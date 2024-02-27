@@ -38,40 +38,40 @@
   .flex {
     display: flex;
   }
-  .truc_en_bas {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-  }
+  
 
-  #transition_1{
+.truc_en_bas_1{
     background-image: url(images/rouge.svg);
-    height: 35%;
     position: absolute;
     left: 0 ;
     bottom: 0;
     background-repeat: no-repeat;
+    height: 35vh; 
+    width: 100%;
+
     
   }
 
-  #transition_2{
+  .truc_en_bas_2{
     background-image: url(images/vert_clair.svg);
     height: 25%;
     position: absolute;
     left: 0 ;
     bottom: 0;
     background-repeat: no-repeat;
+    width: 100%;
+
   }
 
-  #transition_3{
+  .truc_en_bas_3{
     background-image: url(images/vert_fonce.svg);
     height: 30%;
     position: absolute;
     left: 0 ;
     bottom: 0;
     background-repeat: no-repeat;
+    width: 100%;
+
   }
 
   p {
