@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+:root {
+    --desert: #F48625;
+  }
+  body {
+    margin: 0;
+  }
+  .orange {
+    background-color: var(--desert);
+    padding: 20px;
+  }
+  .flex {
+    display: flex;
+  }
+  section {
+    position: relative;
+  }
+  .truc_en_bas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
