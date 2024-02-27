@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 :root {
     --desert: #F48625;
@@ -11,17 +13,9 @@
     --heritage: #667A0B;
     --feminisme: #2E4C18;
   }
-
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-  @font-face {
-    font-family: "RoadRage";
-    src: url("fonts/RoadRage-Regular.ttf");
-}
-  
   body {
     margin: 0;
-    font-family: "Raleway", sans-serif;
+    font-family: "Raleway";
     background-color: #FFF8F3;
   }
 
@@ -33,11 +27,6 @@
     padding: 50px;
     color: #F4FFC0;
   }
-
-  h1{
-    font-family: "RoadRage";
-    font-size: 5rem;
-  }
   .flex {
     display: flex;
   }
@@ -48,6 +37,35 @@
     width: 100%;
     z-index: 2;
   }
+
+  #transition_1{
+    background-image: url(images/rouge.svg);
+    height: 35%;
+    position: absolute;
+    left: 0 ;
+    bottom: 0;
+    background-repeat: no-repeat;
+    
+  }
+
+  #transition_2{
+    background-image: url(images/vert_clair.svg);
+    height: 25%;
+    position: absolute;
+    left: 0 ;
+    bottom: 0;
+    background-repeat: no-repeat;
+  }
+
+  #transition_3{
+    background-image: url(images/vert_fonce.svg);
+    height: 30%;
+    position: absolute;
+    left: 0 ;
+    bottom: 0;
+    background-repeat: no-repeat;
+  }
+
   p {
     margin: 0;
   }
@@ -57,7 +75,6 @@ header{
     background-image:linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6777704831932774) 98%), url(images/AccueilMobile.png);
     height: 100vh;
     background-size: cover;
-    background-position: center;
 }
 
 
@@ -96,7 +113,7 @@ li {
 
 .LogoFrida{
     height: 10vh;
-    padding-left: 1vw;
+    padding-left: 3vw;
 }
   
   @media (max-width: 650px) {
@@ -132,8 +149,6 @@ li {
     height: 80%;
     align-items: center;
     justify-content: center;
-    padding-bottom: 5vh;
-
 }
 
 #AccContent img{
@@ -147,11 +162,10 @@ li {
     align-items: center;
     background-color: #FFF4EB;
     border: 2px solid #F3E2A2;
-    border-radius: 20px;
+    border-radius: 15px;
     width: 45vw;
-    height: 6vh;
+    height: 3vh;
     color: black;
-    font-size: 0.85rem;
 }
 
 @media screen and (min-width: 769px) {
@@ -161,12 +175,13 @@ li {
 
     #AccContent a{
         width: 15vw;
-        font-size: 1rem;
+        margin-left: 3vw;
     }
     
     header{
         background-image:linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6777704831932774) 98%), url(images/BackgroundAccueil.png);
-        background-position: 26% 74%;
+        background-position: center 10%;
+
     }
 }
   /* --------------------------------------DESERT */
