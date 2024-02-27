@@ -27,10 +27,25 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    z-index: 2;
+  }
+  p {
+    margin: 0;
   }
   /* --------------------------------------DESERT */
   .orange {
     background-color: var(--desert);
+    overflow: hidden;
+  }
+  .date_lieu {
+    width: 40%;
+  }
+  .frida_dance{
+    position: absolute;
+    width: 187vw;
+    bottom: 0;
+    right: -272px;
+    max-width: 750px;
   }
 /* --------------------------------------COMMUNISME */
 .communisme {
