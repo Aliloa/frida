@@ -12,6 +12,7 @@
     --communist: #C62B29;
     --heritage: #667A0B;
     --feminisme: #2E4C18;
+    --virtuelle: #E4944E;
   }
   body {
     margin: 0;
@@ -46,7 +47,7 @@
     left: 0 ;
     bottom: 0;
     background-repeat: no-repeat;
-    height: 35vh; 
+    height: 35%; 
     width: 100%;
 
     
@@ -54,7 +55,7 @@
 
   .truc_en_bas_2{
     background-image: url(images/vert_clair.svg);
-    height: 25%;
+    height: 30%;
     position: absolute;
     left: 0 ;
     bottom: 0;
@@ -65,6 +66,17 @@
 
   .truc_en_bas_3{
     background-image: url(images/vert_fonce.svg);
+    height: 30%;
+    position: absolute;
+    left: 0 ;
+    bottom: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+
+  }
+
+  .truc_en_bas_4{
+    background-image: url(images/jaune.svg);
     height: 30%;
     position: absolute;
     left: 0 ;
@@ -147,6 +159,8 @@ li {
     .LogoFrida{
         height: 5vh;
     }
+
+    
   }
 
   /* HeaderContent*/
@@ -207,6 +221,9 @@ li {
     right: -272px;
     max-width: 750px;
   }
+
+ 
+
 /* --------------------------------------COMMUNISME */
 .communisme {
     background-color: var(--communist);
@@ -218,4 +235,8 @@ li {
 /* --------------------------------------FEMINISME */
 .feminisme {
     background-color: var(--feminisme);
+}
+
+.virtuelle{
+  background-color: var(--virtuelle);
 }
