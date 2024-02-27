@@ -13,6 +13,11 @@
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+  @font-face {
+    font-family: "RoadRage";
+    src: url("fonts/RoadRage-Regular.ttf");
+}
   
   body {
     margin: 0;
@@ -27,6 +32,11 @@
     padding: 20px;
     padding: 50px;
     color: #F4FFC0;
+  }
+
+  h1{
+    font-family: "RoadRage";
+    font-size: 5rem;
   }
   .flex {
     display: flex;
@@ -137,9 +147,9 @@ li {
     align-items: center;
     background-color: #FFF4EB;
     border: 2px solid #F3E2A2;
-    border-radius: 15px;
+    border-radius: 20px;
     width: 45vw;
-    height: 3vh;
+    height: 6vh;
     color: black;
     font-size: 0.85rem;
 }
@@ -151,6 +161,7 @@ li {
 
     #AccContent a{
         width: 15vw;
+        font-size: 1rem;
     }
     
     header{
