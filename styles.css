@@ -3,6 +3,10 @@
 *::before {
     box-sizing: border-box;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root {
     --desert: #F48625;
     --communist: #C62B29;
@@ -11,7 +15,11 @@
   }
   body {
     margin: 0;
+    font-family: "Raleway";
+    background-color: #FFF8F3;
   }
+
+  
   section {
     position: relative;
     height: 100vh;
@@ -32,6 +40,121 @@
   p {
     margin: 0;
   }
+  /* --------------------------------------HEADER */
+
+header{
+    background-image:linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6777704831932774) 98%), url(images/AccueilMobile.png);
+    height: 100vh;
+    background-size: cover;
+}
+
+
+  /**** NAVBAR ****/
+li {
+    list-style: none;
+    padding-right: 5vw;
+
+  }
+  a,
+  a:visited {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(0.5rem + 0.8vw);
+}
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    font-weight: 500;
+    color: white;
+  }
+
+  #icons {
+    cursor: pointer;
+    display: none;
+  }
+
+.LogoFrida{
+    height: 10vh;
+    padding-left: 3vw;
+}
+  
+  @media (max-width: 650px) {
+
+    #icons {
+      display: block;
+    }
+
+    nav ul {
+      position: fixed;
+      left: -100%;
+      top: 5%;
+      flex-direction: column;
+      width: 50%;
+      text-align: center;
+      transition: 0.25s;
+    }
+
+    nav.active ul {
+      left: 0;
+    }
+
+    .LogoFrida{
+        height: 5vh;
+    }
+  }
+
+  /* HeaderContent*/
+
+  #AccContent{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+#AccContent img{
+    width: 85%;
+    padding-bottom: 5vh;
+}
+
+#AccContent a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF4EB;
+    border: 2px solid #F3E2A2;
+    border-radius: 15px;
+    width: 45vw;
+    height: 3vh;
+    color: black;
+}
+
+@media screen and (min-width: 769px) {
+    #AccContent img{
+        width: 60%;
+    }
+
+    #AccContent a{
+        width: 15vw;
+        margin-left: 3vw;
+    }
+    
+    header{
+        background-image:linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6777704831932774) 98%), url(images/BackgroundAccueil.png);
+        background-position: center 10%;
+
+    }
+}
   /* --------------------------------------DESERT */
   .orange {
     background-color: var(--desert);
