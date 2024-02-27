@@ -27,6 +27,14 @@
     padding: 50px;
     color: #F4FFC0;
   }
+
+
+  h1{
+    font-family: "RoadRage";
+    font-size: 4rem;
+    margin: 0;
+  }
+
   .flex {
     display: flex;
   }
