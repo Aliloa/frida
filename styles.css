@@ -5,19 +5,22 @@
 }
 :root {
     --desert: #F48625;
+    --communist: #C62B29;
+    --heritage: #667A0B;
+    --feminisme: #2E4C18;
   }
   body {
     margin: 0;
   }
-  .orange {
-    background-color: var(--desert);
+  section {
+    position: relative;
+    height: 100vh;
     padding: 20px;
+    padding: 50px;
+    color: #F4FFC0;
   }
   .flex {
     display: flex;
-  }
-  section {
-    position: relative;
   }
   .truc_en_bas {
     position: absolute;
@@ -25,3 +28,19 @@
     left: 0;
     width: 100%;
   }
+  /* --------------------------------------DESERT */
+  .orange {
+    background-color: var(--desert);
+  }
+/* --------------------------------------COMMUNISME */
+.communisme {
+    background-color: var(--communist);
+}
+/* --------------------------------------HERTIAGE */
+.heritage {
+    background-color: var(--heritage);
+}
+/* --------------------------------------FEMINISME */
+.feminisme {
+    background-color: var(--feminisme);
+}
