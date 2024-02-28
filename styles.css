@@ -27,8 +27,28 @@
 
   .nuit{
     background-color: #4A4473;
-    
   }
+
+  .theme{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    z-index: 3;
+
+  }
+
+  .themebutton{
+    background-image: url(images/DarkMode.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:rgba(0, 0, 0, 0);
+    border:none;
+    height: 6vh;
+    width: 13vw;
+    margin-right: 3vw;
+  }
+  
 
   
   section {
@@ -183,7 +203,6 @@ nav ul {
   height: 80%;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5vh;
 
 }
 
@@ -235,6 +254,19 @@ background-size: contain;
 }
 /* --------------------------------------MODE SOMBRE ACCUEIL */
 
+
+.nuit .themebutton{
+  background-image: url(images/LightMode.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-color:rgba(0, 0, 0, 0);
+  border:none;
+  height: 6vh;
+  width: 13vw;
+  margin-right: 3vw;
+}
+
 .nuit header{
   background-image: url(images/BackAccSombre.svg);
 }
@@ -249,16 +281,18 @@ color: white;
 background-image: url(images/TitreSombre.svg);
 }
 
-#transition{
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-z-index: 2;
-background-image: url(images/bleu_claire.svg);
-width: 100%;
-height: 30%;
+@media screen and (min-width: 769px) {
+  .nuit .themebutton{
+    width: 5vw;
+    margin-right: 3vw;
+  }
+
+  .themebutton{
+    width: 5vw;
+    margin-right: 3vw;
+  }
 }
+
 
 
   /* --------------------------------------DESERT */
