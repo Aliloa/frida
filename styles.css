@@ -71,49 +71,47 @@
   }
   
 
-.truc_en_bas_1{
-    background-image: url(images/rouge.svg);
+.truc_en_bas{
     position: absolute;
     left: 0 ;
-    bottom: 0;
-    background-repeat: no-repeat;
-    height: 35%; 
-    width: 100%;
-
-    
-  }
-
-  .truc_en_bas_2{
-    background-image: url(images/vert_clair.svg);
-    height: 25%;
-    position: absolute;
-    left: 0 ;
-    bottom: 0;
+    bottom: -2px;
     background-repeat: no-repeat;
     width: 100%;
-
-  }
-
-  .truc_en_bas_3{
-    background-image: url(images/vert_fonce.svg);
     height: 30%;
-    position: absolute;
-    left: 0 ;
-    bottom: 0;
-    background-repeat: no-repeat;
-    width: 100%;
-
+    display: flex;
+    background-position: bottom;
+    background-size: contain;
   }
 
-  .truc_en_bas_4{
-    background-image: url(images/jaune.svg);
-    height: 30%;
-    position: absolute;
-    left: 0 ;
-    bottom: 0;
-    background-repeat: no-repeat;
-    width: 100%;
+  .orange .truc_en_bas {
+    background-image: url(images/transitions/rouge.png);
+  }
+  .communisme .truc_en_bas {
+    background-image: url(images/transitions/vert.png);
+  }
 
+  .heritage .truc_en_bas {
+    background-image: url(images/transitions/vert_fonce.png);
+  }
+
+  .feminisme .truc_en_bas {
+    background-image: url(images/transitions/orange.png);
+  }
+  @media (min-width: 500px) {
+    .orange .truc_en_bas {
+      background-image: url(images/transitions/rouge_desk.svg);
+    }
+    .communisme .truc_en_bas {
+      background-image: url(images/transitions/vert_desk.svg);
+    }
+  
+    .heritage .truc_en_bas {
+      background-image: url(images/transitions/vert_fonce_desk.svg);
+    }
+  
+    .feminisme .truc_en_bas {
+      background-image: url(images/transitions/orange_desk.svg);
+    }
   }
 
   p {
