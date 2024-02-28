@@ -6,6 +6,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+  font-family: "RoadRage";
+  src: url("fonts/RoadRage-Regular.ttf");
+}
 
 :root {
     --desert: #F48625;
@@ -14,10 +18,16 @@
     --feminisme: #2E4C18;
     --virtuelle: #E4944E;
   }
+
   body {
     margin: 0;
-    font-family: "Raleway";
+    font-family: "Raleway", sans-serif;
     background-color: #FFF8F3;
+  }
+
+  .nuit{
+    background-color: #4A4473;
+    
   }
 
   
@@ -89,123 +99,168 @@
   p {
     margin: 0;
   }
-  /* --------------------------------------HEADER */
+ /* --------------------------------------HEADER */
 
 header{
-    background-image:linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6777704831932774) 98%), url(images/AccueilMobile.svg);
-    height: 100vh;
-    background-size: cover;
+  background-image:linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6777704831932774) 98%), url(images/AccueilMobile.svg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
 
-  /**** NAVBAR ****/
+/**** NAVBAR ****/
 li {
-    list-style: none;
-    padding-right: 5vw;
-
-  }
-  a,
-  a:visited {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    font-size: calc(0.5rem + 0.8vw);
+  list-style: none;
+  padding-right: 5vw;
 }
-  nav ul {
-    display: flex;
-    justify-content: flex-end;
-    width: 60%;
-    font-weight: 500;
-    color: white;
-  }
 
-  #icons {
-    cursor: pointer;
-    display: none;
-  }
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: calc(0.5rem + 0.8vw);
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+  font-weight: 500;
+  color: white;
+}
+
+#icons {
+  cursor: pointer;
+  display: none;
+}
 
 .LogoFrida{
-    height: 10vh;
-    padding-left: 3vw;
+  height: 10vh;
+  padding-left: 1vw;
 }
-  
-  @media (max-width: 650px) {
 
-    #icons {
-      display: block;
-    }
+@media (max-width: 650px) {
 
-    nav ul {
-      position: fixed;
-      left: -100%;
-      top: 5%;
-      flex-direction: column;
-      width: 50%;
-      text-align: center;
-      transition: 0.25s;
-    }
-
-    nav.active ul {
-      left: 0;
-    }
-
-    .LogoFrida{
-        height: 5vh;
-    }
-
-    
+  #icons {
+    display: block;
   }
 
-  /* HeaderContent*/
-
-  #AccContent{
-    display: flex;
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 5%;
     flex-direction: column;
-    height: 80%;
-    align-items: center;
-    justify-content: center;
+    width: 50%;
+    text-align: center;
+    transition: 0.25s;
+  }
+
+  nav.active ul {
+    left: 0;
+  }
+
+  .LogoFrida{
+      height: 5vh;
+  }
+
+
 }
 
-#AccContent img{
-    width: 85%;
-    padding-bottom: 5vh;
+
+/* HeaderContent*/
+
+#AccContent{
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5vh;
+
+}
+
+#AccContent .titre{
+background-image: url(images/Titre.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+  width: 85%;
+  height: 50%;
+  padding-bottom: 5vh;
 }
 
 #AccContent a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFF4EB;
-    border: 2px solid #F3E2A2;
-    border-radius: 15px;
-    width: 45vw;
-    height: 3vh;
-    color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF4EB;
+  border: 2px solid #F3E2A2;
+  border-radius: 20px;
+  width: 45vw;
+  height: 6vh;
+  color: black;
+  font-size: 0.85rem;
 }
 
 @media screen and (min-width: 769px) {
-    #AccContent img{
-        width: 60%;
-    }
+  #AccContent .titre{
+      width: 70%;
+      height: 80%;
+  }
 
-    #AccContent a{
-        width: 15vw;
-        margin-left: 3vw;
-    }
-    
-    header{
-        background-image:linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6777704831932774) 98%), url(images/BackgroundAccueil.svg);
-        background-position: 26% 74%;
+  #AccContent a{
+      width: 15vw;
+      font-size: 1rem;
+  }
 
-    }
+  .nuit header{
+    background-image: url(images/BackgroundAccSombre.svg) !important;
+  }
+
+  header{
+      background-image:linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6777704831932774) 98%), url(images/BackgroundAccueil.svg);
+      background-position: 26% 74%;
+  }
+
+
+
 }
+/* --------------------------------------MODE SOMBRE ACCUEIL */
+
+.nuit header{
+  background-image: url(images/BackAccSombre.svg);
+}
+
+.nuit #AccContent a{
+background-color: #34304F ;
+border: 2px solid #34304F;
+color: white;
+}
+
+.nuit #AccContent .titre{
+background-image: url(images/TitreSombre.svg);
+}
+
+#transition{
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+z-index: 2;
+background-image: url(images/bleu_claire.svg);
+width: 100%;
+height: 30%;
+}
+
+
   /* --------------------------------------DESERT */
   .orange {
     background-color: var(--desert);
