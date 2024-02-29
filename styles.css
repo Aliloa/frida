@@ -355,7 +355,37 @@ background-image: url(images/TitreSombre.svg);
     background-color: var(--communist);
 }
 
+.faucille {
+  position: absolute;
+  bottom: auto;
+  right: auto;
+  top: 23px;
+  left: -30vw;
+  width: 70vw;
+  max-width: 500px;
+  transform: rotate(27deg);
+}
+.communisme strong {
+  text-align: end;
+}
+.communisme .center {
+  padding-left: 40vw;
+}
 
+@media screen and (min-width: 500px) {
+  .faucille {
+    top: auto;
+    left: auto;
+    bottom: -15px;
+    right: 8vw;
+    width: 52vw;
+    transform: rotate(0deg);
+  }
+  .communisme .center {
+    padding-right: 45vw;
+    padding-left: 50px;
+}
+}
 /* --------------------------------------HERTIAGE */
 .heritage {
     background-color: var(--heritage);
