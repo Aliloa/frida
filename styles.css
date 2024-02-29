@@ -6,10 +6,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-@font-face {
-  font-family: "RoadRage";
-  src: url("fonts/RoadRage-Regular.ttf");
-}
 
 :root {
     --desert: #F48625;
@@ -61,15 +57,13 @@
 
   .center{
     padding: 30px 50px 0px 50px;
-  }
-
-  .ContentPartie{
     height: 80vh;
   }
 
-
   h1{
-    font-family: "RoadRage";
+    font-family: "Road Rage", sans-serif;
+  font-weight: 400;
+  font-style: normal;
     font-size: 4rem;
     margin: 0;
   }
@@ -77,40 +71,7 @@
   .flex {
     display: flex;
   }
-  
-
-  .truc_en_bas_2{
-    background-image: url(images/vert_clair.svg);
-    height: 30%;
-    position: absolute;
-    left: 0 ;
-    bottom: 0;
-    background-repeat: no-repeat;
-    width: 100%;
-
-  }
-
-  .truc_en_bas_3{
-    background-image: url(images/vert_fonce.svg);
-    height: 30%;
-    position: absolute;
-    left: 0 ;
-    bottom: 0;
-    background-repeat: no-repeat;
-    width: 100%;
-
-  }
-
-  .truc_en_bas_4{
-    background-image: url(images/jaune.svg);
-    height: 30%;
-    position: absolute;
-    left: 0 ;
-    bottom: 0;
-    background-repeat: no-repeat;
-    width: 100%;
-
-  }
+ 
 
   p {
     margin: 0;
@@ -248,6 +209,33 @@ background-size: contain;
 
 
 }
+/*----------------------------------------- TRANSITIONS */
+
+
+#transition{
+  position: relative;
+  bottom: 0;
+  background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 24vh;
+}
+
+.desert #transition {
+  background-image: url(images/transitions/rouge.svg);
+}
+
+.communisme #transition {
+  background-image: url(images/transitions/vert.png);
+}
+
+.heritage #transition {
+  background-image: url(images/transitions/vert_fonce.png);
+}
+
+.feminisme #transition {
+  background-image: url(images/transitions/orange.png);
+}
 /* --------------------------------------MODE SOMBRE ACCUEIL */
 
 
@@ -283,13 +271,6 @@ background-image: url(images/TitreSombre.svg);
   background-position: center;
   width: 100%;
   height: 20vh;
-}
-
-#transition {
-  position: relative;
-  bottom: 0;
-  background-size: cover;
-    background-position: center;
 }
 
 @media screen and (min-width: 767px) {
@@ -338,11 +319,6 @@ background-image: url(images/TitreSombre.svg);
     width: 178vw;
     margin-top: -42vh;
     margin-left: -20vw;
-  }
-
-  .desert #transition{
-    background-image: url(images/RougeMobile.svg) ;
-    height: 24vh;
   }
  
 
