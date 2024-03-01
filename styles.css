@@ -45,35 +45,13 @@
     width: 13vw;
     margin-right: 3vw;
   }
-  
-
-  
-  section {
-    position: relative;
-    height: 100vh;
-    color: #F4FFC0;
-  }
-
-  .center{
-    padding: 30px 50px 0px 50px;
-    height: 80vh;
-  }
-
-  h1{
-    font-family: "Road Rage", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-    font-size: 4rem;
-    margin: 0;
-  }
-
-  .flex {
-    display: flex;
-  }
  
 
   p {
     margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
   }
  /* --------------------------------------HEADER */
 
@@ -209,12 +187,10 @@ background-size: contain;
     position: fixed;
     display: flex;
     margin-top: 10vh;
-
   }
 
 
 }
-/*----------------------------------------- TRANSITIONS */
 
 
 #transition{
@@ -279,7 +255,7 @@ background-image: url(images/TitreSombre.svg);
   height: 20vh;
 }
 
-#transition {
+header #transition {
   background-image: url(images/transitions/Sable.svg);
   position: relative;
   background-size: cover;
@@ -295,7 +271,7 @@ background-image: url(images/TitreSombre.svg);
     height: 35vh;
   }
 
-  #transition {
+  header #transition {
     background-image: url(images/transitions/SablePC.svg);
     position: relative;
     bottom: 0;
@@ -545,21 +521,195 @@ background-image: url(images/TitreSombre.svg);
 
 
  
+  /*----------------------------------------- MAIN GENERAL */
+  section {
+    position: relative;
+    height: 100vh;
+    color: #F4FFC0;
+  }
 
+  .center{
+    padding: 15px 25px 0px 25px;
+    height: 80vh;
+  }
+
+  h1{
+    font-family: "Road Rage", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 15vw;
+    margin: 0;
+  }
+
+  .flex {
+    display: flex;
+  }
+  .bouton {
+    border-radius: 30px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    border: 0;
+    width: 80%;
+    min-width: fit-content;
+    height: fit-content;
+    color: white;
+    margin-top: 20px;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  /*----------------------------------------- TRANSITIONS */
+
+/* /*TECHNIQUE1 */
+ /* #transition{
+  position: relative;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 20vh;
+  transform: translate(0px, 2px);
+} */ 
+
+/* TECHNIQUE */
+
+#transition {
+  position: absolute;
+    bottom: -2px;
+    height: 45vh;
+    width: 100vw;
+    background-position: bottom;
+  background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.desert #transition {
+  background-image: url(images/transitions/rouge.svg);
+}
+
+.communisme #transition {
+  background-image: url(images/transitions/vert.svg);
+}
+
+.heritage #transition {
+  background-image: url(images/transitions/vert_fonce.svg);
+}
+
+.feminisme #transition {
+  background-image: url(images/transitions/orange.svg);
+}
+
+@media screen and (min-width: 767px) {
+  .desert #transition {
+    background-image: url(images/transitions/rouge_desk.svg);
+  }
+  
+  .communisme #transition {
+    background-image: url(images/transitions/vert_desk.svg);
+  }
+  
+  .heritage #transition {
+    background-image: url(images/transitions/vert_fonce_desk.svg);
+  }
+  .feminisme #transition {
+    background-image: url(images/transitions/orange_desk.svg);
+  }
+}
 /* --------------------------------------COMMUNISME */
 .communisme {
     background-color: var(--communist);
 }
 
+.faucille {
+  position: absolute;
+  bottom: auto;
+  right: auto;
+  top: 23px;
+  left: -30vw;
+  width: 70vw;
+  max-width: 550px;
+  transform: rotate(27deg);
+}
+.communisme strong {
+  text-align: end;
+  font-weight: 400;
+}
+.communisme .center {
+  padding-left: 40vw;
+}
 
+@media screen and (min-width: 500px) {
+  .faucille {
+    top: auto;
+    left: auto;
+    bottom: -15px;
+    right: 15vw;
+    width: 52vw;
+    transform: rotate(0deg);
+  }
+  .communisme .center {
+    padding-right: 45vw;
+    padding-left: 50px;
+}
+}
+
+.communisme h1 {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+}
+
+.communisme .bouton {
+  background-color: #AE211F;
+}
 /* --------------------------------------HERTIAGE */
 .heritage {
     background-color: var(--heritage);
+}
+.heritage .center {
+  padding-right: 30vw;
+}
+.frida_skeleton {
+  position: absolute;
+  right: 0;
+  width: 45vw;
+}
+.confettis {
+  position: absolute;
+  right: 10px;
+  top: 10%;
+  width: 30vw;
+}
+.heritage .bouton {
+  background-color: #2E4C18;
 }
 /* --------------------------------------FEMINISME */
 .feminisme {
     background-color: var(--feminisme);
 }
+
+.feminisme .center {
+  display: flex;
+  padding-left: 0;
+}
+.coeur {
+  width: 42vw;
+}
+
+.feminisme .bouton {
+  background-color: #142508;
+}
+
+.feminisme h1 {
+  transform: rotate(353deg) translate(-50%, 0);
+}
+.feminisme h2 {
+    font-family: "Road Rage", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 15vw;
+    margin: 0;
+}
+/* --------------------------------------VIRTUEL */
 
 .virtuelle{
   background-color: var(--virtuelle);
