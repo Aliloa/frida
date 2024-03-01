@@ -551,8 +551,10 @@ header #transition {
     margin: 0;
   }
 
-  .flex {
+  .flexcenter {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .bouton {
     border-radius: 30px;
@@ -567,6 +569,24 @@ header #transition {
     font-family: "Fredoka", sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
+  }
+  @media screen and (min-width: 500px) {
+    .center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      padding-right: 10vw;
+      padding-left: 10vw;
+    }
+    h1 {
+      font-size: 7vw;
+    }
+    .bouton {
+      padding: 20px 7% 20px 7%;
+      width: fit-content;
+    }
+    
   }
   /*----------------------------------------- TRANSITIONS */
 
@@ -638,6 +658,7 @@ header #transition {
   width: 70vw;
   max-width: 550px;
   transform: rotate(27deg);
+  max-height: 100%;
 }
 .communisme strong {
   text-align: end;
@@ -647,21 +668,6 @@ header #transition {
   padding-left: 40vw;
 }
 
-@media screen and (min-width: 500px) {
-  .faucille {
-    top: auto;
-    left: auto;
-    bottom: -15px;
-    right: 15vw;
-    width: 52vw;
-    transform: rotate(0deg);
-  }
-  .communisme .center {
-    padding-right: 45vw;
-    padding-left: 50px;
-}
-}
-
 .communisme h1 {
   display: flex;
   flex-direction: column;
@@ -669,8 +675,28 @@ header #transition {
 }
 
 .communisme .bouton {
-  background-color: #AE211F;
+  background-color: #781A19;
 }
+
+@media screen and (min-width: 500px) {
+  .faucille {
+    top: auto;
+    left: auto;
+    bottom: -15px;
+    right: 8vw;
+    width: 52vw;
+    transform: rotate(0deg);
+  }
+  .communisme .center {
+    padding-right: 45vw;
+    padding-left: 10vw;
+    flex-direction: column;
+}
+.communisme h1 {
+  display: block;
+}
+}
+
 /* --------------------------------------HERTIAGE */
 .heritage {
     background-color: var(--heritage);
@@ -682,6 +708,7 @@ header #transition {
   position: absolute;
   right: 0;
   width: 45vw;
+  bottom: 10%;
 }
 .confettis {
   position: absolute;
@@ -691,6 +718,25 @@ header #transition {
 }
 .heritage .bouton {
   background-color: #2E4C18;
+}
+.frida_skeleton_desk {
+  display: none;
+}
+@media screen and (min-width: 500px) {
+  .confettis, .frida_skeleton {
+    display: none;
+  }
+  .heritage .center {
+    flex-direction: row;
+    padding-right: 10vw;
+  }
+  .frida_skeleton_desk {
+    display: block;
+    width: 40vw;
+  }
+  .heritage .bouton {
+    margin-left: auto;
+  }
 }
 /* --------------------------------------FEMINISME */
 .feminisme {
@@ -709,16 +755,41 @@ header #transition {
   background-color: #142508;
 }
 
-.feminisme h1 {
-  transform: rotate(353deg) translate(-50%, 0);
-}
 .feminisme h2 {
-    font-family: "Road Rage", sans-serif;
+  transform: rotate(353deg) translate(-50%, 0);
+  font-family: "Road Rage", sans-serif;
   font-weight: 400;
   font-style: normal;
     font-size: 15vw;
     margin: 0;
 }
+.coeur_desk {
+  display: none;
+}
+.div_image {
+  height: 92vh;
+  display: flex;
+}
+@media screen and (min-width: 500px) {
+  .coeur {
+    display: none;
+  }
+  .feminisme h2 {
+    display: none;
+  }
+  .feminisme .center {
+    padding-left: 10vw;
+    height: 100%;
+  }
+  .coeur_desk {
+    display: block;
+    width: 40vw;
+    max-height: 90%;
+    margin-top: auto;
+    margin-bottom: 5%;
+  }
+}
+
 /* --------------------------------------VIRTUEL */
 
 .virtuelle{
