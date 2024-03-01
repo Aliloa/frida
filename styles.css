@@ -241,6 +241,7 @@ background-size: contain;
 .feminisme #transition {
   background-image: url(images/transitions/orange.png);
 }
+
 /* --------------------------------------MODE SOMBRE ACCUEIL */
 
 
@@ -325,6 +326,144 @@ background-image: url(images/TitreSombre.svg);
 }
 
 
+  /* --------------------------------------FOOTER */
+
+  footer{
+    height: 80vh;
+    width: 100vw;
+    background: rgb(33,31,47);
+    background: linear-gradient(0deg, rgba(33,31,47,1) 6%, rgba(40,37,63,1) 94%);
+    }
+
+  #footerContentMob{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    justify-content: space-around;
+  }
+
+  #footerContent{
+    display: none;
+  }
+
+  #footerContent img{
+    width: 80vw;
+  }
+
+  #footerContentMob ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  #footerlist1{
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 0.90rem;
+  }
+
+  #footerlist2{
+    font-size: 0.75rem;
+  }
+
+  #footerContentMob a {
+    padding-bottom: 2vh;
+  }
+
+  #Reseau{
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #Reseau img{
+    width: 10vw;
+    height: 4vh;
+  }
+
+  @media screen and (min-width: 767px) {
+
+    #footerContentMob{
+            display: none;
+    }
+
+
+    #footerContent{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 80vh;
+      justify-content: space-evenly;
+      color: #FFFFFF;
+    }
+
+    #footerContent img{
+      width: 25vw;
+    }
+
+    #footerContent h2{
+      color: #7D7A93;
+    }
+
+    #FooterCoo{
+      display: flex;
+      flex-direction: column;
+      height: 30vh;
+      justify-content: flex-start;
+    }
+
+    #FooterCoo p{
+      margin-top: 2vh;
+    }
+    
+    #FooterLien{
+      display: flex;
+      flex-direction: column;
+      height: 30vh;
+      justify-content: flex-start;
+    }
+
+    #FooterLien a {
+      text-transform: none;
+      font-size: 1.2rem;
+      margin-top: 2vh;
+    }
+
+    #FooterNav{
+      display: flex;
+      flex-direction: column;
+      height: 30vh;
+      justify-content: flex-start;
+    }
+
+    #FooterNav a {
+      text-transform: none;
+      font-size: 1.2rem;
+      margin-top: 2vh;
+    }
+
+    #ReseauPc{
+      height: 30vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    #ReseauPc img{
+      margin-top: 5vh;
+      width: 3vw;
+      height: 4vh;
+    }
+
+    #Mentions{
+      display: flex;
+    }
+  }
+
+
+
 
   /* --------------------------------------DESERT */
   .desert {
@@ -348,6 +487,63 @@ background-image: url(images/TitreSombre.svg);
     margin-top: -42vh;
     margin-left: -20vw;
   }
+
+  @media screen and (min-width: 767px) {
+    .date_lieu{
+      display: flex;
+    }
+
+    .desert #transition{
+      background-image: url(images/transitions/rouge_desk.svg);
+      height: 30vh;
+    }
+
+    .frida_dance{
+      transform: rotateY(180deg);
+      width: 90vw;
+      margin-left: -23vw;
+      margin-top: 0vh;
+      margin-bottom: -23vh;
+    }
+
+    .desert h1{
+      font-size: 7rem;
+    }
+
+    .desert h2{
+      font-family: "Raleway", sans-serif;
+      font-size: 2rem;
+    }
+
+    .desert p{
+      font-size: 1.5rem;
+    }
+
+    .date_lieu{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .date_lieu div{
+      width: 25%;
+    }
+
+    .flexEnd{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .TXTPC{
+      display: flex;
+      flex-direction: column;
+    }
+
+
+
+  }
+
+
  
 
 /* --------------------------------------COMMUNISME */
@@ -367,4 +563,12 @@ background-image: url(images/TitreSombre.svg);
 
 .virtuelle{
   background-color: var(--virtuelle);
+}
+
+.nuit .virtuelle{
+  background-color: var(--desertNuit);
+}
+
+.virtuelle #transition{
+  background-image: url(images/transitions/FooterMob.svg);
 }
