@@ -191,6 +191,7 @@ background-size: contain;
 
 }
 
+
 /* --------------------------------------MODE SOMBRE ACCUEIL */
 
 
@@ -525,12 +526,23 @@ header #transition {
   .communisme #transition {
     background-image: url(images/transitions/vert_desk.svg);
   }
+  .nuit .communisme #transition{
+    background-image: url(images/transitions/violet_pc.svg);
+  }
   
   .heritage #transition {
     background-image: url(images/transitions/vert_fonce_desk.svg);
   }
+
+  .nuit .heritage #transition{
+    background-image: url(images/transitions/magenta_pc.svg);
+  }
   .feminisme #transition {
     background-image: url(images/transitions/orange_desk.svg);
+  }
+
+  .nuit .feminisme #transition{
+    background-image: url(images/transitions/Bleu_Nuit.svg);
   }
 }
 
@@ -673,6 +685,10 @@ header #transition {
 .heritage {
     background-color: var(--heritage);
 }
+
+.nuit .heritage{
+  background-color: #3B365B;
+}
 .heritage .center {
   padding-right: 30vw;
 }
@@ -690,6 +706,10 @@ header #transition {
 }
 .heritage .bouton {
   background-color: #2E4C18;
+}
+
+.nuit .heritage .bouton{
+  background-color: #2E294D;
 }
 .frida_skeleton_desk {
   display: none;
@@ -715,6 +735,10 @@ header #transition {
     background-color: var(--feminisme);
 }
 
+.nuit .feminisme{
+  background-color: #B05EBC;
+}
+
 .feminisme .center {
   display: flex;
   padding-left: 0;
@@ -725,6 +749,10 @@ header #transition {
 
 .feminisme .bouton {
   background-color: #142508;
+}
+
+.nuit .feminisme .bouton{
+  background-color: #763480;
 }
 
 .feminisme h2 {
@@ -755,6 +783,10 @@ header #transition {
     max-height: 90%;
     margin-top: auto;
     margin-bottom: 5%;
+  }
+
+  .nuit .feminisme{
+    background-color: #9C47AA;
   }
 }
 
