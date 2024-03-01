@@ -277,8 +277,7 @@ header #transition {
 
   header #transition {
     background-image: url(images/transitions/SablePC.svg);
-    position: relative;
-    bottom: 0;
+    bottom: -20px;
     background-size: cover;
       background-position: center;
       width: 100%;
@@ -365,6 +364,10 @@ header #transition {
 
   @media screen and (min-width: 767px) {
 
+    footer{
+      height: 60vh;
+    }
+
     #footerContentMob{
             display: none;
     }
@@ -374,7 +377,7 @@ header #transition {
       display: flex;
       flex-direction: row;
       align-items: center;
-      height: 80vh;
+      height: 60vh;
       justify-content: space-evenly;
       color: #FFFFFF;
     }
@@ -717,6 +720,7 @@ header #transition {
 
 .virtuelle{
   background-color: var(--virtuelle);
+  height: 65vh;
 }
 
 .nuit .virtuelle{
@@ -725,4 +729,82 @@ header #transition {
 
 .virtuelle #transition{
   background-image: url(images/transitions/FooterMob.svg);
+  bottom: -20px;
 }
+
+.virtuelle .center{
+  background-image: url(images/perso-casque-vr.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
+  }
+
+  .nuit .virtuelle .center{
+    background-image: url(images//perso-casque-vr-nuit.svg);
+  }
+
+  .virtuelle .center h1{
+    font-size: 4rem;
+  }
+
+  .titrevirt{
+    padding-bottom: 17vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .virtuelle .bouton{
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    background-color: #472C14;
+  }
+
+  .nuit .virtuelle .bouton{
+    background-color: #36456B;
+  }
+
+  @media screen and (min-width: 767px) {
+
+    .virtuelle #transition{
+      background-image: url(images/transitions/FooterPc.svg);
+      bottom: -20px;
+    }
+
+    .virtuelle .center{
+      background-image: url(images/VR_PC.svg);
+      background-position: bottom;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .nuit .virtuelle .center{
+      background-image: url(images/VR_PC_nuit.svg);
+    }
+
+    .center .titrevirt h1{
+      font-size: 7rem;
+    }
+
+    .virtuelle{
+      height: 100vh;
+    }
+
+    .virtuelle .bouton{
+      width: 15vw;
+      height: 9vh;
+      background-color: #451B34;
+      display: flex;
+      align-items: center;
+      margin-top: 10vh;
+      font-size: 1.5rem;
+    }
+  }
