@@ -189,37 +189,6 @@ background-size: contain;
     margin-top: 10vh;
   }
 
-
-}
-
-
-#transition{
-  position: relative;
-  bottom: 0;
-  background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 24vh;
-}
-
-.desert #transition {
-  background-image: url(images/transitions/rouge.svg);
-}
-
-.communisme #transition {
-  background-image: url(images/transitions/vert.png);
-}
-
-.heritage #transition {
-  background-image: url(images/transitions/vert_fonce.png);
-}
-
-.feminisme #transition {
-  background-image: url(images/transitions/orange.png);
-}
-
-.nuit .feminisme #transition{
-  background-image: url(images/transitions/bleu_clair_mobile.svg);
 }
 
 /* --------------------------------------MODE SOMBRE ACCUEIL */
@@ -264,11 +233,6 @@ background-image: url(images/TitreSombre.svg);
 
 header #transition {
   background-image: url(images/transitions/Sable.svg);
-  position: relative;
-  background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 20vh;
 }
 
 @media screen and (min-width: 767px) {
@@ -448,94 +412,12 @@ header #transition {
     }
   }
 
-
-
-
-  /* --------------------------------------DESERT */
-  .desert {
-    background-color: var(--desert);
-    overflow: hidden;
-  }
-
-  .nuit .desert{
-    background-color: var(--desertNuit) ;
-
-  }
-
-  .date_lieu {
-    width: 40%;
-  }
-
-  .frida_dance{
-    position: relative;
-    z-index: 0;
-    width: 178vw;
-    margin-top: -42vh;
-    margin-left: -20vw;
-  }
-
-  @media screen and (min-width: 767px) {
-    .date_lieu{
-      display: flex;
-    }
-
-    .desert #transition{
-      background-image: url(images/transitions/rouge_desk.svg);
-      height: 30vh;
-    }
-
-    .frida_dance{
-      transform: rotateY(180deg);
-      width: 90vw;
-      margin-left: -23vw;
-      margin-top: 0vh;
-      margin-bottom: -23vh;
-    }
-
-    .desert h1{
-      font-size: 7rem;
-    }
-
-    .desert h2{
-      font-family: "Raleway", sans-serif;
-      font-size: 2rem;
-    }
-
-    .desert p{
-      font-size: 1.5rem;
-    }
-
-    .date_lieu{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .date_lieu div{
-      width: 25%;
-    }
-
-    .flexEnd{
-      display: flex;
-      flex-direction: row-reverse;
-    }
-
-    .TXTPC{
-      display: flex;
-      flex-direction: column;
-    }
-
-
-
-  }
-
-
- 
   /*----------------------------------------- MAIN GENERAL */
   section {
     position: relative;
     height: 100vh;
     color: #F4FFC0;
+    overflow: hidden;
   }
 
   .center{
@@ -548,6 +430,13 @@ header #transition {
   font-weight: 400;
   font-style: normal;
     font-size: 15vw;
+    margin: 0;
+  }
+
+  h2 {
+    font-family: "Road Rage", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
   }
 
@@ -570,7 +459,7 @@ header #transition {
     font-weight: 600;
     font-size: 1.2rem;
   }
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 767px) {
     .center {
       display: flex;
       flex-direction: row;
@@ -644,6 +533,89 @@ header #transition {
     background-image: url(images/transitions/orange_desk.svg);
   }
 }
+
+  /* --------------------------------------DESERT */
+  .desert {
+    background-color: var(--desert);
+    overflow: hidden;
+  }
+
+  .nuit .desert{
+    background-color: var(--desertNuit) ;
+  }
+
+  .date_lieu {
+    width: 40%;
+  }
+  .date_lieu h2 {
+    font-size: 2rem;
+  }
+
+  .frida_dance{
+    /* position: relative;
+    z-index: 0;
+    margin-top: -42vh;
+    margin-left: -20vw; */
+    width: 150vw;
+    max-width: 500px;
+    position: absolute;
+    bottom: 0;
+    right: -80px;
+  }
+
+  @media screen and (min-width: 767px) {
+    .date_lieu{
+      display: flex;
+    }
+
+    .frida_dance{
+      max-width: 800px;
+      right: auto;
+      left: 0;
+      transform: rotateY(180deg);
+      width: 80vw;
+    }
+    .desert .center {
+      flex-direction: column;
+      margin-left: 35vw;
+      width: initial;
+    }
+
+    .date_lieu{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+/* 
+    .desert h1{
+      font-size: 7rem;
+    }
+
+    .desert h2{
+      font-family: "Raleway", sans-serif;
+      font-size: 2rem;
+    }
+
+    .desert p{
+      font-size: 1.5rem;
+    }
+
+    .date_lieu div{
+      width: 25%;
+    }
+
+    .flexEnd{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .TXTPC{
+      display: flex;
+      flex-direction: column;
+    } */
+
+  }
+
 /* --------------------------------------COMMUNISME */
 .communisme {
     background-color: var(--communist);
@@ -678,7 +650,7 @@ header #transition {
   background-color: #781A19;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 767px) {
   .faucille {
     top: auto;
     left: auto;
@@ -722,7 +694,7 @@ header #transition {
 .frida_skeleton_desk {
   display: none;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 767px) {
   .confettis, .frida_skeleton {
     display: none;
   }
@@ -757,11 +729,7 @@ header #transition {
 
 .feminisme h2 {
   transform: rotate(353deg) translate(-50%, 0);
-  font-family: "Road Rage", sans-serif;
-  font-weight: 400;
-  font-style: normal;
     font-size: 15vw;
-    margin: 0;
 }
 .coeur_desk {
   display: none;
@@ -770,7 +738,7 @@ header #transition {
   height: 92vh;
   display: flex;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 767px) {
   .coeur {
     display: none;
   }
