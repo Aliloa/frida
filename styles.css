@@ -36,7 +36,7 @@
   }
 
   .themebutton{
-    background-image: url(images/DarkMode.svg);
+    background-image: url(images/icon/DarkMode.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-color:rgba(0, 0, 0, 0);
@@ -218,11 +218,15 @@ background-size: contain;
   background-image: url(images/transitions/orange.png);
 }
 
+.nuit .feminisme #transition{
+  background-image: url(images/transitions/bleu_clair_mobile.svg);
+}
+
 /* --------------------------------------MODE SOMBRE ACCUEIL */
 
 
 .nuit .themebutton{
-  background-image: url(images/LightMode.svg);
+  background-image: url(images/icon/LightMode.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: content-box;
@@ -248,7 +252,7 @@ background-image: url(images/TitreSombre.svg);
 }
 
 .nuit #transition{
-  background-image: url(images/bleu_clair_mobile.svg);
+  background-image: url(images/transitions/bleu_clair_mobile.svg);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -267,7 +271,7 @@ header #transition {
 @media screen and (min-width: 767px) {
 
   .nuit #transition{
-    background-image: url(images/Bleu_Nuit.svg);
+    background-image: url(images/transitions/Bleu_Nuit.svg);
     height: 35vh;
   }
 
