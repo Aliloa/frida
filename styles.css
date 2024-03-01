@@ -240,7 +240,6 @@ header #transition {
 
   .nuit #transition{
     background-image: url(images/transitions/Bleu_Nuit.svg);
-    height: 35vh;
   }
 
   header #transition {
@@ -509,13 +508,22 @@ header #transition {
 .communisme #transition {
   background-image: url(images/transitions/vert.svg);
 }
+.nuit .communisme #transition {
+  background-image: url(images/transitions/vert_nuit.svg);
+}
 
 .heritage #transition {
   background-image: url(images/transitions/vert_fonce.svg);
 }
 
+.nuit .heritage #transition {
+  background-image: url(images/transitions/vert_fonce_nuit.svg);
+}
 .feminisme #transition {
   background-image: url(images/transitions/orange.svg);
+}
+.nuit .feminisme #transition {
+  background-image: url(images/transitions/orange_nuit.svg);
 }
 
 @media screen and (min-width: 767px) {
@@ -527,7 +535,7 @@ header #transition {
     background-image: url(images/transitions/vert_desk.svg);
   }
   .nuit .communisme #transition{
-    background-image: url(images/transitions/violet_pc.svg);
+    background-image: url(images/transitions/violet_pc.svg)!important;
   }
   
   .heritage #transition {
@@ -535,14 +543,14 @@ header #transition {
   }
 
   .nuit .heritage #transition{
-    background-image: url(images/transitions/magenta_pc.svg);
+    background-image: url(images/transitions/magenta_pc.svg)!important;
   }
   .feminisme #transition {
     background-image: url(images/transitions/orange_desk.svg);
   }
 
   .nuit .feminisme #transition{
-    background-image: url(images/transitions/Bleu_Nuit.svg);
+    background-image: url(images/transitions/Bleu_Nuit.svg)!important;
   }
 }
 
