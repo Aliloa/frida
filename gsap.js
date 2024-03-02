@@ -37,13 +37,14 @@ if (window.innerWidth < 767) {
 
     if (window.innerWidth < 767) {
         gsap.fromTo(".faucille", { rotation: 0, transformOrigin: "50% 100%", x: -80},
-    { rotation: 27, 
+    { rotation: 32, 
     scrollTrigger : {
         trigger: ".faucille",
         toggleActions : "restart none restart none",
         scrub : 3,
-        start: "top center",
-        end: "90% center"
+        start: "-80% center",
+        end: "50% center",
+        markers: true
     },});
       } else {
         gsap.fromTo(".faucille", { rotation: 40, transformOrigin: "bottom center"},
@@ -115,7 +116,7 @@ scrollTrigger : {
       });
 
       gsap.to(".transition_vert_fonce", {
-        marginTop: "-40vh",
+        marginTop: "-45vh",
         ease: "none",
         scrollTrigger: {
           trigger: ".heritage",
@@ -126,7 +127,7 @@ scrollTrigger : {
       });
 
       gsap.to(".transition_orange", {
-        marginTop: "-55vh",
+        marginTop: "-50vh",
         ease: "none",
         scrollTrigger: {
           trigger: ".feminisme",
