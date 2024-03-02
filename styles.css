@@ -221,7 +221,7 @@ color: white;
 background-image: url(images/TitreSombre.svg);
 }
 
-.nuit #transition{
+/* .nuit #transition{
   background-image: url(images/transitions/bleu_clair_mobile.svg);
   position: absolute;
     bottom: -2px;
@@ -230,18 +230,23 @@ background-image: url(images/TitreSombre.svg);
     background-position: bottom;
   background-repeat: no-repeat;
     background-size: contain;
-}
+} */
 
-header #transition {
+.transition_sable {
   background-image: url(images/transitions/Sable.svg);
+  height: 40vh!important;
+}
+.nuit .transition_sable {
+  background-image: url(images/transitions/bleu_clair_mobile.svg);
+  height: 40vh!important;
 }
 
 @media screen and (min-width: 767px) {
 
-  .nuit #transition{
+  .nuit .transition_sable {
     background-image: url(images/transitions/Bleu_Nuit.svg);
   }
-
+/* 
   header #transition {
     background-image: url(images/transitions/SablePC.svg);
     bottom: -20px;
@@ -249,7 +254,7 @@ header #transition {
       background-position: center;
       width: 100%;
       height: 31vh;
-  }
+  } */
 
   .nuit #AccContent{
     justify-content: flex-end;
@@ -275,8 +280,8 @@ header #transition {
   /* --------------------------------------FOOTER */
 
   footer{
+    position: relative;
     height: 80vh;
-    width: 100vw;
     background: rgb(33,31,47);
     background: linear-gradient(0deg, rgba(33,31,47,1) 6%, rgba(40,37,63,1) 94%);
     }
@@ -479,78 +484,76 @@ header #transition {
   }
   /*----------------------------------------- TRANSITIONS */
 
-/* /*TECHNIQUE1 */
- /* #transition{
-  position: relative;
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  height: 20vh;
-  transform: translate(0px, 2px);
-} */ 
-
-/* TECHNIQUE */
-
 #transition {
-  position: absolute;
+    position: relative;
     bottom: -2px;
-    height: 45vh;
-    width: 100vw;
+    margin-top: -20vh;
+    z-index: 1;
+    height: 35vh;
+    width: 100%;
     background-position: bottom;
   background-repeat: no-repeat;
     background-size: contain;
 }
 
-.desert #transition {
+.transition_rouge {
   background-image: url(images/transitions/rouge.svg);
 }
 
-.communisme #transition {
+.transition_vert {
   background-image: url(images/transitions/vert.svg);
 }
-.nuit .communisme #transition {
+.nuit .transition_vert {
   background-image: url(images/transitions/vert_nuit.svg);
 }
 
-.heritage #transition {
+.transition_vert_fonce {
   background-image: url(images/transitions/vert_fonce.svg);
 }
 
-.nuit .heritage #transition {
+.nuit .transition_vert_fonce {
   background-image: url(images/transitions/vert_fonce_nuit.svg);
 }
-.feminisme #transition {
+.transition_orange {
   background-image: url(images/transitions/orange.svg);
 }
-.nuit .feminisme #transition {
+.nuit .transition_orange {
   background-image: url(images/transitions/orange_nuit.svg);
 }
 
 @media screen and (min-width: 767px) {
-  .desert #transition {
+
+  .transition_sable {
+    background-image: url(images/transitions/SablePC.svg);
+  }
+
+  .transition_rouge {
     background-image: url(images/transitions/rouge_desk.svg);
   }
   
-  .communisme #transition {
+  .transition_vert {
     background-image: url(images/transitions/vert_desk.svg);
   }
-  .nuit .communisme #transition{
-    background-image: url(images/transitions/violet_pc.svg)!important;
-  }
   
-  .heritage #transition {
+  .transition_vert_fonce {
     background-image: url(images/transitions/vert_fonce_desk.svg);
   }
-
-  .nuit .heritage #transition{
-    background-image: url(images/transitions/magenta_pc.svg)!important;
-  }
-  .feminisme #transition {
+  
+  .transition_orange {
     background-image: url(images/transitions/orange_desk.svg);
+    height: 42vh!important;
   }
-
-  .nuit .feminisme #transition{
-    background-image: url(images/transitions/Bleu_Nuit.svg)!important;
+  
+  .nuit .transition_vert {
+    background-image: url(images/transitions/violet_pc.svg);
+  }
+  
+  .nuit .transition_vert_fonce {
+    background-image: url(images/transitions/magenta_pc.svg);
+  }
+  
+  .nuit .transition_orange {
+    background-image: url(images/transitions/orange_desk_nuit.svg);
   }
 }
 
@@ -798,6 +801,9 @@ header #transition {
   }
 }
 
+.feminisme .flexcenter {
+  height: 80%;
+}
 /* --------------------------------------VIRTUEL */
 
 .virtuelle{
@@ -809,7 +815,7 @@ header #transition {
   background-color: var(--desertNuit);
 }
 
-.virtuelle #transition{
+.transition_footer{
   background-image: url(images/transitions/FooterMob.svg);
   bottom: -20px;
 }
@@ -853,7 +859,7 @@ header #transition {
 
   @media screen and (min-width: 767px) {
 
-    .virtuelle #transition{
+    .transition_footer{
       background-image: url(images/transitions/FooterPc.svg);
       bottom: -20px;
     }
