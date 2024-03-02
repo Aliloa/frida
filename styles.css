@@ -115,6 +115,8 @@
   p {
     margin: 0;
   }
+
+
  /* --------------------------------------HEADER */
 
 header{
@@ -125,14 +127,15 @@ header{
 }
 
 
+
 /**** NAVBAR ****/
 li {
   list-style: none;
   padding-right: 5vw;
 }
 
-a,
-a:visited {
+nav a,
+nav a:visited {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -186,6 +189,8 @@ nav ul {
   .LogoFrida{
       height: 5vh;
   }
+
+  
 }
 
 
@@ -246,7 +251,7 @@ background-size: contain;
       background-position: 26% 74%;
   }
 
-
+  
 }
 /* --------------------------------------MODE SOMBRE ACCUEIL */
 
@@ -317,6 +322,7 @@ background-image: url(images/TitreSombre.svg);
 
 
 
+
   /* --------------------------------------DESERT */
   .desert {
     background-color: var(--desert);
@@ -363,4 +369,159 @@ background-image: url(images/TitreSombre.svg);
 
 .virtuelle{
   background-color: var(--virtuelle);
+}
+
+
+/* ---------------------------------------------------- style site billeterie */
+
+.billeterie-page{
+  background-color: #043F22;
+  height: 100vh;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  color: white;
+
+
+
+}
+
+.billeterie-page header{
+  background-image:linear-gradient(0deg, rgba(31, 24, 46, 0.8) 0%, rgba(31, 24, 46, 0.5) 50%, rgba(31, 24, 46, 1) 100%), url(images/Fond_mobile_billetterie.svg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center ;
+
+}
+
+
+.billeterie-titre h1{
+  text-align: center;
+  color: #F4FFC0;
+  font-size: 2.5rem;
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+   text-transform: uppercase;
+}
+
+
+@media screen and  (min-width:400px){
+  .billeterie-page header{
+    background-image:linear-gradient(0deg, rgba(31, 24, 46, 0.8) 0%, rgba(31, 24, 46, 0.5) 50%, rgba(31, 24, 46, 1) 100%), url(images/Fond_desktop_billetterie.svg);
+    background-size: cover;
+    background-position: center;
+
+
+  }
+
+  .billeterie-page{
+    background-color: #E4A771;
+    height: 100vh;
+    width: 100%;
+  }
+};
+  
+/* Formulaire */
+
+.champ-obligatoire p {
+ text-align: center;
+ margin: 30px;
+ 
+}
+
+.onglets h1{
+  font-family: "Inter", sans-serif;
+  font-size: 1.9rem;
+  text-align: center;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.champ{
+  text-align: left; 
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.date-formulaire, .horraire-formulaire{
+font-size: 1.2rem; 
+font-style: italic ; 
+}
+
+.date-choix{
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #D9D9D9 ;
+  opacity: 70%;
+  border: none;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+.horaires{
+  margin-top: 40px;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-wrap: wrap
+
+}
+
+input[type=radio] {
+  visibility: hidden;
+  width: 0;
+  margin: 0;
+}
+
+input[type=radio]+label {
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 10px;
+  /* background-color: #e7e7e7; */
+  border: solid #D9D9D9;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+input[type=radio]+label:hover{
+  background-color:#D9D9D9 ;
+  color: black;
+  transition: color 0.1s ease-in-out;
+}
+
+button{
+padding: 7px 35px ;
+border-radius: 50px;
+border: none;
+font-size: 1.2rem;
+background-color: #D9D9D9;
+}
+
+.button-form{
+  display: block; 
+  margin: 0 auto; 
+}
+
+/* chemin de navigation */
+
+.flex{
+  display: flex;
+  margin: 0 auto;
+
+}
+
+.chemin_de_navigation{
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+
+.chemin_active  {
+ color: white;
+ text-decoration: none;
+ font-weight: 600;
+}
+
+#chemin_billet,#chemin_coordonne{
+  color: #FFFFFF;
+  opacity: 50%;
 }
