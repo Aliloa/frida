@@ -2,6 +2,7 @@
 *::after,
 *::before {
     box-sizing: border-box;
+    margin: 0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
@@ -437,7 +438,7 @@ background-image: url(images/TitreSombre.svg);
     height: 80vh;
   }
 
-  h1{
+   h1{
     font-family: "Road Rage", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -445,7 +446,7 @@ background-image: url(images/TitreSombre.svg);
     margin: 0;
   }
 
-  h2 {
+   h2 {
     font-family: "Road Rage", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -827,6 +828,7 @@ background-image: url(images/TitreSombre.svg);
   width: 100%;
   font-family: "Inter", sans-serif;
   color: white;
+  margin: 0;
 
 
 
@@ -837,14 +839,14 @@ background-image: url(images/TitreSombre.svg);
   height: 100vh;
   background-size: cover;
   background-position: center ;
-
 }
 
 
-.billeterie-titre h1{
+.billeterie-formulaire h1{
   text-align: center;
-  color: #F4FFC0;
+  color: white;
   font-size: 2.5rem;
+  font-weight: 600;
   margin-top: 10px;
   font-family: "Inter", sans-serif;
    text-transform: uppercase;
@@ -868,19 +870,21 @@ background-image: url(images/TitreSombre.svg);
 };
   
 /* Formulaire */
-
-.champ-obligatoire p {
- text-align: center;
- margin: 30px;
- 
-}
-
-.onglets h1{
+.formulaire-info h2{
   font-family: "Inter", sans-serif;
   font-size: 1.9rem;
-  text-align: center;
+  font-weight: 600;
+  
+}
+
+.formulaire-info{
   margin-top: 30px;
   text-transform: uppercase;
+  text-align: center;
+
+  
+
+
 }
 
 .champ{
@@ -901,7 +905,7 @@ font-style: italic ;
   background-color: #D9D9D9 ;
   opacity: 70%;
   border: none;
-  width: 100%;
+  width: 80%;
   font-family: "Inter", sans-serif;
 }
 
@@ -909,7 +913,8 @@ font-style: italic ;
   margin-top: 40px;
   font-family: "Inter", sans-serif;
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  /* width: 80%; a mettre */
 
 }
 
@@ -922,11 +927,12 @@ input[type=radio] {
 input[type=radio]+label {
   margin-bottom: 1rem;
   display: inline-block;
-  padding: 10px;
+  padding: 7px 20px;
   /* background-color: #e7e7e7; */
   border: solid #D9D9D9;
   border-radius: 50px;
   width: fit-content;
+  cursor: pointer;
 }
 
 input[type=radio]+label:hover{
@@ -935,17 +941,31 @@ input[type=radio]+label:hover{
   transition: color 0.1s ease-in-out;
 }
 
+input[type=radio]:checked+label {
+  background-color:#D9D9D9 ;
+  color: black;
+}
+
 button{
 padding: 7px 35px ;
 border-radius: 50px;
-border: none;
+border: solid #D9D9D9;
+color:black ;
 font-size: 1.2rem;
-background-color: #D9D9D9;
+cursor: pointer;
+}
+
+button:hover{
+  color:black;
+  /* background-color: #D9D9D9; */
+
 }
 
 .button-form{
   display: block; 
   margin: 0 auto; 
+  margin-top: 20px;
+
 }
 
 /* chemin de navigation */
@@ -973,7 +993,74 @@ background-color: #D9D9D9;
   opacity: 50%;
 }
 
+.image-ticket img{
+  width: 200px;
+}
+
+.image-ticket{
+  margin-top: 30%;
+  width: 500px;
+  height: 200px;
+  display: none;
+}
+
+@media screen and (min-width:800px) {
+  .flex{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  
+  .billeterie-formulaire h1{
+    text-align: left;
+    font-weight: 900;
+    font-size: 3rem;
+  }
+
+  .champ{
+  text-align: left; 
+  margin-top: 50px;
+  margin-left: 0px;
+  }
+  
+  .formulaire-info{
+    text-align: left;  
+  }
+  .chemin_de_navigation{
+    text-align: left;
+    font-size: 0.8rem;
+    margin-top: 20px;
+  }
+
+  .horaires{
+   
+    width: 70%;
+  
+  }
+
+  .button-form{
+    float: left;
+    /* margin: 0; */
+  }
+
+}
+
+@media screen and (min-width:900px) {
+
+  .image-ticket img{
+    width: 330px;
+  }
+  
+  .image-ticket{
+    margin-top: 15%;
+    width: 500px;
+    height: 200px;
+    display: block;
+  }
+
+}
  
+/* footer */
 
 .nuit .virtuelle{
   background-color: var(--desertNuit);

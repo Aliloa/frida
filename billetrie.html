@@ -29,27 +29,29 @@
                 <a href="">À propos</a>
             </li>
         </ul>
-        <div id="icons"><img src="images/burger.png" alt="BurgerMenu"></div>
+        <div id="icons"><img src="images/icon/burger.png" alt="BurgerMenu"></div>
     </nav>
 
-    <div class="billeterie-titre">
-        <h1>Billeterie</h1>
-    </div>    
+
     <main class="flex">
+        <div class="image-ticket">
+            <img src="images/frida-ticket.svg">
+        </div>
         <div class="billeterie-formulaire">
+            <h1>Billeterie</h1>
             <form action="" method="post" id="billeterie-formulaire">
                 <div aria-label="chemin_de_navigation" class="chemin_de_navigation">
                     <a href="#" id="chemin_date" class="chemin_active">Dates & horaires&#160;</a>
                     <span id="chemin_billet"><span>>&#160;</span>Nombre de billets&#160;</span>
                     <span id="chemin_coordonne"><span>>&#160;</span>Coordonnées</span>
                 </div>
-                 <div class="champ-obligatoire">
-                    <p>Les champs suivis d’un <span style="color: red;">*</span> sont obligatoires.</p>
-                </div>
+                 
+                    <!-- <p class="champ-obligatoire">Les champs suivis d’un <span style="color: red;">*</span> sont obligatoires.</p> -->
+                
                 <div class="formulaire-info">
 
                     <div id="part_1" class="onglets">
-                        <h1>Dates et horaires</h1>
+                        <h2>Dates et horaires</h2>
                         <div class="champ">
                             <label for="date" class="date-formulaire">Choisissez une date<span style="color:red"> *</span></label>
                                 <div class="errorTxt"></div>
@@ -67,15 +69,15 @@
                                 <label for="radio3">12:00</label>
                                 <input type="radio" id="radio4" name="horaire" value="13:00" required>
                                 <label for="radio4">13:00</label>
-                                <input type="radio" id="radio5" name="horaire" value="14:00">
+                                <input type="radio" id="radio5" name="horaire" value="14:00" required>
                                 <label for="radio5">14:00</label>
-                                <input type="radio" id="radio6" name="horaire" value="15:00">
+                                <input type="radio" id="radio6" name="horaire" value="15:00" required>
                                 <label for="radio6">15:00</label>
-                                <input type="radio" id="radio7" name="horaire" value="16:00">
+                                <input type="radio" id="radio7" name="horaire" value="16:00" required>
                                 <label for="radio7">16:00</label>
-                                <input type="radio" id="radio8" name="horaire" value="17:00">
+                                <input type="radio" id="radio8" name="horaire" value="17:00" required>
                                 <label for="radio8">17:00</label>
-                                <input type="radio" id="radio9" name="horaire" value="18:00">
+                                <input type="radio" id="radio9" name="horaire" value="18:00" required>
                                 <label for="radio9">18:00</label>
                             </div>
                         </div>
@@ -91,6 +93,7 @@
 
 
 </div>
+
 
 
 
