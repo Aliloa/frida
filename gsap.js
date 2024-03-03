@@ -37,14 +37,13 @@ if (window.innerWidth < 767) {
 
     if (window.innerWidth < 767) {
         gsap.fromTo(".faucille", { rotation: 0, transformOrigin: "50% 100%", x: -80},
-    { rotation: 32, 
+    { rotation: 29, 
     scrollTrigger : {
         trigger: ".faucille",
         toggleActions : "restart none restart none",
         scrub : 3,
         start: "-80% center",
-        end: "50% center",
-        markers: true
+        end: "50% center"
     },});
       } else {
         gsap.fromTo(".faucille", { rotation: 40, transformOrigin: "bottom center"},
@@ -69,6 +68,32 @@ scrollTrigger : {
     end: "70% center"
 },});
 
+gsap.fromTo(".confettis", 
+{ x: 150, rotation: 100}, 
+{ x: 0,  rotation: 0,
+  scrollTrigger : {
+    trigger: ".heritage",
+    toggleActions : "restart none restart none",
+    scrub : 2,
+    start: "-50% 80%",
+    end: "20% center"
+  }
+}
+);
+
+gsap.fromTo(".frida_skeleton", 
+{ x: 100,  rotation: 30 }, 
+{ x: -10,  rotation: -10,
+  scrollTrigger : {
+    trigger: ".heritage",
+    toggleActions : "restart none restart none",
+    scrub : 3,
+    start: "-50% 80%",
+    end: "40% center"
+  }
+}
+);
+
     // -----------------------------------------------------------FEMINISME
     gsap.fromTo(".coeur_desk", { x: 200, rotation: 10},
     { x: 0, duration: 1, rotation: 0,
@@ -78,6 +103,16 @@ scrollTrigger : {
         scrub : 3,
         start: "-100% 80%",
         end: "1% center"
+    },});
+
+    gsap.fromTo(".coeur", {x: -20, rotation: 10},
+    {x:0, rotation: 0, 
+    scrollTrigger : {
+        trigger: ".feminisme",
+        toggleActions : "restart none restart none",
+        scrub : 3,
+        start: "-70% center",
+        end: "20% center",
     },});
 
     //--------------------------------------------------------- TRANSITIONS
@@ -160,3 +195,34 @@ scrollTrigger : {
             }, 
           });
     }
+
+    // ------------------------------------------------------------TEXTES
+
+    let startPercentage = -15; 
+    document.querySelectorAll("h1:not(.footer h1, .virtuelle h1), h2:not(.footer h2, virtuelle h1), p:not(.footer p), .bouton:not(.virtuelle .bouton)").forEach((element) => {
+      let delayValue = 0; // Delais par defaut
+      if (element.tagName === 'P') {
+        delayValue = 0.3; // Delais pour p
+      } else if (element.classList.contains('bouton')) {
+        delayValue = 0.6; // Delais pour bouton
+      }
+    
+      gsap.fromTo(
+        element,
+        { y: -20, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          delay: delayValue, 
+          scrollTrigger: {
+            toggleActions: "restart reverse restart reverse",
+            trigger: element.closest('section'), // Set trigger to the closest parent section
+            start: `${startPercentage}% center`,
+            // markers: true 
+          }
+        }
+      );
+      // startPercentage -= 2;
+    });
+  

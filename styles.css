@@ -438,18 +438,11 @@ background-image: url(images/TitreSombre.svg);
     height: 80vh;
   }
 
-   h1{
+   h1, .feminisme h2, .desert h2{
     font-family: "Road Rage", sans-serif;
   font-weight: 400;
   font-style: normal;
     font-size: 15vw;
-    margin: 0;
-  }
-
-   h2 {
-    font-family: "Road Rage", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     margin: 0;
   }
 
@@ -495,7 +488,7 @@ background-image: url(images/TitreSombre.svg);
 #transition {
     position: relative;
     bottom: -2px;
-    margin-top: -20vh;
+    margin-top: -25vh;
     z-index: 1;
     height: 35vh;
     width: 100%;
@@ -529,7 +522,7 @@ background-image: url(images/TitreSombre.svg);
   background-image: url(images/transitions/orange_nuit.svg);
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 635px) {
 
   .transition_sable {
     background-image: url(images/transitions/SablePC.svg);
@@ -700,6 +693,11 @@ background-image: url(images/TitreSombre.svg);
   display: block;
 }
 }
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  .faucille {
+    left: -35vw;
+  }
+  }
 
 /* --------------------------------------HERTIAGE */
 .heritage {
@@ -717,6 +715,7 @@ background-image: url(images/TitreSombre.svg);
   right: 0;
   width: 45vw;
   bottom: 10%;
+  max-width: 240px;
 }
 .confettis {
   position: absolute;
@@ -762,6 +761,7 @@ background-image: url(images/TitreSombre.svg);
 .feminisme .center {
   display: flex;
   padding-left: 0;
+  height: 100vh;
 }
 .coeur {
   width: 42vw;
@@ -776,8 +776,12 @@ background-image: url(images/TitreSombre.svg);
 }
 
 .feminisme h2 {
-  transform: rotate(353deg) translate(-50%, 0);
-    font-size: 15vw;
+  transform: rotate(353deg) translate(-30%, 0);
+}
+@media screen and (min-width: 500x) {
+  .feminisme h2 {
+    transform: rotate(353deg) translate(-30%, 0) !important;
+  }
 }
 .coeur_desk {
   display: none;
@@ -816,7 +820,6 @@ background-image: url(images/TitreSombre.svg);
 
 .virtuelle{
   background-color: var(--virtuelle);
-
 }
 
 
