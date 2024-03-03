@@ -127,7 +127,7 @@ scrollTrigger : {
       });
 
       gsap.to(".transition_orange", {
-        marginTop: "-50vh",
+        marginTop: "-55vh",
         ease: "none",
         scrollTrigger: {
           trigger: ".feminisme",
@@ -137,13 +137,26 @@ scrollTrigger : {
         }, 
       });
 
-      gsap.to(".transition_footer", {
-        marginTop: "-50vh",
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".virtuelle",
-          start: "top bottom",
-          end: "bottom center",
-          scrub: 2,
-        }, 
-      });
+      if (window.innerWidth < 767) {
+        gsap.to(".transition_footer", {
+            marginTop: "-100vh",
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".virtuelle",
+              start: "top bottom",
+              end: "bottom center",
+              scrub: 2,
+            }, 
+          });
+      } else {
+        gsap.to(".transition_footer", {
+            marginTop: "-50vh",
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".virtuelle",
+              start: "top bottom",
+              end: "bottom center",
+              scrub: 2,
+            }, 
+          });
+    }
