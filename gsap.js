@@ -198,7 +198,6 @@ gsap.fromTo(".frida_skeleton",
 
     // ------------------------------------------------------------TEXTES
 
-    let startPercentage = -15; 
     document.querySelectorAll("h1:not(.footer h1, .virtuelle h1), h2:not(.footer h2, virtuelle h1), p:not(.footer p), .bouton:not(.virtuelle .bouton)").forEach((element) => {
       let delayValue = 0; // Delais par defaut
       if (element.tagName === 'P') {
@@ -206,7 +205,6 @@ gsap.fromTo(".frida_skeleton",
       } else if (element.classList.contains('bouton')) {
         delayValue = 0.6; // Delais pour bouton
       }
-    
       gsap.fromTo(
         element,
         { y: -20, opacity: 0 },
@@ -218,11 +216,16 @@ gsap.fromTo(".frida_skeleton",
           scrollTrigger: {
             toggleActions: "restart reverse restart reverse",
             trigger: element.closest('section'), // Set trigger to the closest parent section
-            start: `${startPercentage}% center`,
+            start: `-15.5% center`,
             // markers: true 
           }
         }
       );
-      // startPercentage -= 2;
+      // if (window.innerWidth < 767) {
+      //   startPercentage -= 0.6;
+      //   console.log(startPercentage)
+      // } else {
+      //   startPercentage -= 0.4;
+      // }
     });
   
