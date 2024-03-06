@@ -856,6 +856,8 @@ background-image: url(images/TitreSombre.svg);
 }
 
 
+
+
 @media screen and  (min-width:400px){
   .billeterie-page header{
     background-image:linear-gradient(0deg, rgba(31, 24, 46, 0.8) 0%, rgba(31, 24, 46, 0.5) 50%, rgba(31, 24, 46, 1) 100%), url(images/Fond_desktop_billetterie.svg);
@@ -884,10 +886,6 @@ background-image: url(images/TitreSombre.svg);
   margin-top: 30px;
   text-transform: uppercase;
   text-align: center;
-
-  
-
-
 }
 
 .champ{
@@ -917,6 +915,7 @@ font-style: italic ;
   font-family: "Inter", sans-serif;
   display: flex;
   flex-wrap: wrap;
+  gap: 5px;
   /* width: 80%; a mettre */
 
 }
@@ -971,6 +970,12 @@ button:hover{
 
 }
 
+
+.error-1, .error-2{
+  color: red;
+  text-transform: lowercase;
+}
+
 /* chemin de navigation */
 
 .flex{
@@ -983,6 +988,12 @@ button:hover{
   text-align: center;
   font-size: 0.8rem;
   margin-top: 20px;
+}
+
+.chemin_de_navigation a, 
+.chemin_de_navigation a:visited{
+  color: white;
+  text-decoration: none;
 }
 
 .chemin_active  {
@@ -1043,7 +1054,7 @@ button:hover{
 
   .button-form{
     float: left;
-    /* margin: 0; */
+    margin: 0;
   }
 
 }

@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -51,15 +54,18 @@
                 <div class="formulaire-info">
 
                     <div id="part_1" class="onglets">
+                        <p>
+                            Les champs suivis d’un <span style="color: red; text-transform: lowercase;">*</span> sont obligatoires.
+                        </p>
                         <h2>Dates et horaires</h2>
                         <div class="champ">
                             <label for="date" class="date-formulaire">Choisissez une date<span style="color:red"> *</span></label>
-                                <div class="errorTxt"></div>
+                                <div class="error-1"></div>
                                 <input type="date" id="date" class="date-choix" name="date" required>
                         </div>
                         <div class="champ">
                             <label for="horaire" class="horraire-formulaire">Choisissez un horaire<span style="color:red"> *</span></label>
-                            <!-- <div class="errorTxt"></div> -->
+                            <div class="error-2" ></div>
                             <div class="horaires">
                                 <input type="radio" id="radio1" name="horaire" value="10:00" required>
                                 <label for="radio1">10:00</label>
@@ -84,6 +90,28 @@
                     </div>
                     <button  type="button" class="button-form">Suivant</button>
                 </div>
+                 <br>
+                 <Br>
+                <div  id="part_2" class="onglets">
+                    <p>
+                        Les champs suivis d’un <span style="color: red;">*</span> sont obligatoires.
+                    </p>
+                    <h2>
+                        Billets
+                    </h2>
+
+                    <div class="container">
+                        <p>Choisissez un nombre de billet de visite. (Jusqu’à 10 visiteurs). <span style="color: red;">*</span></p>
+                        
+                        <div class="amount">
+                            <button class="counter-1"
+                                onclick="this.parentNode.querySelector('#amount').stepDown()">-</button><input
+                                type="number" min="1" max="10" name="amount" id="amount" readonly
+                                required placeholder="0"><button class="counter"
+                                onclick="this.parentNode.querySelector('#amount').stepUp()">+</button>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </main>
@@ -99,6 +127,7 @@
 
 
     
+<script src="Script/billeterie.js"></script>
 
 </body>
 </html>
