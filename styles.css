@@ -1129,6 +1129,11 @@ button:hover{
     background-color: #36456B;
   }
 
+  a{
+    color: white;
+    text-decoration: none;
+  }
+
   @media screen and (min-width: 767px) {
 
     .transition_footer{
