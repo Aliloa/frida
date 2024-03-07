@@ -1024,6 +1024,68 @@ button:hover{
   display: none;
 }
 
+
+/* style compteur */
+
+.amount{
+  display: flex;
+}
+
+.adulte_billet{
+  display: flex;
+  gap: 5px;
+}
+
+
+.enfant_billet{
+  display: flex;
+  gap: 5px;
+
+}
+
+
+.adulte_billet button{
+  width: 50px; 
+  height: 50px; 
+  padding: 10px; 
+  font-size: 1.2rem; 
+  color: #D9D9D9;
+  background-color: transparent ;
+  border: solid #D9D9D9;
+  font-family: "Inter";
+}
+
+.enfant_billet button{
+  width: 50px; 
+  height: 50px; 
+  padding: 10px; 
+  font-size: 1.2rem; 
+  color: #D9D9D9;
+  background-color: transparent ;
+  border: solid #D9D9D9;
+  font-family: "Inter";
+}
+
+.counter{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100px; 
+    height: 50px; 
+    border-radius: 50px;
+    color: rgb(92, 92, 92); 
+    font-size: 0.9rem;
+    background-color: #D9D9D9;
+    font-family: "Inter";
+
+  }
+
+  .main_counter{
+   flex-direction: column;
+   display: flex;
+  }
+
+
 @media screen and (min-width:800px) {
   .flex{
     display: flex;
