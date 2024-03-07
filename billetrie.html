@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-    <script src="Script/billeterie.js" defer></script>
+    <script src="script/billeterie.js" defer></script>
 
     <link rel="stylesheet" href="styles.css">
 
@@ -42,7 +42,7 @@
         </div>
         <div class="billeterie-formulaire">
             <h1>Billeterie</h1>
-            <form action="" method="post" id="billeterie-formulaire">
+            <form action="php/controller.php" method="post" id="billeterie-formulaire">
                 <div aria-label="chemin_de_navigation" class="chemin_de_navigation">
                     <a href="#" id="chemin_date" class="chemin_active">Dates & horaires&#160;</a>
                     <span id="chemin_billet"><span>>&#160;</span>Nombre de billets&#160;</span>
@@ -87,9 +87,10 @@
                                 <label for="radio9">18:00</label>
                             </div>
                         </div>
-                        <button  type="button" class="button-form">Suivant</button>
 
                     </div>
+                    <button  type="button" class="button-form">Suivant</button>
+
                 </div>
                  <br>
                  <Br>
@@ -107,14 +108,12 @@
                         <div class="amount">
                             <div class="adulte_billet">
                                 <p>Billets adultes <span style="color: red;">*</span></p>
-                                <div class="main_counter
-                                ">
+                                
                                 <button id="addAdulte">+</button>
                                 <div class="counter">
                                 <h3  id="countAdulte">0</h3>
                             </div>
-                                <button id="substractAdulte">-</button></div>
-                                
+                                <button id="substractAdulte">-</button>
                             </div>
                             <div class="enfant_billet">
                                 <p>Billets enfants <span style="color: red;">*</span></p>
@@ -127,6 +126,18 @@
                         </div>
                         
                     </div>
+                </div>
+
+
+                <div id="part_3" class="onglets">
+                    <label for="name_first">Prénom</label>
+                     <input type="text" id="name_first" name="name_first" required>
+                       
+                     <label for="name_sec">Nom</label>
+                     <input type="email" id="name_sec" name="name_sec" required>
+                    
+                     <label for="email">Email</label>
+                     <input type="email" id="email" name="email" required>
                 </div>
             </form>
         </div>
@@ -143,7 +154,7 @@
 
 
     
-<script src="Script/billeterie.js"></script>
+<script src="script/billeterie.js"></script>
 
 </body>
 </html>
