@@ -15,7 +15,7 @@ if (window.innerWidth < 767) {
           toggleActions : "restart none restart none",
           scrub : 3,
           start: "-20% center",
-          end: "60% center"
+          end: "60% center",
         }
       }
     );
@@ -28,7 +28,7 @@ if (window.innerWidth < 767) {
           toggleActions : "restart none restart none",
           scrub : 3,
           start: "-10% center",
-          end: "60% center"
+          end: "60% center",
         }
       }
     );
