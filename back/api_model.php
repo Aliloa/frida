@@ -19,4 +19,20 @@ function getOneReservation($id)
     return $query->fetchAll(PDO::FETCH_ASSOC);
 }
 
+function addReservations($name_first,$name_sec,$email){
+    $db=dbConnect();
+    $query=$db->prepare("INSERT INTO reservation (prenom, nom, mail) VALUES (NULL, ?, ?, ?, ?, ?, ?)");
+
+    if ($query->execute([$prenom, $nom, $mail])){
+        $response = array(
+            'status' => 1,
+            'status_message' =>'Booking Added Successfully.'
+        ); 
+    }else{
+        $response = array(
+            'status' => 0,
+            'status_message' =>'Booking Addition Failed.'
+        );
+}
+};
 ?>

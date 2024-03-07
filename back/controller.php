@@ -15,6 +15,13 @@ switch ($request_method) {
        header('Content-Type: application/json');
         echo json_encode($result);
         break;
+
+
+        case 'POST';
+        if (isset($_POST['name_first'],$_POST['name_sec'],$_POST['email']))
+        {
+         
+        }
 };
 
 ?>
