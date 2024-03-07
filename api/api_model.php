@@ -21,7 +21,7 @@ function getOneReservation($id)
 
 function addReservations($name_first,$name_sec,$email){
     $db=dbConnect();
-    $query=$db->prepare("INSERT INTO reservation (prenom, nom, mail) VALUES (NULL, ?, ?, ?, ?, ?, ?)");
+    $query=$db->prepare("INSERT INTO reservation (prenom, nom, mail) VALUES ()");
 
     if ($query->execute([$prenom, $nom, $mail])){
         $response = array(
