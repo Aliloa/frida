@@ -73,7 +73,6 @@ header{
 }
 
 
-
 /**** NAVBAR ****/
 li {
   list-style: none;
@@ -190,6 +189,7 @@ background-size: contain;
 
   .nuit header{
     background-image: url(images/BackgroundAccSombre.svg) !important;
+    background-color: #4A4473;
   }
 
   header{
