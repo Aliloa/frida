@@ -34,5 +34,24 @@ function addReservations($name_first,$name_sec,$email){
             'status_message' =>'Booking Addition Failed.'
         );
 }
-};
+}
+
+function deletereservation($id)
+{
+    $db=dbConnect();
+    $query=$db->prepare("DELETE FROM reservation WHERE id=$id");
+    if ($query->execute()){
+        $response = array(
+            'status' => 1,
+            'status_message' => 'Booking Delete Successfully'
+        );
+    } else {
+        $response = array(
+            'status' => 0,
+            'status_message' => 'Booking Delete Failed'
+        );
+    }
+    header('Content-Type: application:json');
+    echo json_encode($response);
+}
 ?>
