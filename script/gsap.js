@@ -228,4 +228,3 @@ gsap.fromTo(".frida_skeleton",
       //   startPercentage -= 0.4;
       // }
     });
-  

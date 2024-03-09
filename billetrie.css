@@ -20,9 +20,17 @@ body{
   fieldset {
     text-align: center;
     border: none;
+    min-width: 100%; 
+    overflow: hidden;
+
   }
   form {
+    display: flex;
     padding-top: 15px;
+  }
+  .form_wrap {
+    position: relative;
+    overflow: hidden;
   }
 h1{
     text-align: center;
@@ -95,9 +103,7 @@ h1{
   }
   
   input[type=radio] {
-    visibility: hidden;
-    width: 0;
-    margin: 0;
+display: none;
   }
   
   input[type=radio]+label {
@@ -151,27 +157,25 @@ button{
 
     /* chemin de navigation */
   
-  .chemin_de_navigation{
+    .etapes{
+      text-align: center;
+    }
+
+  .etape {
     text-align: center;
     font-size: 0.8rem;
     margin-top: 20px;
-  }
-  
-  .chemin_de_navigation a, 
-  .chemin_de_navigation a:visited{
     color: white;
-    text-decoration: none;
+    opacity: 50%;
+    display: inline;
   }
   
-  .chemin_active  {
+  
+  .etape_active  {
    color: white;
    text-decoration: none;
    font-weight: 600;
-  }
-  
-  #chemin_billet,#chemin_coordonne{
-    color: #FFFFFF;
-    opacity: 50%;
+   opacity: 1;
   }
   
   .image-ticket img{
@@ -264,7 +268,7 @@ button{
     .formulaire-info{
       text-align: left;  
     }
-    .chemin_de_navigation{
+    .etapes{
       text-align: left;
       font-size: 0.8rem;
       margin-top: 20px;

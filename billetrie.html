@@ -43,15 +43,15 @@
         </div>
         <div class="billeterie-formulaire">
             <h1>Billeterie</h1>
-            <div aria-label="chemin_de_navigation" class="chemin_de_navigation">
-                <a href="#" id="chemin_date" class="chemin_active">Dates & horaires&#160;</a>
-                <span id="chemin_billet"><span>>&#160;</span>Nombre de billets&#160;</span>
-                <span id="chemin_coordonne"><span>>&#160;</span>Coordonnées</span>
+            <div aria-label="etapes" class="etapes">
+                <p id="etape1" class="etape etape_active">Dates & horaires&#160;</p>
+                <p id="etape2" class="etape"><span>>&#160;</span>Nombre de billets&#160;</p>
+                <p id="etape3" class="etape"><span>>&#160;</span>Coordonnées</p>
             </div>
             <p>
                 Les champs suivis d’un <span style="color: red; text-transform: lowercase;">*</span> sont obligatoires.
             </p>   
-            
+            <div class="form_wrap">
             <form action="api/reservations.php" method="POST" id="billeterie-formulaire">             
                     <fieldset id="part_1" class="onglets">
 
@@ -85,7 +85,7 @@
                                 <label for="radio9">18:00</label>
                             </div>
                         </div>
-                        <button  type="button" class="button-form">Suivant</button>
+                        <button  type="button" class="button-form suivant1" disabled>Suivant</button>
                     </fieldset>
 
                 <fieldset  id="part_2" class="onglets">
@@ -105,7 +105,7 @@
                                 <!-- <div class="counter">
                                 <h3  id="countAdulte">0</h3>
                             </div> -->
-                            <input type="number" name="billet_adulte">
+                            <input type="number" name="billet_adulte" class="billet_adulte">
                                 <button id="substractAdulte">-</button>
                             </div>
                             <div class="enfant_billet">
@@ -114,13 +114,13 @@
                                 <!-- <div class="counter">
                                     <h3  id="countEnfant">0</h3>
                                 </div>                                -->
-                                <input type="number" name="billet_enfant">
+                                <input type="number" name="billet_enfant" class="billet_enfant">
 
                                  <button id="substractEnfant">-</button>
                             </div>
                         </div>
-                        
                     </div>
+                    <button  type="button" class="button-form suivant2" disabled>Suivant</button>
                 </fieldset>
 
 
@@ -133,15 +133,19 @@
                     
                      <label for="email">Email</label>
                      <input type="email" id="email" name="mail" required>
-                </div>
-                <input type="submit">
+
+                     <input type="submit">
+                </fieldset>
             </form>
-        </fieldset>
+        </div>
+        </div>
     </main>
 
 
     
 <script src="script/billeterie.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 </body>
 </html>
