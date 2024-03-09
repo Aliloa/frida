@@ -19,39 +19,36 @@ function getOneReservation($id)
     return $query->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function addReservations($name_first,$name_sec,$email){
+function addReservations($prenom,$bom,$mail){
     $db=dbConnect();
     $query=$db->prepare("INSERT INTO reservation (prenom, nom, mail) VALUES ()");
 
-    if ($query->execute([$prenom, $nom, $mail])){
-        $response = array(
-            'status' => 1,
-            'status_message' =>'Booking Added Successfully.'
-        ); 
-    }else{
-        $response = array(
-            'status' => 0,
-            'status_message' =>'Booking Addition Failed.'
+    $url ='api/reservations.php';
+    $data = array(
+    'nom' => 'valeur_nom',
+    'prenom' => 'valeur_prenom',
+    'date' => 'valeur_date'
+    );
+    $options = array(
+        'http' => array(
+            'header' => "Content-type: application/x-www-form-utlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($data)
+        )
         );
-}
+        $context = stream_context_create($options);
+        $result = file_get_contents($url, false, $context);//CODE DU PROF
+        header('Location: admin.php');
+
 }
 
-function deletereservation($id)
+function deleteReservation($id)
 {
     $db=dbConnect();
     $query=$db->prepare("DELETE FROM reservation WHERE id=$id");
-    if ($query->execute()){
-        $response = array(
-            'status' => 1,
-            'status_message' => 'Booking Delete Successfully'
-        );
-    } else {
-        $response = array(
-            'status' => 0,
-            'status_message' => 'Booking Delete Failed'
-        );
-    }
-    header('Content-Type: application:json');
-    echo json_encode($response);
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    header('Location: admin.php');
+
 }
 ?>

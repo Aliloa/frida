@@ -11,13 +11,19 @@ function afficherReservations() {
                     <td>${reservation.id}</td>
                     <td>${reservation.nom}</td>
                     <td>${reservation.mail}</td>
-                    <!-- Ajoutez d'autres colonnes au besoin -->
-                `;
+                    <td> 
+                <form action="api/reservations.php" method="DELETE">
+                <input type='hidden' name='id' value='${reservation.id}'>
+    <button type='submit' name='deleteBtn' class='deleteBtn'>Supprimer</button>
+    </form></td>
+                `; 
                 reservationsBody.appendChild(row);
             });
+            
         })
         .catch(error => console.error('Erreur lors de la récupération des données :', error));
 }
+
 
 // Appel de la fonction pour afficher les réservations lors du chargement de la page
 afficherReservations();
