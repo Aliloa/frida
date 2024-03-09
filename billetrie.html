@@ -42,7 +42,7 @@
         </div>
         <div class="billeterie-formulaire">
             <h1>Billeterie</h1>
-            <form action="back/controller.php" method="post" id="billeterie-formulaire">
+            <form action="api/reservations.php" method="post" id="billeterie-formulaire">
                 <div aria-label="chemin_de_navigation" class="chemin_de_navigation">
                     <a href="#" id="chemin_date" class="chemin_active">Dates & horaires&#160;</a>
                     <span id="chemin_billet"><span>>&#160;</span>Nombre de billets&#160;</span>
@@ -89,7 +89,7 @@
                         </div>
 
                     </div>
-                    <button  type="button" class="button-form">Suivant</button>
+                    <button  type="submit" class="button-form">Suivant</button>
 
                 </div>
                  <br>
@@ -134,7 +134,7 @@
                      <input type="text" id="name_first" name="name_first" required>
                        
                      <label for="name_sec">Nom</label>
-                     <input type="email" id="name_sec" name="name_sec" required>
+                     <input type="text" id="name_sec" name="name_sec" required>
                     
                      <label for="email">Email</label>
                      <input type="email" id="email" name="email" required>
