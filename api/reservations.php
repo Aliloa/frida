@@ -15,10 +15,9 @@ switch ($request_method) {
         break;
 
 
-
         case 'POST':
-            echo "fdp";
-             break;
+                addReservations($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['date'], $_POST['heure'], $_POST['billet_adulte'], $_POST['billet_enfant']);
+            break;
    
 
         case 'DELETE':
@@ -29,11 +28,4 @@ switch ($request_method) {
             //DEMANDER AU PROF COMMENT FAIRE POUR PRENDRE EN COMPTE LA METHODE DELETE PARCE QUE DANS LES FORM HTML Y A QUE GET ET POST QUI EXISTE
 };
 
-?>
-    case 'POST':
-        if (isset($_POST['name_first'], $_POST['name_sec'], $_POST['email'], $_POST['date'], $_POST['horraire'])) {
-            addReservations($_POST['name_first'], $_POST['name_sec'], $_POST['email'], $_POST['date'], $_POST['horraire']);
-        }
-        break;
-}
 ?>

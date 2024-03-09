@@ -24,48 +24,55 @@ function getOneReservation($id)
     return $query->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function addReservations($prenom,$bom,$mail){
-function addReservations($name_first, $name_sec, $email, $date, $horraire)
-{
+function addReservations($nom, $prenom, $mail, $date, $heure, $billet_adulte, $billet_enfant) {
     $db = dbConnect();
-    $query = $db->prepare("INSERT INTO reservation (prenom, nom, mail, date, heure) VALUES (?, ?, ?, ?, ?)");
+    // $query = $db->prepare("INSERT INTO reservation (nom, prenom, mail, date, heure, adulte, enfant) VALUES (:nom, :prenom, :mail, :date, :heure, :adulte, :enfant)");
 
-    if ($query->execute([$name_first, $name_sec, $email, $date, $horraire])) {
-        $response = array(
-            'status' => 1,
-            'status_message' => 'Booking Added Successfully.'
+    // $query->bindValue(':nom', $nom, PDO::PARAM_STR);
+    // $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
+    // $query->bindValue(':mail', $mail, PDO::PARAM_STR);
+    // $query->bindValue(':date', $date, PDO::PARAM_STR);
+    // $query->bindValue(':heure', $heure, PDO::PARAM_STR);
+    // $query->bindValue(':adulte', $billet_adulte, PDO::PARAM_INT);
+    // $query->bindValue(':enfant', $billet_enfant, PDO::PARAM_INT); 
 
-        );
-    }else{
-        $response = array(
-            'status' => 0,
-            'status_message' =>'Booking Addition Failed.'
-        );
-}
-
-
-function addReservations($name_first,$name_sec,$email){
-    $db=dbConnect();
-    $query=$db->prepare("INSERT INTO reservation (prenom, nom, mail) VALUES ()");
-
-    $url ='api/reservations.php';
+    // $query->execute();
+//A QUOI CA SERT 
+    $url = 'reservations.php';
     $data = array(
-    'nom' => 'valeur_nom',
-    'prenom' => 'valeur_prenom',
-    'date' => 'valeur_date'
+        'nom' => $nom,
+        'prenom' => $prenom,
+        'mail' => $mail,
+        'date' => $date,
+        'heure' => $heure,
+        'adulte' => $billet_adulte,
+        'enfant' => $billet_enfant,
     );
+
     $options = array(
         'http' => array(
-            'header' => "Content-type: application/x-www-form-utlencoded\r\n",
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
             'method' => 'POST',
             'content' => http_build_query($data)
         )
-        );
-        $context = stream_context_create($options);
-        $result = file_get_contents($url, false, $context);//CODE DU PROF
-        header('Location: admin.php');
+    );
 
+    $context = stream_context_create($options);
+    $result = file_get_contents($url, false, $context); 
+    if ($result === false) {
+        echo "Error: Failed to fetch data from API";
+        // or handle the error in another appropriate way
+    } else {
+        // Debugging: Display API response
+        var_dump($result);
+    }
+
+    // var_dump($data);
+
+    // header('Location: ../admin.php?succes');
+    exit; 
 }
+
 
 function deleteReservation($id)
 {

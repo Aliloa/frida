@@ -52,8 +52,8 @@
                 Les champs suivis d’un <span style="color: red; text-transform: lowercase;">*</span> sont obligatoires.
             </p>   
             
-            <form action="back/controller.php" method="post" id="billeterie-formulaire">             
-                    <fieldset id="part_1" class="onglets" style="display: none;">
+            <form action="api/reservations.php" method="POST" id="billeterie-formulaire">             
+                    <fieldset id="part_1" class="onglets">
 
                         <h2>DATE ET HORAIRE</h2>
                         <div class="champ">
@@ -65,29 +65,28 @@
                             <label for="horaire" class="horraire-formulaire">Choisissez un horaire<span style="color:red"> *</span></label>
                             <div class="error-2" ></div>
                             <div class="horaires">
-                                <input type="radio" id="radio1" name="horaire" value="10:00" required>
+                                <input type="radio" id="radio1" name="heure" value="10:00" required>
                                 <label for="radio1">10:00</label>
-                                <input type="radio" id="radio2" name="horaire" value="11:00" required>
+                                <input type="radio" id="radio2" name="heure" value="11:00" required>
                                 <label for="radio2">11:00</label>
-                                <input type="radio" id="radio3" name="horaire" value="12:00" required>
+                                <input type="radio" id="radio3" name="heure" value="12:00" required>
                                 <label for="radio3">12:00</label>
-                                <input type="radio" id="radio4" name="horaire" value="13:00" required>
+                                <input type="radio" id="radio4" name="heure" value="13:00" required>
                                 <label for="radio4">13:00</label>
-                                <input type="radio" id="radio5" name="horaire" value="14:00" required>
+                                <input type="radio" id="radio5" name="heure" value="14:00" required>
                                 <label for="radio5">14:00</label>
-                                <input type="radio" id="radio6" name="horaire" value="15:00" required>
+                                <input type="radio" id="radio6" name="heure" value="15:00" required>
                                 <label for="radio6">15:00</label>
-                                <input type="radio" id="radio7" name="horaire" value="16:00" required>
+                                <input type="radio" id="radio7" name="heure" value="16:00" required>
                                 <label for="radio7">16:00</label>
-                                <input type="radio" id="radio8" name="horaire" value="17:00" required>
+                                <input type="radio" id="radio8" name="heure" value="17:00" required>
                                 <label for="radio8">17:00</label>
-                                <input type="radio" id="radio9" name="horaire" value="18:00" required>
+                                <input type="radio" id="radio9" name="heure" value="18:00" required>
                                 <label for="radio9">18:00</label>
                             </div>
                         </div>
-
+                        <button  type="button" class="button-form">Suivant</button>
                     </fieldset>
-                    <button  type="button" class="button-form">Suivant</button>
 
                 <fieldset  id="part_2" class="onglets">
                     <h2>
@@ -98,21 +97,25 @@
                         <p>Choisissez un nombre de billet de visite (Jusqu’à 10 visiteurs). <span style="color: red;">*</span></p>
                         
                         <div class="amount">
+                            
                             <div class="adulte_billet">
                                 <p>Billets adultes <span style="color: red;">*</span></p>
                                 
                                 <button id="addAdulte">+</button>
-                                <div class="counter">
+                                <!-- <div class="counter">
                                 <h3  id="countAdulte">0</h3>
-                            </div>
+                            </div> -->
+                            <input type="number" name="billet_adulte">
                                 <button id="substractAdulte">-</button>
                             </div>
                             <div class="enfant_billet">
                                 <p>Billets enfants <span style="color: red;">*</span></p>
                                 <button id="addEnfant">+</button>
-                                <div class="counter">
+                                <!-- <div class="counter">
                                     <h3  id="countEnfant">0</h3>
-                                </div>                               
+                                </div>                                -->
+                                <input type="number" name="billet_enfant">
+
                                  <button id="substractEnfant">-</button>
                             </div>
                         </div>
@@ -123,14 +126,15 @@
 
                 <fieldset id="part_3" class="onglets">
                     <label for="name_first">Prénom</label>
-                     <input type="text" id="name_first" name="name_first" required>
+                     <input type="text" id="name_first" name="prenom" required>
                        
                      <label for="name_sec">Nom</label>
-                     <input type="text" id="name_sec" name="name_sec" required>
+                     <input type="text" id="name_sec" name="nom" required>
                     
                      <label for="email">Email</label>
-                     <input type="email" id="email" name="email" required>
+                     <input type="email" id="email" name="mail" required>
                 </div>
+                <input type="submit">
             </form>
         </fieldset>
     </main>
