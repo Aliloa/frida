@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-image:linear-gradient(0deg, rgba(31, 24, 46, 0.8) 0%, rgba(31, 24, 46, 0.5) 50%, rgba(31, 24, 46, 1) 100%), url(images/Fond_mobile_billetterie.svg);
+    background-image:linear-gradient(0deg, rgba(31, 24, 46, 0.8) 0%, rgba(31, 24, 46, 0.5) 50%, rgba(31, 24, 46, 1) 100%), url(../images/Fond_mobile_billetterie.svg);
     background-size: cover;
     background-position: center ;
   }

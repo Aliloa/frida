@@ -1,7 +1,20 @@
 /* page femme engagé */
 
+:root {
+    --desert: #EF771D;
+    --communist: #C62B29;
+    --heritage: #667A0B;
+    --feminisme: #2E4C18;
+    --virtuelle: #E4944E;
+    --desertNuit:#7E9CE9;
+  }
 
 
+.femme_engage_page{
+    background-color: var(--communist) ;
+    width: 100%;
+    height: 100vh;
+}
 
 
 
