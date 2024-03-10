@@ -73,70 +73,7 @@ header{
 }
 
 
-/**** NAVBAR ****/
-li {
-  list-style: none;
-  padding-right: 5vw;
-}
 
-nav a,
-nav a:visited {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  font-size: calc(0.5rem + 0.8vw);
-}
-nav ul {
-  display: flex;
-  justify-content: flex-end;
-  width: 60%;
-  font-weight: 500;
-  color: white;
-}
-
-#icons {
-  cursor: pointer;
-  display: none;
-}
-
-.LogoFrida{
-  height: 10vh;
-  padding-left: 1vw;
-}
-
-@media (max-width: 650px) {
-
-  #icons {
-    display: block;
-  }
-
-  nav ul {
-    position: fixed;
-    left: -100%;
-    top: 5%;
-    flex-direction: column;
-    width: 50%;
-    text-align: center;
-    transition: 0.25s;
-  }
-
-  nav.active ul {
-    left: 0;
-  }
-
-  .LogoFrida{
-      height: 5vh;
-  }
-
-  
-}
 
 
 /* HeaderContent*/
