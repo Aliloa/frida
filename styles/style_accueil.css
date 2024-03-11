@@ -287,6 +287,10 @@ background-image: url(../images/TitreSombre.svg);
     height: 4vh;
   }
 
+  #Mentions{
+    display: none;
+  }
+
   @media screen and (min-width: 767px) {
 
     footer{
@@ -297,12 +301,20 @@ background-image: url(../images/TitreSombre.svg);
             display: none;
     }
 
+    #Mentions{
+      width: 65vw;
+      font-size: 1.25rem;
+      display: flex;
+      justify-content: space-around;
+      text-transform: uppercase;
+    }
+
 
     #footerContent{
       display: flex;
       flex-direction: row;
       align-items: center;
-      height: 60vh;
+      height: 55vh;
       justify-content: space-evenly;
       color: #FFFFFF;
     }
@@ -363,10 +375,6 @@ background-image: url(../images/TitreSombre.svg);
       margin-top: 5vh;
       width: 3vw;
       height: 4vh;
-    }
-
-    #Mentions{
-      display: flex;
     }
   }
 

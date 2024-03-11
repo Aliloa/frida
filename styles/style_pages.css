@@ -1,12 +1,20 @@
-@font-face {
-    font-family: "grandway";
-    src: url("/fonts/GrandwayDisplayTest-Regular-BF65e1421a3a077.woff") format('woff');
-    }
+
 *,
 *::after,
 *::before {
     box-sizing: border-box;
     margin: 0;
+}
+
+@font-face {
+    font-family: "grandwaySemiBold";
+    src:
+    url("../fonts/grandway-font-family-1709626924-0/GrandwayTest-Semibold-BF65e1421a77b5b.otf")
+    }
+
+@font-face {
+    font-family: "GrandWay";
+    src:    url("../fonts/grandway-font-family-1709626924-0/GrandwayTest-Regular-BF65e1421a71b7e.otf")    ;
 }
 
 body{
@@ -163,7 +171,7 @@ body{
 }
 
 .citation{
-    font-family:"grandway";
+    font-family: "GrandWay";
     text-transform: uppercase;
 }
 
@@ -177,6 +185,7 @@ body{
 figcaption span {
     font-size: 0.9rem; 
     font-weight: bold;
+    font-family:"grandwaySemiBold";
 }
 
 
@@ -188,5 +197,10 @@ figcaption span {
 
 
 
-
 /* page vie sociale */
+
+.vie_social_page{
+    background-image: url(../images/BackgroundMobVie.svg);
+    height: 100vh;
+    background-size: cover;
+}
