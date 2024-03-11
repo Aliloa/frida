@@ -1,4 +1,29 @@
-/* page femme engagé */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "grandwaySemiBold";
+    src:
+    url("../fonts/grandway-font-family-1709626924-0/GrandwayTest-Semibold-BF65e1421a77b5b.otf")
+    }
+
+@font-face {
+    font-family: "GrandWay";
+    src:    url("../fonts/grandway-font-family-1709626924-0/GrandwayTest-Regular-BF65e1421a71b7e.otf")    ;
+}
+
+body{
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    color: #F4FFC0;
+    
+}
+
 
 
 :root {
@@ -11,19 +36,157 @@
   }
 
 
+  
+/* page femme engagé */
+
+
 .femme_engage_page{
-    background-color: var(--communist) ;
-    width: 100%;
+    background-image: linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.6777704831932774) 98%),
+    url("../images/page_femme_engage_mobile.svg");    
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 600px) {
+    .femme_engage_page{
+        background-image: linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.6777704831932774) 98%),
+        url("../images/page_femme_engage_desktop.svg");    
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left top -50px;
+
+    }
+}
+
+ h1{
+    font-family: "Road Rage", sans-serif;
+    font-weight: 800;
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.introduction{
+    display: flex;
+    position: relative;
+}
+
+.introduction img{
+    position: absolute;
+    right: 0;
+    display: none;
+    width: 400px;
+}
+
+.intro_element{
+    text-align: left;
+    margin: 30px;
+    width: 300px;
+}
+
+.intro_element h1:first-child{
+    font-size: 3.5rem;
+    line-height: 0.3; 
+}
+
+.intro_element p {
+    margin-bottom: 20px;
+
+}
+
+.bouton {
+    border-radius: 30px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    background-color:#F4FFC0;
+    font-size: 0.8rem;
+  }
+
+  .intro_element a {
+    text-decoration: none;
+    color: #521514;
+    text-transform: uppercase;
+  }
+
+  
+@media screen and (min-width: 760px) {
+    .intro_element h1:first-child{
+        font-size: 4.5rem;
+    }
+    
+
+    h1{
+        font-size: 9rem;
+    }
+
+    .intro_element p{
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .intro_element{
+        width: 400px;
+        margin-top: 100px ;
+        margin-left: 50px;
+    }
+    
+    .introduction img{
+        
+        display: block;
+    }
+
+    .introduction{
+        height: 500px;
+        margin-top: 30px ;
+
+    }
+
+    .bouton {
+        border-radius: 30px;
+        padding: 20px;
+        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+        background-color:#F4FFC0;
+        font-size: 1rem;
+      }
+}
+
+/* tableaux */
+.partie_tableaux {
+    text-align: center; 
     height: 100vh;
 }
 
+.tableaux {
+    display: inline-block; 
+    text-align: left; 
+    margin: 0 20px; 
+}
+
+.tableaux img {
+    width: 250px; 
+    margin-top: 60px;
+
+}
+
+.citation{
+    font-family: "GrandWay";
+    text-transform: uppercase;
+}
+
+.citation figcaption {
+    text-align: left;
+    font-size: 0.7rem; 
+
+}
 
 
-
-
-
-
-
+figcaption span {
+    font-size: 0.9rem; 
+    font-weight: bold;
+    font-family:"grandwaySemiBold";
+}
 
 
 /* page heritage culturel */
@@ -34,5 +197,10 @@
 
 
 
-
 /* page vie sociale */
+
+.vie_social_page{
+    background-image: url(../images/BackgroundMobVie.svg);
+    height: 100vh;
+    background-size: cover;
+}
