@@ -1,13 +1,26 @@
-body{
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
     margin: 0;
-    background-image:linear-gradient(0deg, rgba(31, 24, 46, 0.8) 0%, rgba(31, 24, 46, 0.5) 50%, rgba(31, 24, 46, 1) 100%), url(../images/Fond_mobile_billetterie.svg);
+}
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body{
+    background-image:url(../images/billetrie/fond_mobile.svg);
     background-size: cover;
     background-position: center ;
+    backdrop-filter: blur(2px);
   }
-
   main {
     font-family: "Inter", sans-serif;
     color: white;
+    text-align: center;
+    margin: auto;
+
 
   }
 
@@ -18,34 +31,35 @@ body{
    }
   
   fieldset {
-    text-align: center;
     border: none;
     min-width: 100%; 
     overflow: hidden;
-
+    padding: 0 20px;
+    margin: 0;
+    margin-top: 10px;
   }
+
   form {
     display: flex;
-    padding-top: 15px;
   }
   .form_wrap {
     position: relative;
     overflow: hidden;
   }
+
 h1{
-    text-align: center;
     color: white;
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 900;
     margin-top: 10px;
     font-family: "Inter", sans-serif;
      text-transform: uppercase;
+     margin-bottom: 15px;
   }
   
   p {
     line-height: normal;
     font-size: 0.8rem;
-    text-align: center;
     margin-top: 20px;
     opacity: 0.7;
   }
@@ -53,53 +67,105 @@ h1{
   h2{
     font-family: "Inter", sans-serif;
     font-size: 1.9rem;
-    font-weight: 600;
-    
+    font-weight: 900;
+    text-transform: uppercase;
+    width: 100%;    
   }
 
-  label {
-    margin-bottom: 5px;
-  }
   .champ{
     text-align: left; 
-    margin-top: 50px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .adulte_billet, .enfant_billet {
+    display: flex;
+    margin: auto;
+    margin-bottom: 50px;
   }
   
-  @media screen and  (min-width:400px){
-  
-    .billeterie-page{
-      background-color: #E4A771;
-      height: 100vh;
-      width: 100%;
+  span {
+    color: red;
+  }
+
+  #part_2 .input_basique {
+    margin: 0 5px;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  #part_2 .bouton_basique {
+    margin: 0;
+  }
+
+  /* Masquer les flèches de contrôle */
+  #part_2 .input_basique::-webkit-inner-spin-button,
+  .input_basique::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
     }
-  };
+
+    .amount {
+      width: 60%;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+  #part_3 {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #part_3 input {
+    margin-bottom: 20px;
+  }
+
+  #part_3 h2 {
+    margin: 30px 0;
+  }
+
+  #part_3 label {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .nom_prenom {
+    width: 100%;
+  }
+
+  .nom_prenom div {
+    width: 100%;
+  }
 
   
 /* Formulaire */
   
-  .date-formulaire, .horraire-formulaire{
-  font-size: 1.2rem; 
-  font-style: italic ; 
-  }
-  
-  .date-choix{
-    padding: 10px;
-    border-radius: 50px;
-    background-color: #D9D9D9 ;
-    opacity: 70%;
-    border: none;
-    width: 100%;
-    font-family: "Inter", sans-serif;
-  }
+label {
+  display: block;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
   
   .horaires{
     font-family: "Inter", sans-serif;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 5px;
-    /* width: 80%; a mettre */
-  
+    justify-content: center;
+  }
+
+  .horaires label {
+    font-style: normal;
+  }
+
+  @media screen and (min-width:409px) {
+    .horaires{
+      justify-content: flex-start;
+    }
   }
   
   input[type=radio] {
@@ -127,28 +193,22 @@ display: none;
   }
 
   
-button{
+.bouton_basique{
     padding: 7px 35px ;
     border-radius: 50px;
     border: solid #D9D9D9;
     color:black ;
     font-size: 1.2rem;
     cursor: pointer;
+    max-width: 150px;
+    margin-top: 20px;
     }
     
-    button:hover{
+    .bouton_basique:hover{
       color:black;
       /* background-color: #D9D9D9; */
     
     }
-    
-    .button-form{
-      display: block; 
-      margin: 0 auto; 
-      margin-top: 20px;
-    
-    }
-    
     
     .error-1, .error-2{
       color: red;
@@ -156,13 +216,8 @@ button{
     }
 
     /* chemin de navigation */
-  
-    .etapes{
-      text-align: center;
-    }
 
   .etape {
-    text-align: center;
     font-size: 0.8rem;
     margin-top: 20px;
     color: white;
@@ -176,56 +231,48 @@ button{
    text-decoration: none;
    font-weight: 600;
    opacity: 1;
-  }
-  
-  .image-ticket img{
-    width: 200px;
-  }
-  
-  .image-ticket{
-    margin-top: 30%;
-    width: 500px;
-    height: 200px;
-    display: none;
+   cursor: pointer;
   }
 
   
+  .image-ticket{
+    display: none;
+  }
+
+  .input_basique {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #D9D9D9;
+    opacity: 70%;
+    border: none;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    color: #4c4c4c;
+  }
+  .input_basique:focus {
+    opacity: 1;
+  }
+  
 /* style compteur */
   
-  .adulte_billet{
-    display: flex;
-    gap: 5px;
-  }
   
-  
-  .enfant_billet{
-    display: flex;
-    gap: 5px;
-  
-  }
-  
-  
-  .adulte_billet button{
-    width: 50px; 
-    height: 50px; 
-    padding: 10px; 
-    font-size: 1.2rem; 
-    color: #D9D9D9;
-    background-color: transparent ;
-    border: solid #D9D9D9;
-    font-family: "Inter";
-  }
-  
-  .enfant_billet button{
-    width: 50px; 
-    height: 50px; 
-    padding: 10px; 
-    font-size: 1.2rem; 
-    color: #D9D9D9;
-    background-color: transparent ;
-    border: solid #D9D9D9;
-    font-family: "Inter";
-  }
+.adulte_billet button, .enfant_billet button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 100%;
+  max-width: 40px;
+  opacity: 0.7;
+}
+.adulte_billet button:hover, .enfant_billet button:hover {
+  opacity: 1;
+}
+
+
+  .adulte_billet img, .enfant_billet img{
+    width: 100%;
+      }
   
   .counter{
       display: flex;
@@ -247,10 +294,23 @@ button{
     }
   
   
-  @media screen and (min-width:800px) {
+  @media screen and (min-width:767px) {
+
+    body{
+      background-image:url(../images/billetrie/fond_desktop.svg);
+    }
+
+    .billeterie-formulaire {
+      width: 60%;
+    }
 
     main {
         display: flex;
+        text-align: left;
+        width: 85%;
+    }
+    fieldset {
+      padding: 0;
     }
     
     .billeterie-formulaire h1{
@@ -261,7 +321,6 @@ button{
   
     .champ{
     text-align: left; 
-    margin-top: 50px;
     margin-left: 0px;
     }
     
@@ -273,32 +332,29 @@ button{
       font-size: 0.8rem;
       margin-top: 20px;
     }
-  
-    .horaires{
-     
-      width: 70%;
-    
-    }
-  
-    .button-form{
-      float: left;
-      margin: 0;
-    }
-  
-  }
 
-  
-@media screen and (min-width:900px) {
-
-    .image-ticket img{
-      width: 330px;
-    }
-    
     .image-ticket{
-      margin-top: 15%;
-      width: 500px;
-      height: 200px;
+      display: block;
+      width: 30%;
+      margin-right: 15px;
+    }
+
+    .amount {
+      width: 100%;
+      display: flex;
+      gap: 50px;
+    }
+
+    .nom_prenom {
+      display: flex;
+      gap: 40px;
+    }
+
+    #part_3 {
       display: block;
     }
-  
+  }
+
+  .white {
+    color: white;
   }

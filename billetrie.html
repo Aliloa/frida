@@ -8,15 +8,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-    <script src="script/billeterie.js" defer></script>
-
     <link rel="stylesheet" href="styles/style_nav.css">
     <link rel="stylesheet" href="styles/style_billetrie.css">
 
 
 </head>
 
-<body class="billeterie-page">
+<body>
 
     <header>
     <nav id="nav">
@@ -38,31 +36,28 @@
 
 
     <main>
-        <div class="image-ticket">
-            <img src="images/frida-ticket.svg">
-        </div>
+            <img src="images/frida-ticket.svg" class="image-ticket">
         <div class="billeterie-formulaire">
             <h1>Billeterie</h1>
             <div aria-label="etapes" class="etapes">
-                <p id="etape1" class="etape etape_active">Dates & horaires&#160;</p>
-                <p id="etape2" class="etape"><span>>&#160;</span>Nombre de billets&#160;</p>
-                <p id="etape3" class="etape"><span>>&#160;</span>Coordonnées</p>
+                <a id="etape1" class="etape etape_active">Dates & horaires&#160;</a>
+                <a id="etape2" class="etape"><span class="white">>&#160;</span>Nombre de billets&#160;</a>
+                <a id="etape3" class="etape"><span class="white">>&#160;</span>Coordonnées</a>
             </div>
-            <p>
-                Les champs suivis d’un <span style="color: red; text-transform: lowercase;">*</span> sont obligatoires.
-            </p>   
+            <p>Les champs suivis d’un <span>*</span> sont obligatoires.</p>   
+
             <div class="form_wrap">
             <form action="api/reservations.php" method="POST" id="billeterie-formulaire">             
                     <fieldset id="part_1" class="onglets">
 
                         <h2>DATE ET HORAIRE</h2>
                         <div class="champ">
-                            <label for="date_calendrier" class="date-formulaire">Choisissez une date<span style="color:red"> *</span></label>
+                            <label for="date_calendrier" class="date-formulaire">Choisissez une date<span> *</span></label>
                                 <div class="error-1"></div>
-                                <input type="date" id="date_calendrier" class="date-choix" name="date" required>
+                                <input type="date" id="date_calendrier" class="input_basique" name="date" required>
                         </div>
                         <div class="champ">
-                            <label for="horaire" class="horraire-formulaire">Choisissez un horaire<span style="color:red"> *</span></label>
+                            <label for="horaire" class="horraire-formulaire">Choisissez un horaire<span> *</span></label>
                             <div class="error-2" ></div>
                             <div class="horaires">
                                 <input type="radio" id="radio1" name="heure" value="10:00" required>
@@ -85,56 +80,61 @@
                                 <label for="radio9">18:00</label>
                             </div>
                         </div>
-                        <button  type="button" class="button-form suivant1" disabled>Suivant</button>
+                        <button  type="button" class="button-form suivant1 bouton_basique" disabled>Suivant</button>
                     </fieldset>
 
                 <fieldset  id="part_2" class="onglets">
-                    <h2>
-                        Billets
-                    </h2>
+                    <h2>Billets</h2>
 
                     <div class="container">
-                        <p>Choisissez un nombre de billet de visite (Jusqu’à 10 visiteurs). <span style="color: red;">*</span></p>
+                        <p>Choisissez un nombre de billet de visite (Jusqu’à 10 visiteurs). <span>*</span></p>
                         
                         <div class="amount">
-                            
-                            <div class="adulte_billet">
-                                <p>Billets adultes <span style="color: red;">*</span></p>
-                                
-                                <button id="addAdulte">+</button>
-                                <!-- <div class="counter">
-                                <h3  id="countAdulte">0</h3>
-                            </div> -->
-                            <input type="number" name="billet_adulte" class="billet_adulte">
-                                <button id="substractAdulte">-</button>
-                            </div>
-                            <div class="enfant_billet">
-                                <p>Billets enfants <span style="color: red;">*</span></p>
-                                <button id="addEnfant">+</button>
-                                <!-- <div class="counter">
-                                    <h3  id="countEnfant">0</h3>
-                                </div>                                -->
-                                <input type="number" name="billet_enfant" class="billet_enfant">
 
-                                 <button id="substractEnfant">-</button>
+                            <div>
+                                <label for="billet_adulte">Billets adultes<span> *</span></label>
+                                <div class="adulte_billet">
+                                <button type="button" id="substractAdulte"><img src="images/icon/moins.svg" alt="ajouter un billet"></button>
+                            <input type="number" name="billet_adulte" class="billet_adulte input_basique" value="0">
+                            <button type="button" id="addAdulte"><img src="images/icon/plus.svg" alt="enlever un billet"></button>
                             </div>
-                        </div>
+                            </div>
+
+                            <div>
+                                <label for="billet_enfant">Billets enfants<span> *</span></label>
+                                <div class="enfant_billet">
+                                    <button type="button" id="substractEnfant"><img src="images/icon/moins.svg" alt="ajouter un billet"></button>
+    
+                                    <input type="number" name="billet_enfant" class="billet_enfant input_basique" value="0">
+                                    <button type="button" id="addEnfant"><img src="images/icon/plus.svg" alt="enlever un billet"></button>
+                                </div>
+    
+                            </div>
+
                     </div>
-                    <button  type="button" class="button-form suivant2" disabled>Suivant</button>
+                    <button  type="button" class="button-form suivant2 bouton_basique" disabled>Suivant</button>
                 </fieldset>
 
 
                 <fieldset id="part_3" class="onglets">
-                    <label for="name_first">Prénom</label>
-                     <input type="text" id="name_first" name="prenom" required>
-                       
-                     <label for="name_sec">Nom</label>
-                     <input type="text" id="name_sec" name="nom" required>
-                    
-                     <label for="email">Email</label>
-                     <input type="email" id="email" name="mail" required>
+                    <h2>Coordonnées</h2>
 
-                     <input type="submit">
+                    <div class="nom_prenom">
+                        <div>
+                            <label for="name_first">Prénom<span>*</span></label>
+                            <input type="text" id="prenom" name="prenom" class="input_basique" placeholder="Prénom" required>
+                        </div>
+                       <div>
+                        <label for="name_sec">Nom<span>*</span></label>
+                        <input type="text" id="nom" name="nom" class="input_basique"placeholder="Nom" required>
+                       </div>
+
+                    </div>
+                    
+                     <label for="email">Email<span>*</span></label>
+                     <input type="email" id="mail" name="mail" class="input_basique" placeholder="example@mail.fr"  required>
+
+                     <input type="submit" id="valider" class="bouton_basique" value="Valider" disabled>
                 </fieldset>
             </form>
         </div>
