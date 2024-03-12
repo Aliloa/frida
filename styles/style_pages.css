@@ -88,6 +88,7 @@ body{
     text-align: left;
     margin: 30px;
     width: 300px;
+    z-index: 2;
 }
 
 .intro_element h1:first-child{
@@ -226,14 +227,92 @@ figcaption span {
     margin-bottom: 3vh;
 }
 
+#PcVieSocial{
+    display: none;
+}
+
+
 
 
 @media screen and (min-width: 767px) {
 
     .vie_social_page main{
         background-image: url(../images/Background/BackgroundViePc.svg);
-        background-position: center;
+        background-position: bottom;
     }
+
+    .vie_social_page     h1{
+        font-size: 15rem;
+    }
+
+    .vie_social_page .intro_element h1:first-child {
+        font-size: 5rem;
+    }
+
+    .vie_social_page .partie_tableaux{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #MobileVieSocial{
+        display: none;
+    }
+
+    #PcVieSocial{
+        display: block;
+        display: flex;
+        width: 100%;
+        position: relative;
+        height: 300vh;
+        flex-direction: column;
+        }
+
+    
+        #ContentVie{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+    #left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1.5rem;
+        width: 45vw;
+      }
+
+      #right{
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        align-items: center;
+        margin-top: 40vh;
+      }
+
+    .vie_social_page #PcVieSocial img{
+        width: 30vw;
+    }
+
+    .vie_social_page #PcVieSocial .decors{
+        width: 15vw;
+        margin-left: 10vw;
+    }
+
+    .vie_social_page .marginBot{
+        margin-bottom: 10vh;
+    }
+
+    .vie_social_page #fleche{
+        margin-top: 23vh;
+        margin-right: 6vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .vie_social_page #PcVieSocial #fleche img{
+        width: 15vw;
+    }
+
 }
 
 
