@@ -30,7 +30,7 @@
   }
 
   .nuit{
-    background-color: #4A4473;
+    background-color: #4A4473 !important;
   }
 
   .theme{
@@ -161,6 +161,8 @@ background-size: contain;
 
 .nuit header{
   background-image: url(../images/BackAccSombre.svg);
+  background-color: #4A4473;
+
 }
 
 .nuit #AccContent a{
@@ -416,6 +418,7 @@ background-image: url(../images/TitreSombre.svg);
     font-family: "Fredoka", sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
+    z-index: 2;
   }
   @media screen and (min-width: 767px) {
     .center {
@@ -826,6 +829,7 @@ background-image: url(../images/TitreSombre.svg);
   a{
     color: white;
     text-decoration: none;
+    z-index: 3;
   }
 
   @media screen and (min-width: 550px) {
