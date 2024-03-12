@@ -1,4 +1,10 @@
 
+@font-face {
+    font-family: "grandway";
+    src: url("../fonts/GrandwayDisplayTest-Regular-BF65e1421a3a077.woff") format('woff');
+    }
+
+
 *,
 *::after,
 *::before {
@@ -75,7 +81,7 @@ body{
     position: absolute;
     right: 0;
     display: none;
-    width: 400px;
+    width: 500px;
 }
 
 .intro_element{
@@ -109,47 +115,7 @@ body{
     text-transform: uppercase;
   }
 
-  
-@media screen and (min-width: 760px) {
-    .intro_element h1:first-child{
-        font-size: 4.5rem;
-    }
-    
 
-    h1{
-        font-size: 9rem;
-    }
-
-    .intro_element p{
-        font-size: 1.2rem;
-        margin-bottom: 40px;
-    }
-
-    .intro_element{
-        width: 400px;
-        margin-top: 100px ;
-        margin-left: 50px;
-    }
-    
-    .introduction img{
-        
-        display: block;
-    }
-
-    .introduction{
-        height: 500px;
-        margin-top: 30px ;
-
-    }
-
-    .bouton {
-        border-radius: 30px;
-        padding: 20px;
-        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-        background-color:#F4FFC0;
-        font-size: 1rem;
-      }
-}
 
 /* tableaux */
 .partie_tableaux {
@@ -187,6 +153,54 @@ figcaption span {
     font-family:"grandwaySemiBold";
 }
 
+
+  
+@media screen and (min-width: 760px) {
+    .intro_element h1:first-child{
+        font-size: 5.5rem;
+    }
+    
+
+    h1{
+        font-size: 11rem;
+    }
+
+    .intro_element p{
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .intro_element{
+        width: 400px;
+        margin-top: 100px ;
+        margin-left: 50px;
+    }
+    
+    .introduction img{
+        
+        display: block;
+    }
+
+    .introduction{
+        height: 500px;
+        margin-top: 30px ;
+        margin-left: 50px;
+
+    }
+
+    .bouton {
+        border-radius: 30px;
+        padding: 20px;
+        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+        background-color:#F4FFC0;
+        font-size: 1rem;
+      }
+
+      .tableaux img {
+        width: 300px; 
+    
+    }
+}
 
 /* page heritage culturel */
 
