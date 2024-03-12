@@ -404,18 +404,19 @@ background-image: url(../images/TitreSombre.svg);
     justify-content: center;
   }
   .bouton {
+    display: block;
     border-radius: 30px;
     padding: 10px 10px 10px 10px;
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
     border: 0;
     width: 80%;
-    min-width: fit-content;
-    height: fit-content;
     color: white;
     margin-top: 20px;
     font-family: "Fredoka", sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
+    width: fit-content;
+    z-index: 5;
   }
   @media screen and (min-width: 767px) {
     .center {
@@ -431,7 +432,6 @@ background-image: url(../images/TitreSombre.svg);
     }
     .bouton {
       padding: 20px 7% 20px 7%;
-      width: fit-content;
     }
     
   }

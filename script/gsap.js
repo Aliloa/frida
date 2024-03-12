@@ -202,8 +202,10 @@ gsap.fromTo(".frida_skeleton",
       let delayValue = 0; // Delais par defaut
       if (element.tagName === 'P') {
         delayValue = 0.3; // Delais pour p
-      } else if (element.classList.contains('bouton')) {
-        delayValue = 0.6; // Delais pour bouton
+      } else if (element.tagName === 'H2') {
+        delayValue = 0.5; // Délai pour les h2
+      }else if (element.classList.contains('bouton')) {
+        delayValue = 0.7; // Delais pour bouton
       }
       gsap.fromTo(
         element,

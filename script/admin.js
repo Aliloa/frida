@@ -24,6 +24,5 @@ function afficherReservations() {
         .catch(error => console.error('Erreur lors de la récupération des données :', error));
 }
 
-
 // Appel de la fonction pour afficher les réservations lors du chargement de la page
 afficherReservations();
