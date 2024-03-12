@@ -1,4 +1,10 @@
 
+@font-face {
+    font-family: "grandway";
+    src: url("../fonts/GrandwayDisplayTest-Regular-BF65e1421a3a077.woff") format('woff');
+    }
+
+
 *,
 *::after,
 *::before {
@@ -9,19 +15,17 @@
 @font-face {
     font-family: "grandwaySemiBold";
     src:
-    url("../fonts/grandway-font-family-1709626924-0/GrandwayTest-Semibold-BF65e1421a77b5b.otf")
+    url("../fonts/grandway-font-family-1709626924-0/GrandwayTest-Semibold-BF65e1421a77b5b.otf") format("opentype");
     }
 
 @font-face {
     font-family: "GrandWay";
-    src:    url("../fonts/grandway-font-family-1709626924-0/GrandwayTest-Regular-BF65e1421a71b7e.otf")    ;
+    src:    url("../fonts/grandway-font-family-1709626924-0/GrandwayTest-Regular-BF65e1421a71b7e.otf")  format("opentype");
 }
 
 body{
-    margin: 0;
     font-family: "Raleway", sans-serif;
     color: #F4FFC0;
-    
 }
 
 
@@ -77,13 +81,14 @@ body{
     position: absolute;
     right: 0;
     display: none;
-    width: 400px;
+    width: 500px;
 }
 
 .intro_element{
     text-align: left;
     margin: 30px;
     width: 300px;
+    z-index: 2;
 }
 
 .intro_element h1:first-child{
@@ -110,47 +115,7 @@ body{
     text-transform: uppercase;
   }
 
-  
-@media screen and (min-width: 760px) {
-    .intro_element h1:first-child{
-        font-size: 4.5rem;
-    }
-    
 
-    h1{
-        font-size: 9rem;
-    }
-
-    .intro_element p{
-        font-size: 1.2rem;
-        margin-bottom: 40px;
-    }
-
-    .intro_element{
-        width: 400px;
-        margin-top: 100px ;
-        margin-left: 50px;
-    }
-    
-    .introduction img{
-        
-        display: block;
-    }
-
-    .introduction{
-        height: 500px;
-        margin-top: 30px ;
-
-    }
-
-    .bouton {
-        border-radius: 30px;
-        padding: 20px;
-        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-        background-color:#F4FFC0;
-        font-size: 1rem;
-      }
-}
 
 /* tableaux */
 .partie_tableaux {
@@ -189,6 +154,54 @@ figcaption span {
 }
 
 
+  
+@media screen and (min-width: 760px) {
+    .intro_element h1:first-child{
+        font-size: 5.5rem;
+    }
+    
+
+    h1{
+        font-size: 11rem;
+    }
+
+    .intro_element p{
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .intro_element{
+        width: 400px;
+        margin-top: 100px ;
+        margin-left: 50px;
+    }
+    
+    .introduction img{
+        
+        display: block;
+    }
+
+    .introduction{
+        height: 500px;
+        margin-top: 30px ;
+        margin-left: 50px;
+
+    }
+
+    .bouton {
+        border-radius: 30px;
+        padding: 20px;
+        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+        background-color:#F4FFC0;
+        font-size: 1rem;
+      }
+
+      .tableaux img {
+        width: 300px; 
+    
+    }
+}
+
 /* page heritage culturel */
 
 
@@ -199,8 +212,281 @@ figcaption span {
 
 /* page vie sociale */
 
-.vie_social_page{
-    background-image: url(../images/BackgroundMobVie.svg);
-    height: 100vh;
+.vie_social_page main{
+    background-image: url(../images/Background/BackgroundMobVie.svg);
     background-size: cover;
+    background-position: center;
 }
+
+.vie_social_page .partie_tableaux{
+    height: 298vh;
+}
+
+#Decors{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+#PcVieSocial{
+    display: none;
+}
+
+
+
+
+@media screen and (min-width: 767px) {
+
+    .vie_social_page main{
+        background-image: url(../images/Background/BackgroundViePc.svg);
+        background-position: bottom;
+    }
+
+    .vie_social_page     h1{
+        font-size: 15rem;
+    }
+
+    .vie_social_page .intro_element h1:first-child {
+        font-size: 5rem;
+    }
+
+    .vie_social_page .partie_tableaux{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #MobileVieSocial{
+        display: none;
+    }
+
+    #PcVieSocial{
+        display: block;
+        display: flex;
+        width: 100%;
+        position: relative;
+        height: 300vh;
+        flex-direction: column;
+        }
+
+    
+        #ContentVie{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+    #left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1.5rem;
+        width: 45vw;
+      }
+
+      #right{
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        align-items: center;
+        margin-top: 40vh;
+      }
+
+    .vie_social_page #PcVieSocial img{
+        width: 30vw;
+    }
+
+    .vie_social_page #PcVieSocial .decors{
+        width: 15vw;
+        margin-left: 10vw;
+    }
+
+    .vie_social_page .marginBot{
+        margin-bottom: 10vh;
+    }
+
+    .vie_social_page #fleche{
+        margin-top: 23vh;
+        margin-right: 6vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .vie_social_page #PcVieSocial #fleche img{
+        width: 15vw;
+    }
+
+}
+
+
+
+
+
+
+/* --------------------------------------FOOTER */
+
+footer{
+    position: relative;
+    height: 100vh;
+    background: rgb(80,26,89);
+    background: linear-gradient(0deg, rgba(80,26,89,1) 0%, rgba(101,42,110,1) 100%);
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+      }
+
+
+    #ButtonNavFooter{
+        font-family: "GrandWay";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #FFFFFF;
+        width: 88vw;
+    }
+
+    #ButtonNavFooter a{
+        color: #521514;
+    }
+
+    #ButtonNavFooter p{
+        margin: 3vw;
+    }
+
+  #footerContentMob{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-around;
+  }
+
+  #footerContent{
+    display: none;
+  }
+
+  #footerContent img{
+    width: 80vw;
+  }
+
+  #footerContentMob ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  #footerlist1{
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 0.90rem;
+  }
+
+  #footerlist2{
+    font-size: 0.75rem;
+  }
+
+  #footerContentMob a {
+    padding-bottom: 2vh;
+  }
+
+  #Reseau{
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #Reseau img{
+    width: 10vw;
+    height: 4vh;
+  }
+
+  #Mentions{
+    display: none;
+  }
+
+  @media screen and (min-width: 767px) {
+
+    footer{
+      height: 60vh;
+    }
+
+    #footerContentMob{
+            display: none;
+    }
+
+    #Mentions{
+      width: 60vw;
+      font-size: 1.25rem;
+      display: flex;
+      justify-content: space-evenly;
+      text-transform: uppercase;
+    }
+
+
+    #footerContent{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 50vh;
+      justify-content: space-evenly;
+      color: #FFFFFF;
+    }
+
+    #footerContent img{
+      width: 25vw;
+    }
+
+    #footerContent h2{
+      color: #AE4EBE;
+    }
+
+    #FooterCoo{
+      display: flex;
+      flex-direction: column;
+      height: 30vh;
+      justify-content: flex-start;
+    }
+
+    #FooterCoo p{
+      margin-top: 2vh;
+    }
+    
+    #FooterLien{
+      display: flex;
+      flex-direction: column;
+      height: 30vh;
+      justify-content: flex-start;
+    }
+
+    #FooterLien a {
+      text-transform: none;
+      font-size: 1.2rem;
+      margin-top: 2vh;
+    }
+
+    #FooterNav{
+      display: flex;
+      flex-direction: column;
+      height: 30vh;
+      justify-content: flex-start;
+    }
+
+    #FooterNav a {
+      text-transform: none;
+      font-size: 1.2rem;
+      margin-top: 2vh;
+    }
+
+    #ReseauPc{
+      height: 30vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    #ReseauPc img{
+      margin-top: 5vh;
+      width: 3vw;
+      height: 4vh;
+    }
+  }
