@@ -1,108 +1,39 @@
-// document.addEventListener("DOMContentLoaded", function() {
-// // Pour la partie interactif du calendrier:
+ // ------------------------------------------BOUTONS AJOUTER ENLEVER BILLETS
+ ajoutAdulte = document.getElementById('addAdulte');
+ substractAdulte = document.getElementById('substractAdulte');
 
-// // Obtention de la date d'aujourd'hui
-// var today = new Date();
+ ajoutAdulte.addEventListener('click', function() {
+        var inputElement = document.querySelector('.billet_adulte');
+        var currentValue = parseInt(inputElement.value);
+        inputElement.value = currentValue + 1;
+        console.log(inputElement.value)
+    });
 
-// // Obtention du jour, du mois et de l'année
-// var day = today.getDate(); 
-// var month = today.getMonth() + 1; // Janvier est 0, donc +1
-// var year = today.getFullYear(); 
+    substractAdulte.addEventListener('click', function() {
+        var inputElement = document.querySelector('.billet_adulte');
+        var currentValue = parseInt(inputElement.value);
+        if (currentValue > 0) {
+            inputElement.value = currentValue - 1;
+        }
+    });
 
-// if (day < 10) {
-//     day = '0' + day; //ajout un zéro devant
-// }
-// if (month < 10) {
-//     month = '0' + month; //  ajoute un zéro devant
-// }
+    ajoutEnfant = document.getElementById('addEnfant');
+    substractEnfant = document.getElementById('substractEnfant');
 
-// // Selection de la date minimale dans le champ
-// document.getElementById("date_calendrier").setAttribute("min", year + '-' + month + '-' + day);
+    ajoutEnfant.addEventListener('click', function() {
+      var inputElement = document.querySelector('.billet_enfant');
+      var currentValue = parseInt(inputElement.value);
+      inputElement.value = currentValue + 1;
+      console.log(inputElement.value)
+  });
 
-// $(document).ready(function() {
-//     // Cacher la partie 2 (Billets) au chargement de la page
-//     $('#part_2').hide();
-    
-//     // Lorsque le bouton "Suivant" est cliqué
-//     $(".button-form").click(function() {
-//         // Valider la première partie du formulaire
-//         var isValid = validatePart1();
-        
-//         // Si la première partie du formulaire est valide
-//         if (isValid) {
-//             // Cacher la partie 1
-//             $('#part_1').hide();
-//             // Afficher la partie 2
-//             $('#part_2').fadeIn(1000);
-//             // Mettre à jour le chemin de navigation
-//             $('#chemin_date').removeClass('chemin_active');
-//             $('#chemin_billet').addClass('chemin_active');
-//         }
-//     });
-    
-//     // Fonction pour valider la première partie du formulaire
-//     function validatePart1() {
-//         // Vérifier si la date est sélectionnée
-//         var date = $('#date_calendrier').val();
-//         if (date === '') {
-//             $('.error-1').text('Veuillez choisir une date.');
-//             return false;
-//         }
-        
-//         // Vérifier si un horaire est sélectionné
-//         var horaire = $("input[name='horaire']:checked").val();
-//         if (!horaire) {
-//             $('.error-2').text('Veuillez choisir un horaire.');
-//             return false;
-//         }
-        
-//         // Si tout est valide, retourner true
-//         return true;
-//     }
-// });
-
-// // le compteur 
-
-
-// let countAdulte = document.getElementById('countAdulte');
-// let countEnfant = document.getElementById('countEnfant');
-// let addButtonAdulte = document.getElementById('addAdulte');
-// let substractButtonAdulte = document.getElementById('substractAdulte');
-// let addButtonEnfant = document.getElementById('addEnfant');
-// let substractButtonEnfant = document.getElementById('substractEnfant');
-// let countAdulteValue = 0;
-// let countEnfantValue = 0;
-
-// addButtonAdulte.addEventListener('click', () => {
-//     if (countAdulteValue < 10) {
-//         countAdulteValue++;
-//         countAdulte.innerText = countAdulteValue;
-//     }
-// });
-
-// substractButtonAdulte.addEventListener('click', () => {
-//     if (countAdulteValue > 0) {
-//         countAdulteValue--;
-//         countAdulte.innerText = countAdulteValue;
-//     }
-// });
-
-// addButtonEnfant.addEventListener('click', () => {
-//     if (countEnfantValue < 10) {
-//         countEnfantValue++;
-//         countEnfant.innerText = countEnfantValue;
-//     }
-// });
-
-// substractButtonEnfant.addEventListener('click', () => {
-//     if (countEnfantValue > 0) {
-//         countEnfantValue--;
-//         countEnfant.innerText = countEnfantValue;
-//     }
-// });
-   
-    
-// });
+  substractEnfant.addEventListener('click', function() {
+      var inputElement = document.querySelector('.billet_enfant');
+      var currentValue = parseInt(inputElement.value);
+      if (currentValue > 0) {
+          inputElement.value = currentValue - 1;
+      }
+  });
 
 //----------VERIFIER SI LES CHAMPS SONT BIEN ENTRES AVANT DE FAIRE SUIVANT
 var dateInput = document.getElementById('date_calendrier');
@@ -137,26 +68,65 @@ function checkInputsTwo() {
 // verification
 adulte.addEventListener('input', checkInputsTwo);
 enfant.addEventListener('input', checkInputsTwo);
+ajoutAdulte.addEventListener('click', checkInputsTwo);
+substractAdulte.addEventListener('click', checkInputsTwo);
+ajoutEnfant.addEventListener('click', checkInputsTwo);
+substractEnfant.addEventListener('click', checkInputsTwo);
 
-    //---------------------------------------------------------------------------- SLIDER AVC GSAP
+// -----------------------------------------------------------------------PARTIE 3
+
+var prenom = document.getElementById('prenom');
+var nom = document.getElementById('nom');
+var mail = document.getElementById('mail');
+var valider = document.getElementById('valider');
+
+// fonction qui vérifie si les input sont bien entrés
+function checkInputsThree() {
+    var prenomFilled = prenom.value.trim() !== '';
+    var nomFilled = nom.value.trim() !== '';
+    var mailFilled = mail.value.trim() !== '';
+    valider.disabled = !(prenomFilled && nomFilled && mailFilled);
+}
+
+// verification
+prenom.addEventListener('input', checkInputsThree);
+nom.addEventListener('input', checkInputsThree);
+mail.addEventListener('input', checkInputsThree);
+
+
+  //---------------------------------------------------------------------------- SLIDER AVC GSAP
     suivantButtonOne.addEventListener('click', function() {
         gsap.to("form", {
           x: "-100%",
-          ease: "none"
+          ease: "circ"
         });
-        document.getElementById('etape1').classList.remove('etape_active');
         document.getElementById('etape2').classList.add('etape_active');        
       });
 
       suivantButtonTwo.addEventListener('click', function() {
         gsap.to("form", {
           x: "-200%",
-          ease: "none"
+          ease: "circ"
+        });
+        document.getElementById('etape3').classList.add('etape_active');
+      });
+
+      document.getElementById('etape1').addEventListener('click', function() {
+        gsap.to("form", {
+          x: "0%",
+          ease: "circ"
         });
         document.getElementById('etape2').classList.remove('etape_active');
-        document.getElementById('etape3').classList.add('etape_active');
-
+        document.getElementById('etape3').classList.remove('etape_active');
       });
-      
-      
-    
+
+      document.getElementById('etape2').addEventListener('click', function() {
+        if (this.classList.contains('etape_active')) {
+        gsap.to("form", {
+          x: "-100%",
+          ease: "circ"
+        });
+        document.getElementById('etape2').classList.add('etape_active');
+        document.getElementById('etape3').classList.remove('etape_active');
+        }
+      });

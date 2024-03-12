@@ -1,7 +1,10 @@
+
 @font-face {
     font-family: "grandway";
     src: url("../fonts/GrandwayDisplayTest-Regular-BF65e1421a3a077.woff") format('woff');
     }
+
+
 *,
 *::after,
 *::before {
@@ -9,11 +12,20 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: "grandwaySemiBold";
+    src:
+    url("../fonts/grandway-font-family-1709626924-0/GrandwayTest-Semibold-BF65e1421a77b5b.otf") format("opentype");
+    }
+
+@font-face {
+    font-family: "GrandWay";
+    src:    url("../fonts/grandway-font-family-1709626924-0/GrandwayTest-Regular-BF65e1421a71b7e.otf")  format("opentype");
+}
+
 body{
-    margin: 0;
     font-family: "Raleway", sans-serif;
     color: #F4FFC0;
-    
 }
 
 
@@ -123,7 +135,7 @@ body{
 }
 
 .citation{
-    font-family:"grandway";
+    font-family: "GrandWay";
     text-transform: uppercase;
 }
 
@@ -137,6 +149,7 @@ body{
 figcaption span {
     font-size: 0.9rem; 
     font-weight: bold;
+    font-family:"grandwaySemiBold";
 }
 
 
@@ -196,5 +209,205 @@ figcaption span {
 
 
 
-
 /* page vie sociale */
+
+.vie_social_page main{
+    background-image: url(../images/Background/BackgroundMobVie.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.vie_social_page .partie_tableaux{
+    height: 298vh;
+}
+
+#Decors{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+
+
+@media screen and (min-width: 767px) {
+
+    .vie_social_page main{
+        background-image: url(../images/Background/BackgroundViePc.svg);
+        background-position: center;
+    }
+}
+
+
+
+
+
+
+/* --------------------------------------FOOTER */
+
+footer{
+    position: relative;
+    height: 100vh;
+    background: rgb(80,26,89);
+    background: linear-gradient(0deg, rgba(80,26,89,1) 0%, rgba(101,42,110,1) 100%);
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+      }
+
+
+    #ButtonNavFooter{
+        font-family: "GrandWay";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #FFFFFF;
+        width: 88vw;
+    }
+
+    #ButtonNavFooter a{
+        color: #521514;
+    }
+
+    #ButtonNavFooter p{
+        margin: 3vw;
+    }
+
+  #footerContentMob{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-around;
+  }
+
+  #footerContent{
+    display: none;
+  }
+
+  #footerContent img{
+    width: 80vw;
+  }
+
+  #footerContentMob ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  #footerlist1{
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 0.90rem;
+  }
+
+  #footerlist2{
+    font-size: 0.75rem;
+  }
+
+  #footerContentMob a {
+    padding-bottom: 2vh;
+  }
+
+  #Reseau{
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #Reseau img{
+    width: 10vw;
+    height: 4vh;
+  }
+
+  #Mentions{
+    display: none;
+  }
+
+  @media screen and (min-width: 767px) {
+
+    footer{
+      height: 60vh;
+    }
+
+    #footerContentMob{
+            display: none;
+    }
+
+    #Mentions{
+      width: 60vw;
+      font-size: 1.25rem;
+      display: flex;
+      justify-content: space-evenly;
+      text-transform: uppercase;
+    }
+
+
+    #footerContent{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 50vh;
+      justify-content: space-evenly;
+      color: #FFFFFF;
+    }
+
+    #footerContent img{
+      width: 25vw;
+    }
+
+    #footerContent h2{
+      color: #AE4EBE;
+    }
+
+    #FooterCoo{
+      display: flex;
+      flex-direction: column;
+      height: 30vh;
+      justify-content: flex-start;
+    }
+
+    #FooterCoo p{
+      margin-top: 2vh;
+    }
+    
+    #FooterLien{
+      display: flex;
+      flex-direction: column;
+      height: 30vh;
+      justify-content: flex-start;
+    }
+
+    #FooterLien a {
+      text-transform: none;
+      font-size: 1.2rem;
+      margin-top: 2vh;
+    }
+
+    #FooterNav{
+      display: flex;
+      flex-direction: column;
+      height: 30vh;
+      justify-content: flex-start;
+    }
+
+    #FooterNav a {
+      text-transform: none;
+      font-size: 1.2rem;
+      margin-top: 2vh;
+    }
+
+    #ReseauPc{
+      height: 30vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    #ReseauPc img{
+      margin-top: 5vh;
+      width: 3vw;
+      height: 4vh;
+    }
+  }
