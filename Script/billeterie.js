@@ -130,3 +130,24 @@ mail.addEventListener('input', checkInputsThree);
         document.getElementById('etape3').classList.remove('etape_active');
         }
       });
+
+//--------------------------------CALENDRIER
+      // Pour la partie interactif du calendrier:
+
+// Obtention de la date d'aujourd'hui
+var today = new Date();
+
+// Obtention du jour, du mois et de l'année
+var day = today.getDate(); 
+var month = today.getMonth() + 1; // Janvier est 0, donc +1
+var year = today.getFullYear(); 
+
+if (day < 10) {
+    day = '0' + day; //ajout un zéro devant
+}
+if (month < 10) {
+    month = '0' + month; //  ajoute un zéro devant
+}
+
+// Selection de la date minimale dans le champ
+document.getElementById("date_calendrier").setAttribute("min", year + '-' + month + '-' + day);
