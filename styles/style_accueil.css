@@ -302,10 +302,10 @@ background-image: url(../images/TitreSombre.svg);
     }
 
     #Mentions{
-      width: 65vw;
+      width: 60vw;
       font-size: 1.25rem;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
       text-transform: uppercase;
     }
 
@@ -314,7 +314,7 @@ background-image: url(../images/TitreSombre.svg);
       display: flex;
       flex-direction: row;
       align-items: center;
-      height: 55vh;
+      height: 50vh;
       justify-content: space-evenly;
       color: #FFFFFF;
     }
