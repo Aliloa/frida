@@ -21,7 +21,7 @@ switch ($request_method) {
     $data = json_decode(file_get_contents('php://input'), true);
     var_dump($data);
 
-                    // addReservations($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['date'], $_POST['heure'], $_POST['billet_adulte'], $_POST['billet_enfant']);
+                // addReservations($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['date'], $_POST['heure'], $_POST['billet_adulte'], $_POST['billet_enfant']);
                 $data = json_decode(file_get_contents('php://input'), true);
                 var_dump($data);
                 $id = addReservations($data);
@@ -59,7 +59,6 @@ switch ($request_method) {
     //     // Debugging: Display API response
     //     var_dump($result);
     // }
-
             break;
 
         case 'DELETE':
