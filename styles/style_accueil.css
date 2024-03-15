@@ -108,6 +108,7 @@ background-size: contain;
   height: 6vh;
   color: black;
   font-size: 0.85rem;
+  transform: uppercase;
 }
 
 
@@ -122,6 +123,8 @@ background-size: contain;
   #AccContent a{
       width: 23vw;
       font-size: 1rem;
+      transform: uppercase;
+
   }
 
   .nuit header{
