@@ -1,14 +1,22 @@
+const nav = document.querySelector("nav");
 const links = document.querySelectorAll("nav li");
 
 icons.addEventListener("click", () => {
   nav.classList.toggle("active");
+  toggleScrollLock();
 });
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("active");
+    toggleScrollLock();
   });
 });
+
+function toggleScrollLock() {
+  document.body.classList.toggle("scroll-lock");
+}
+
 
 if(!localStorage.getItem("theme")){
   localStorage.setItem("theme","nuit")

@@ -20,8 +20,10 @@ body{
     color: white;
     text-align: center;
     margin: auto;
+  }
 
-
+  a {
+    text-decoration: none;
   }
 
    header {
@@ -209,11 +211,6 @@ display: none;
       /* background-color: #D9D9D9; */
     
     }
-    
-    .error-1, .error-2{
-      color: red;
-      text-transform: lowercase;
-    }
 
     /* chemin de navigation */
 
@@ -274,26 +271,6 @@ display: none;
     width: 100%;
       }
   
-  .counter{
-      display: flex;
-      justify-content: center;
-      align-items: center; 
-      width: 100px; 
-      height: 50px; 
-      border-radius: 50px;
-      color: rgb(92, 92, 92); 
-      font-size: 0.9rem;
-      background-color: #D9D9D9;
-      font-family: "Inter";
-  
-    }
-  
-    .main_counter{
-     flex-direction: column;
-     display: flex;
-    }
-  
-  
   @media screen and (min-width:767px) {
 
     body{
@@ -308,6 +285,7 @@ display: none;
         display: flex;
         text-align: left;
         width: 85%;
+        justify-content: space-between;
     }
     fieldset {
       padding: 0;
@@ -323,10 +301,7 @@ display: none;
     text-align: left; 
     margin-left: 0px;
     }
-    
-    .formulaire-info{
-      text-align: left;  
-    }
+
     .etapes{
       text-align: left;
       font-size: 0.8rem;
@@ -340,9 +315,10 @@ display: none;
     }
 
     .amount {
-      width: 100%;
+      width: 85%;
       display: flex;
       gap: 50px;
+      margin: 20px 0;
     }
 
     .nom_prenom {

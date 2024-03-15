@@ -24,7 +24,7 @@
                 <a href="">Découvrir</a>
             </li>
             <li>
-                <a href="billetrie.php">Billets</a>
+                <a href="billetrie.html">Billets</a>
             </li>
             <li>
                 <a href="">À propos</a>
@@ -40,9 +40,9 @@
         <div class="billeterie-formulaire">
             <h1>Billeterie</h1>
             <div aria-label="etapes" class="etapes">
-                <a id="etape1" class="etape etape_active">Dates & horaires&#160;</a>
-                <a id="etape2" class="etape"><span class="white">>&#160;</span>Nombre de billets&#160;</a>
-                <a id="etape3" class="etape"><span class="white">>&#160;</span>Coordonnées</a>
+                <a href=# id="etape1" class="etape etape_active">Dates & horaires&#160;</a>
+                <a href=# id="etape2" class="etape"><span class="white">>&#160;</span>Nombre de billets&#160;</a>
+                <a href=#  id="etape3" class="etape"><span class="white">>&#160;</span>Coordonnées</a>
             </div>
             <p>Les champs suivis d’un <span>*</span> sont obligatoires.</p>   
 
@@ -53,12 +53,10 @@
                         <h2>DATE ET HORAIRE</h2>
                         <div class="champ">
                             <label for="date_calendrier" class="date-formulaire">Choisissez une date<span> *</span></label>
-                                <div class="error-1"></div>
                                 <input type="date" id="date_calendrier" class="input_basique" name="date" required>
                         </div>
                         <div class="champ">
                             <label for="horaire" class="horraire-formulaire">Choisissez un horaire<span> *</span></label>
-                            <div class="error-2" ></div>
                             <div class="horaires">
                                 <input type="radio" id="radio1" name="heure" value="10:00" required>
                                 <label for="radio1">10:00</label>
@@ -147,6 +145,8 @@
 <script src="script/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script/envoidonnees.js"></script>
 
 </body>
 </html>
