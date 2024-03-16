@@ -26,9 +26,12 @@
 body{
     font-family: "Raleway", sans-serif;
     color: #F4FFC0;
+    overflow-x: hidden;
 }
 
-
+#nav-1 a{
+  color: white;
+}
 
 :root {
     --desert: #EF771D;
@@ -47,23 +50,13 @@ body{
 .femme_engage_page{
     background-image: linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.6777704831932774) 98%),
     url("../images/page_femme_engage_mobile.svg");    
-    height: 100vh;
     background-size: cover;
+    
     background-repeat: no-repeat;
+
 }
 
-@media screen and (min-width: 600px) {
-    .femme_engage_page{
-        background-image: linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.6777704831932774) 98%),
-        url("../images/page_femme_engage_desktop.svg");    
-        height: 100vh;
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: left top -50px;
 
-    }
-}
 
  h1{
     font-family: "Road Rage", sans-serif;
@@ -83,6 +76,9 @@ body{
     display: none;
     width: 500px;
 }
+
+
+
 
 .intro_element{
     text-align: left;
@@ -118,9 +114,11 @@ body{
 
 
 /* tableaux */
+
+
 .partie_tableaux {
     text-align: center; 
-    height: 100vh;
+    height:170vh;
 }
 
 .tableaux {
@@ -130,7 +128,7 @@ body{
 }
 
 .tableaux img {
-    width: 250px; 
+    width:350px; 
     margin-top: 60px;
 
 }
@@ -154,8 +152,58 @@ figcaption span {
 }
 
 
+.femme_engage_page footer{
+  position: relative;
+    background:#7E1B1A;
+}
+
+.femme_engage_page .partie_1 #fleche img{
+  display: none;
+}
   
+.femme_engage_page footer  #footerContent h2{
+  color: white;
+}
+
+
+
+@media screen and (min-width: 600px) {
+  .femme_engage_page{
+      background-image: linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.6777704831932774) 98%),
+      url("../images/page_femme_engage_desktop.svg");    
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: left top 0px;
+
+  }
+  .femme_engage_page .partie_tableaux {
+    height: 200vh;
+}
+h1{
+  font-size: 8rem;
+}
+.intro_element h1:first-child{
+font-size: 5.5rem;
+}
+
+
+}
+
+@media screen and (min-width: 767px) {
+
+  .femme_engage_page .partie_1 #fleche img{
+    display: block;
+  }
+}
+
+
+
+
 @media screen and (min-width: 760px) {
+
+  
+
     .intro_element h1:first-child{
         font-size: 5.5rem;
     }
@@ -176,11 +224,7 @@ figcaption span {
         margin-left: 50px;
     }
     
-    .introduction img{
-        
-        display: block;
-    }
-
+    
     .introduction{
         height: 500px;
         margin-top: 30px ;
@@ -197,10 +241,54 @@ figcaption span {
       }
 
       .tableaux img {
-        width: 300px; 
+        width: 350px; 
     
     }
+
+    
+    .femme_engage_page .partie_tableaux {
+      height: 100vh;
+  }
+
+  .femme_engage_page #fleche{
+    margin-top: 18vh;
+    margin-right: 6vw;
+    display: flex;
+    justify-content: flex-end;
 }
+
+.femme_engage_page .partie_1 #fleche img{
+    width: 15vw;
+}
+
+   
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .partie_1 .introduction img {
+    position: absolute;
+    right: 0;
+    display: block;
+    animation: hand 2s infinite ease-in-out alternate;
+    width: 500px;
+}
+
+@keyframes hand {
+  0% {
+    transform: rotate(-20deg);
+  }
+  
+  
+  100% {
+    transform: rotate(-10deg);
+  }
+  
+}
+}
+
+
 
 /* page heritage culturel */
 
@@ -210,23 +298,123 @@ figcaption span {
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+  /* background:#162117; */
+
 }
+
+@keyframes flyingBird {
+  0% {
+      transform: translateX(-100%) rotate(-20deg);
+  }
+  100% {
+      transform: translateX(100%) rotate(25deg);
+  }
+  
+}
+
+.partie_2 .introduction img {
+  animation: flyingBird 10s linear ;
+}
+
+
+.heritage_culturel_page footer  #footerContent h2{
+  color: #7C937A;
+}
+
+.heritage_culturel_page footer{
+  position: relative;
+  background:#162117;
+}
+
+.heritage_culturel_page .partie_2 #fleche img{
+  display: none;
+}
+  
+.heritage_culturel_page #fleche{
+  margin-top: 30vh;
+  margin-right: 6vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heritage_culturel_page .partie_1 #fleche img{
+  width: 15vw;
+}
+
+
 
 @media screen and (min-width: 600px) {
   .heritage_culturel_page{
       background-image: linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.6777704831932774) 98%),
       url("../images/heritage_culturel_desktop.svg");    
-      height: 100vh;
+      height: 300vh;
       width: 100%;
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: left top -50px;
+      background-position: left top 0px;
 
+  }
+
+  
+  
+}
+
+@media screen and (min-width: 767px) {
+
+  .heritage_culturel_page .partie_2 #fleche img{
+    display: block;
+  }
+
+
+  .heritage_culturel_page .partie_tableaux{
+    height: 110vh;
   }
 }
 
+@media screen and (min-width: 900px) {
+    
+  .heritage_culturel_page .partie_tableaux{
+    height: 110vh;
+  }
 
 
+   .heritage_culturel_page .partie_tableaux{
+    position: relative;
+   }
+
+  .heritage_culturel_page .partie_tableaux .tableaux:first-child{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 90px;
+  }
+
+  .heritage_culturel_page .partie_tableaux .tableaux:nth-child(2) {
+    display: block;
+    position: absolute;
+    top: 250px;
+    right: 50px;
+  }
+
+  .heritage_culturel_page .partie_tableaux .tableaux:nth-child(3) {
+    display: block;
+    position: absolute;
+    top: 650px;
+    left: 90px;
+
+  }
+  
+  
+}
+
+
+@media screen and (min-width:1300px) {
+  .heritage_culturel_page .partie_tableaux{
+    height: 120vh;
+  }
+
+  
+}
 
 
 
@@ -323,7 +511,7 @@ figcaption span {
     }
 
     .vie_social_page #fleche{
-        margin-top: 18vh;
+        /* margin-top: 18vh; */
         margin-right: 6vw;
         display: flex;
         justify-content: flex-end;
