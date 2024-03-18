@@ -23,30 +23,35 @@ function getOneReservation($id)
 
 function addReservations($nom, $prenom, $mail, $date, $heure, $billet_adulte, $billet_enfant) {
     $db = dbConnect();
-    $query = $db->prepare("INSERT INTO reservation (nom, prenom, mail, date, heure, adulte, enfant) VALUES (:nom, :prenom, :mail, :date, :heure, :adulte, :enfant)");
+    $query = "INSERT INTO reservation (nom, prenom, mail, date, heure, adulte, enfant) VALUES (:nom, :prenom, :mail, :date, :heure, :adulte, :enfant)";
 
-    $query->bindValue(':nom', $nom, PDO::PARAM_STR);
-    $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
-    $query->bindValue(':mail', $mail, PDO::PARAM_STR);
-    $query->bindValue(':date', $date, PDO::PARAM_STR);
-    $query->bindValue(':heure', $heure, PDO::PARAM_STR);
-    $query->bindValue(':adulte', $billet_adulte, PDO::PARAM_INT);
-    $query->bindValue(':enfant', $billet_enfant, PDO::PARAM_INT); 
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':nom', $nom, PDO::PARAM_STR);
+    $stmt->bindValue(':prenom', $prenom, PDO::PARAM_STR);
+    $stmt->bindValue(':mail', $mail, PDO::PARAM_STR);
+    $stmt->bindValue(':date', $date, PDO::PARAM_STR);
+    $stmt->bindValue(':heure', $heure, PDO::PARAM_STR);
+    $stmt->bindValue(':adulte', $billet_adulte, PDO::PARAM_INT);
+    $stmt->bindValue(':enfant', $billet_enfant, PDO::PARAM_INT); 
 
-    $query->execute();
+    // Exécutez la requête préparée
+    $stmt->execute();
 
+    // Si vous souhaitez rediriger l'utilisateur après l'insertion, vous pouvez le faire ici
     // header('Location: ../admin.php?succes');
-    exit; 
+    // exit;
 }
+
 
 
 function deleteReservation($id)
 {
-    $db=dbConnect();
-    $query=$db->prepare("DELETE FROM reservation WHERE id=$id");
-    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
-    $stmt->execute();
+    $db = dbConnect();
+    $query = $db->prepare("DELETE FROM reservation WHERE id=:id");
+    $query->bindValue(':id', $id, PDO::PARAM_INT);
+    $query->execute();
     header('Location: admin.php');
+    exit(); // Exit after redirect to prevent further execution
 
 }
 ?>
