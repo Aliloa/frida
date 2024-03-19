@@ -747,6 +747,10 @@ background-image: url(../images/TitreSombre.svg);
   height: 92vh;
   display: flex;
 }
+.feminisme h1{
+  display: none;
+}
+
 @media screen and (min-width: 767px) {
   .coeur {
     display: none;
@@ -754,6 +758,11 @@ background-image: url(../images/TitreSombre.svg);
   .feminisme h2 {
     display: none;
   }
+
+  .feminisme h1{
+    display: block;
+  }
+
   .feminisme .center {
     padding-left: 10vw;
     height: 100%;
