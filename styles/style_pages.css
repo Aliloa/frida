@@ -305,7 +305,6 @@ font-size: 5.5rem;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  /* background:#162117; */
 
 }
 
@@ -333,7 +332,7 @@ font-size: 5.5rem;
   background:#162117;
 }
 
-.heritage_culturel_page .partie_2 #fleche img{
+.heritage_culturel_page .partie_2 #fleche{
   display: none;
 }
   
@@ -344,7 +343,7 @@ font-size: 5.5rem;
   justify-content: flex-end;
 }
 
-.heritage_culturel_page .partie_1 #fleche img{
+.heritage_culturel_page .partie_1 #fleche{
   width: 15vw;
 }
 
@@ -357,12 +356,13 @@ font-size: 5.5rem;
       height: 300vh;
       width: 100%;
       background-size: cover;
-      background-repeat: no-repeat;
-      background-position: left top 0px;
+      background-position: center;
 
   }
 
-  
+  .heritage_culturel_page .partie_2 #fleche img{
+    display: block;
+  }
   
 }
 
