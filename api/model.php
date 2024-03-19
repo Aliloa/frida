@@ -21,18 +21,18 @@ function getOneReservation($id)
     return $query->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function addReservations($nom, $prenom, $mail, $date, $heure, $billet_adulte, $billet_enfant) {
+function addReservation($data) {
     $db = dbConnect();
     $query = "INSERT INTO reservation (nom, prenom, mail, date, heure, adulte, enfant) VALUES (:nom, :prenom, :mail, :date, :heure, :adulte, :enfant)";
 
     $stmt = $db->prepare($query);
-    $stmt->bindValue(':nom', $nom, PDO::PARAM_STR);
-    $stmt->bindValue(':prenom', $prenom, PDO::PARAM_STR);
-    $stmt->bindValue(':mail', $mail, PDO::PARAM_STR);
-    $stmt->bindValue(':date', $date, PDO::PARAM_STR);
-    $stmt->bindValue(':heure', $heure, PDO::PARAM_STR);
-    $stmt->bindValue(':adulte', $billet_adulte, PDO::PARAM_INT);
-    $stmt->bindValue(':enfant', $billet_enfant, PDO::PARAM_INT); 
+    $stmt->bindValue(':nom', $data['nom'], PDO::PARAM_STR);
+    $stmt->bindValue(':prenom', $data['prenom'], PDO::PARAM_STR);
+    $stmt->bindValue(':mail', $data['mail'], PDO::PARAM_STR);
+    $stmt->bindValue(':date', $data['date'], PDO::PARAM_STR);
+    $stmt->bindValue(':heure', $data['heure'], PDO::PARAM_STR);
+    $stmt->bindValue(':adulte', $data['billet_adulte'], PDO::PARAM_INT);
+    $stmt->bindValue(':enfant', $data['billet_enfant'], PDO::PARAM_INT); 
 
     // Exécutez la requête préparée
     $stmt->execute();

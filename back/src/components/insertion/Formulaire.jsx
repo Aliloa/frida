@@ -22,7 +22,7 @@ export const Formulaire = () => {
             headers: {"Content-Type": 'application/json'},
             body: JSON.stringify(data)
         }).then(response => {
-            if (!response.ok) {
+            if (!response.ok) { 
                 throw new Error('Erreur lors de la requête.');
             }
             return response.text(); // Récupérer le corps complet de la réponse
