@@ -10,13 +10,6 @@ li {
   
   nav a,
   nav a:visited {
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-
-  .nuit   nav a,
-  .nuit nav a:visited {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -53,6 +46,20 @@ li {
   }
   
   @media (max-width: 650px) {
+
+    nav a,
+    nav a:visited {
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  
+    .nuit   nav a,
+    .nuit nav a:visited {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
   
     #icons {
       display: block;
