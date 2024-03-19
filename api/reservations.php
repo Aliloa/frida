@@ -31,28 +31,22 @@ switch ($request_method) {
 
         case 'POST':
 
-                $data = json_decode(file_get_contents('php://input'), true);
-                if (!empty($data)) {
-                    // Extraire les données de la requête
-                    $nom = $data['nom'];
-                    $prenom = $data['prenom'];
-                    $mail = $data['mail'];
-                    $date = $data['date'];
-                    $heure = $data['heure'];
-                    $adulte = $data['billet_adulte'];
-                    $enfant = $data['billet_enfant'];
-
- // Répondre avec un code de succès et les données JSON
- http_response_code(201);
- header('Content-Type: application/json');
- echo json_encode([
-     'message' => 'Réservation ajoutée avec succès',
- ]);
-} else {
- // Répondre avec un code d'erreur si les données de la requête sont vides
- http_response_code(400);
- echo json_encode(['message' => 'Les données de la requête sont vides']);
-}
+            $data = json_decode(file_get_contents('php://input'), true);
+            if (!empty($data)) {
+                // Appeler la fonction addReservation avec le tableau de données
+                addReservation($data);
+            
+                // Répondre avec un code de succès et les données JSON
+                http_response_code(201);
+                header('Content-Type: application/json');
+                echo json_encode([
+                    'message' => 'Réservation ajoutée avec succès',
+                ]);
+            } else {
+                // Répondre avec un code d'erreur si les données de la requête sont vides
+                http_response_code(400);
+                echo json_encode(['message' => 'Les données de la requête sont vides']);
+            }
                 break;
 
         case 'DELETE':

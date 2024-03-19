@@ -1,34 +1,37 @@
-$(document).ready(function() {
-    $('form').submit(function(event) {
-        console.log("formulaire soumis");
-        // Empêcher le comportement par défaut du formulaire
-        event.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    const API = 'http://localhost/frida/api/reservations.php';
 
-        // Récupérer les données du formulaire
-        var data = {
-            nom: $('#nom').val(),
-            prenom: $('#prenom').val(),
-            mail: $('#mail').val(),
-            date: $('#date_calendrier').val(),
-            heure: $('input[name="heure"]:checked').val(),
-            billet_adulte: $('.billet_adulte').val(),
-            billet_enfant: $('.billet_enfant').val(),
-        };
+    const reservationForm = document.getElementById('billeterie-formulaire');
+    reservationForm.addEventListener('submit', handleSubmit);
 
-        // Envoyer les données JSON à la page PHP
-        $.ajax({
-            type: 'POST',
-            url: 'api/reservations.php',
-            data: JSON.stringify(data),
-            contentType: 'application/json',
-            success: function(response) {
-                // Traiter la réponse ici si nécessaire
-                console.log(response);
-            },
-            error: function(xhr, status, error) {
-                // Gérer les erreurs ici si nécessaire
-                console.error(error);
-            }
+    function handleSubmit(e) {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
         });
-    });
+        console.log(data)
+
+
+        fetch(API, {
+            method: 'POST',
+            headers: { "Content-Type": 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erreur lors de la requête.');
+            }
+            return response.text(); // Récupérer le corps complet de la réponse
+        })
+        .then(text => {
+            // Afficher le contenu complet de la réponse dans la console
+            console.log('Réponse du serveur:', text);
+        })
+        .catch(error => {
+            // Gestion des erreurs lors de l'envoi de la requête ou de la réception de la réponse
+            console.error('Erreur lors de la requête:', error);
+        });
+    }
 });
