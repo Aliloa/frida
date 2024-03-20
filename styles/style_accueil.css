@@ -630,6 +630,7 @@ background-image: url(../images/TitreSombre.svg);
 
 .communisme .bouton {
   background-color: #781A19;
+  position: relative;
 }
 
 @media screen and (min-width: 767px) {
