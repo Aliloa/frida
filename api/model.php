@@ -36,10 +36,6 @@ function addReservation($data) {
 
     // Exécutez la requête préparée
     $stmt->execute();
-
-    // Si vous souhaitez rediriger l'utilisateur après l'insertion, vous pouvez le faire ici
-    // header('Location: ../admin.php?succes');
-    // exit;
 }
 
 
@@ -50,8 +46,6 @@ function deleteReservation($id)
     $query = $db->prepare("DELETE FROM reservation WHERE id=:id");
     $query->bindValue(':id', $id, PDO::PARAM_INT);
     $query->execute();
-    header('Location: admin.php');
-    exit(); // Exit after redirect to prevent further execution
-
+    exit(); 
 }
 ?>

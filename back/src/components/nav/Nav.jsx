@@ -7,7 +7,7 @@ export default function Nav() {
     <nav>
       <ul>
         <li>
-          <Link href="/">
+          <Link href="/tableau">
             Gérer utilisateurs
           </Link>
         </li>
