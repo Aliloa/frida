@@ -83,6 +83,7 @@ header{
   flex-direction: column;
   height: 73%;
   align-items: center;
+  
   justify-content: center;
 
 }
@@ -95,6 +96,8 @@ background-size: contain;
   width: 85%;
   height: 50%;
   padding-bottom: 5vh;
+  
+  
 }
 
 #AccContent a {
@@ -103,12 +106,15 @@ background-size: contain;
   align-items: center;
   background-color: #FFF4EB;
   border: 2px solid #F3E2A2;
-  border-radius: 20px;
-  width: 45vw;
-  height: 6vh;
+  border-radius: 30px;
   color: black;
   font-size: 0.85rem;
-  transform: uppercase;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 20px 15px 20px;
+
+
 }
 
 
@@ -121,9 +127,10 @@ background-size: contain;
   }
 
   #AccContent a{
-      width: 23vw;
+      width: 20vw;
       font-size: 1rem;
       transform: uppercase;
+      padding: 15px 20px 15px 20px;
 
   }
 
@@ -169,8 +176,10 @@ background-size: contain;
 }
 
 .nuit #AccContent a{
-background-color: #34304F ;
+background-color: #312D49 ;
 border: 2px solid #34304F;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+transform: uppercase;
 color: white;
 }
 
@@ -178,16 +187,7 @@ color: white;
 background-image: url(../images/TitreSombre.svg);
 }
 
-/* .nuit #transition{
-  background-image: url(images/transitions/bleu_clair_mobile.svg);
-  position: absolute;
-    bottom: -2px;
-    height: 45vh;
-    width: 100vw;
-    background-position: bottom;
-  background-repeat: no-repeat;
-    background-size: contain;
-} */
+
 
 .transition_sable {
   background-image: url(../images/transitions/Sable.svg);
@@ -203,15 +203,7 @@ background-image: url(../images/TitreSombre.svg);
   .nuit .transition_sable {
     background-image: url(../images/transitions/Bleu_Nuit.svg);
   }
-/* 
-  header #transition {
-    background-image: url(images/transitions/SablePC.svg);
-    bottom: -20px;
-    background-size: cover;
-      background-position: center;
-      width: 100%;
-      height: 31vh;
-  } */
+
 
   .nuit #AccContent{
     justify-content: flex-end;
