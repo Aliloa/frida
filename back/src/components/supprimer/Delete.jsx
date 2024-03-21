@@ -1,3 +1,4 @@
+import "./delete.css";
 export const Delete = ({ id }) => {
     const API = `http://localhost/frida/api/reservations.php` + '?id=' + id;
     
@@ -15,7 +16,7 @@ export const Delete = ({ id }) => {
         window.location.reload();
     }    
 
-    return <button onClick={supprimerReservation}>Delete</button>;
+    return <button onClick={supprimerReservation}><img src="Delete.svg" alt="supprimer" /></button>;
 }
 
 export default Delete;

@@ -14,7 +14,6 @@ const Home = () => {
 
   return (
       <section>
-      <h1>TABLEAU</h1>
       <Connexion />
     </section>
   )

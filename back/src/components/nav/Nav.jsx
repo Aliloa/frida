@@ -8,7 +8,7 @@ export default function Nav() {
       <ul>
         <li>
           <Link href="/tableau">
-            Gérer utilisateurs
+            Gérer réservations
           </Link>
         </li>
         <li>

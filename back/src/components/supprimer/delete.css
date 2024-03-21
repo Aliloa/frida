@@ -1,0 +1,11 @@
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    scale: 1.2;
+}
+img {
+    max-width: 35px;
+}

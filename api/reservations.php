@@ -54,7 +54,7 @@ switch ($request_method) {
         break;
 
     case 'DELETE':
-        authenticateRequest();
+        // authenticateRequest();
 
         $id = intval($_GET['id']);
         deleteReservation($id);
