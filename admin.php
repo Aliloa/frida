@@ -6,7 +6,7 @@
     <title>Administration</title>
 </head>
 <body>
-<form action="traite_login.php" method="POST">
+<form action="traite_login.php" method="POST" id="formtoken">
   
     <input type="text" name="login" required>
    
@@ -16,4 +16,6 @@
 </form>
 
 </body>
+
+<script src="script/admin.js"></script>
 </html>

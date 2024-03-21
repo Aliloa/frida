@@ -9,21 +9,33 @@ export const Tableau = () => {
     const API = `http://localhost/frida/api/reservations.php`;
     const [reservations, setReservations] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const result = await fetch(API);
+useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const token = localStorage.getItem('token'); // Retrieve token from localStorage
+            console.log('Token:', token);
+            const result = await fetch(API, {
+                headers: {
+                    'Authorization': `Bearer ${token}` // Include token in the request headers
+                }
+            });
+            if (result.ok) {
                 const data = await result.json();
                 setReservations(data); // Set fetched data to state
-            } catch (error) {
-                console.error('Error fetching data:', error);
+            } else {
+                console.error('Error fetching data:', result.statusText);
             }
-        };
-        fetchData();
-    }, []);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+    fetchData();
+}, []);
+
     
     return (
         <tbody>
+            <h1>nsm</h1>
                     {reservations.map((reservation, index) => (
                         <tr key={index}>
                             <td>{reservation.id}</td>
