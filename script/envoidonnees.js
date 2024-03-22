@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const billeterieFormulaire = document.querySelector('.billeterie-formulaire');
             billeterieFormulaire.innerHTML = `
                 <h1>Billetrie</h1>
-                <h2>Votre réservation a été effectuée avec succès.</h2>
+                <h2>Votre réservation a été confirmée avec succès.</h2>
+                <h3>Un e-mail de confirmation vous a été envoyé.</h3>
                 <p><strong>Réservation au nom de:</strong> ${data.prenom} ${data.nom}</p>
                 <p><strong>Pour le:</strong> ${formatDate(data.date)} à ${data.heure}</p>
                 <p><strong>Nombre de billets:</strong></p>
