@@ -24,7 +24,7 @@ $request_method = $_SERVER["REQUEST_METHOD"];
 
 switch ($request_method) {
     case 'GET':
-        authenticateRequest();
+        // authenticateRequest();
         if (isset($_GET["id"])) {
             $result = getOneReservation($_GET["id"]);
         } else {

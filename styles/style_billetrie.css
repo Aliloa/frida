@@ -204,12 +204,21 @@ display: none;
     cursor: pointer;
     max-width: 150px;
     margin-top: 20px;
+    transition: 0.1s;
     }
     
     .bouton_basique:hover{
-      color:black;
-      /* background-color: #D9D9D9; */
-    
+      scale: 1.01;
+    }
+
+    .retour {
+      background-color: black;
+      color: white;
+      transition: 0.1s;
+    }
+    .retour:hover {
+      background-color: white;
+      color: black;
     }
 
     /* chemin de navigation */
