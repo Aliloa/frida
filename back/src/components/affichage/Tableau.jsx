@@ -17,7 +17,7 @@ const formatTimeString = (timeString) => {
 export const Tableau = () => {
 
     //RECUPERER L'API
-    const API = `http://localhost/frida/api/reservations.php`;
+    const API = `http://frida.fatimarajan.fr/api/reservations.php`;
     const [reservations, setReservations] = useState([]);
 
 useEffect(() => {
@@ -27,7 +27,7 @@ useEffect(() => {
             console.log('Token:', token);
             const result = await fetch(API, {
                 headers: {
-                    'Authorization': `Bearer ${token}` // Include token in the request headers
+                    'Authorization': `${token}` // Include token in the request headers
                 }
             });
             if (result.ok) {

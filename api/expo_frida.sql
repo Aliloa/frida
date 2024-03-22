@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 07 mars 2024 à 10:51
+-- Généré le : ven. 22 mars 2024 à 11:28
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.0.26
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `adulte` int NOT NULL,
   `enfant` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `reservation`
@@ -48,7 +48,33 @@ INSERT INTO `reservation` (`id`, `nom`, `prenom`, `mail`, `date`, `heure`, `adul
 (1, 'Lynn', 'Sarah', 'sarah@gmail.com', '2024-03-15', '13:00:00', 1, 0),
 (2, 'Love', 'Lynda', 'Lyndalove@gmail.com', '2024-03-16', '15:00:00', 2, 1),
 (3, 'Pink', 'Jane', 'pinkgirl@gmail.com', '2024-03-16', '13:00:00', 1, 3),
-(4, 'Queen', 'Brenda', 'Brendoline@gmail.com', '2024-03-15', '15:00:00', 4, 2);
+(4, 'Queen', 'Brenda', 'Brendoline@gmail.com', '2024-03-15', '15:00:00', 4, 2),
+(5, 'chien', 'sup', 'bu', '0000-00-00', '00:00:00', 0, 0),
+(6, 'iench', 'supp', 'ceihefv', '0000-00-00', '00:00:00', 0, 0),
+(21, 'dzkj', 'ojcfs', 'kfz@cbsh', '2024-03-14', '09:06:00', 1, 0),
+(22, 'dzkj', 'ojcfs', 'kfz@cbsh', '2024-03-14', '09:06:00', 1, 0),
+(23, 'dzkj', 'ojcfs', 'kfz@cbsh', '2024-03-14', '09:06:00', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `login` varchar(50) NOT NULL,
+  `mdp` varchar(300) CHARACTER SET utf8mb4 NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `login`, `mdp`) VALUES
+(1, 'admin', '$2y$10$ze8QOZ2li74sYrFi1UT8auJH/U.T4YpO.gHxF5jmFZb0KqKAow9oO');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

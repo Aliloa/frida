@@ -4,18 +4,18 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7f97fc9c4d2beaf06d019ba50f7efcbc
+class ComposerStaticInitdfe27548af6d83b7d428280eae1df087
 {
     public static $prefixLengthsPsr4 = array (
         'F' => 
         array (
-            'Frida\\Reservation\\' => 18,
+            'Frida\\Api\\' => 10,
             'Firebase\\JWT\\' => 13,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Frida\\Reservation\\' => 
+        'Frida\\Api\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -32,9 +32,9 @@ class ComposerStaticInit7f97fc9c4d2beaf06d019ba50f7efcbc
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit7f97fc9c4d2beaf06d019ba50f7efcbc::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit7f97fc9c4d2beaf06d019ba50f7efcbc::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit7f97fc9c4d2beaf06d019ba50f7efcbc::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitdfe27548af6d83b7d428280eae1df087::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitdfe27548af6d83b7d428280eae1df087::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitdfe27548af6d83b7d428280eae1df087::$classMap;
 
         }, null, ClassLoader::class);
     }

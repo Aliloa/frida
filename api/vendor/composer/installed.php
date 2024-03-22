@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'frida/reservation',
+        'name' => 'frida/api',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '33bf1b81554920a8d8593946f071fb6adb0839f6',
+        'reference' => '86b48af89dd69d2a6cba8d177326cc22149339dd',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -19,10 +19,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'frida/reservation' => array(
+        'frida/api' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '33bf1b81554920a8d8593946f071fb6adb0839f6',
+            'reference' => '86b48af89dd69d2a6cba8d177326cc22149339dd',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

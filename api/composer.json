@@ -1,8 +1,8 @@
 {
-    "name": "frida/reservation",
+    "name": "frida/api",
     "autoload": {
         "psr-4": {
-            "Frida\\Reservation\\": "src/"
+            "Frida\\Api\\": "src/"
         }
     },
     "authors": [
