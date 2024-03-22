@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import "./tableau.css";
-
+import Link from "next/link";
 import { Delete } from "../supprimer/Delete";
 
 const formatDateString = (dateString) => {
@@ -15,56 +15,64 @@ const formatTimeString = (timeString) => {
 };
 
 export const Tableau = () => {
-
-    //RECUPERER L'API
     const API = `http://frida.fatimarajan.fr/api/reservations.php`;
     const [reservations, setReservations] = useState([]);
+    const [error, setError] = useState(null);
 
-useEffect(() => {
-    const fetchData = async () => {
-        try {
-            const token = localStorage.getItem('token'); // Retrieve token from localStorage
-            console.log('Token:', token);
-            const result = await fetch(API, {
-                headers: {
-                    'Authorization': `${token}` // Include token in the request headers
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                const result = await fetch(API, {
+                    headers: {
+                        'Authorization': `${token}`
+                    }
+                });
+                if (result.ok) {
+                    const data = await result.json();
+                    data.forEach(reservation => {
+                        reservation.date = formatDateString(reservation.date);
+                        reservation.heure = formatTimeString(reservation.heure);
+                    });
+                    setReservations(data);
+                } else {
+                    setError('Vous devez vous connecter pour accéder aux données');
                 }
-            });
-            if (result.ok) {
-                const data = await result.json();
-            // mettre la date au bon format
-            data.forEach(reservation => {
-            reservation.date = formatDateString(reservation.date);
-            reservation.heure = formatTimeString(reservation.heure);
-            });
-                setReservations(data); // Set fetched data to state
-            } else {
-                console.error('Error fetching data:', result.statusText);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                setError('Erreur lors du chargement des données. Veuillez réessayer plus tard.');
             }
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
-    fetchData();
-}, []);
+        };
+        fetchData();
+    }, []);
 
-    
+    if (error) {
+        return (
+            <div>
+            <p>{error}</p>
+            <Link href="/">
+            <button>Se connecter</button>
+          </Link>
+        </div>
+        )
+    }
+
     return (
         <div className="container">
-        <table>
-            <thead>
-                <tr>
-                    <th className="corner">ID</th>
-                    <th>Nom prenom</th>
-                    <th>E-mail</th>
-                    <th>Date</th>
-                    <th>Heure</th>
-                    <th>Billet adulte</th>
-                    <th>Billet enfant</th>
-                    <th className="corner">Supprimer</th>
-                </tr>
-            </thead>
-        <tbody>
+            <table>
+                <thead>
+                    <tr>
+                        <th className="corner">ID</th>
+                        <th>Nom prenom</th>
+                        <th>E-mail</th>
+                        <th>Date</th>
+                        <th>Heure</th>
+                        <th>Billet adulte</th>
+                        <th>Billet enfant</th>
+                        <th className="corner">Supprimer</th>
+                    </tr>
+                </thead>
+                <tbody>
                     {reservations.map((reservation, index) => (
                         <tr key={index}>
                             <td>{reservation.id}</td>
@@ -78,7 +86,7 @@ useEffect(() => {
                         </tr>
                     ))}
                 </tbody>
-                </table>
-                </div>
+            </table>
+        </div>
     );
 }

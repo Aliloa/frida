@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./connexion.css";
 
 const Connexion = () => {
   const [login, setLogin] = useState('');
@@ -31,9 +32,12 @@ const Connexion = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="login" value={login} onChange={(e) => setLogin(e.target.value)} />
-      <input type="password" name="mdp" value={mdp} onChange={(e) => setMdp(e.target.value)} />
+    <form onSubmit={handleSubmit} className='connexion'>
+      <h1>Connexion administrateur</h1>
+      <label htmlFor="login">Login</label><br />
+      <input type="text" name="login" id='login' value={login} onChange={(e) => setLogin(e.target.value)} /><br />
+      <label htmlFor="mdp">Mot de passe</label><br />
+      <input type="password" name="mdp" id='mdp' value={mdp} onChange={(e) => setMdp(e.target.value)} /><br />
       <button type="submit">Valider</button>
     </form>
   );

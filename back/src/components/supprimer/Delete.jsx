@@ -24,7 +24,7 @@ export const Delete = ({ id }) => {
         }
     }    
 
-    return <button onClick={supprimerReservation}><img src="Delete.svg" alt="supprimer" /></button>;
+    return <button onClick={supprimerReservation} className="delete"><img src="Delete.svg" alt="supprimer" /></button>;
 }
 
 export default Delete;
