@@ -48,6 +48,7 @@ switch ($request_method) {
                 'message' => 'Réservation ajoutée avec succès',
             ]);
         } else {
+            
             // Répondre avec un code d'erreur si les données de la requête sont vides
             http_response_code(400);
             echo json_encode(['message' => 'Les données de la requête sont vides']);
@@ -59,7 +60,8 @@ switch ($request_method) {
 
         $id = intval($_GET['id']);
         deleteReservation($id);
-        // Respond with success message
+
+        // envoi de message 
         http_response_code(200);
         echo json_encode(['message' => 'Reservation supprimée avec succès']);
         break;
