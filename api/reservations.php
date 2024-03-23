@@ -1,11 +1,6 @@
 <?php
-// Allow requests from any origin
-header("Access-Control-Allow-Origin: http://localhost:3000");
-
-// Allow the specified methods
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE");
-
-// Allow the specified headers
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 

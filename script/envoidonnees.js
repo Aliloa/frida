@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Adultes: ${data.billet_adulte}</p>
                 <p>Enfants: ${data.billet_enfant}</p>
                 <p><strong>Adresse mail:</strong> ${data.mail}</p>
-                <a href='index.html'><button class='bouton_basique retour'>Acceuil</button></a>`;
+                <a href='index.html'><button class='bouton_basique retour'>Accueil</button></a>`;
         })
         .catch(error => {
             // Gestion des erreurs lors de l'envoi de la requête ou de la réception de la réponse
