@@ -3,9 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style_exp.css">
+    <link rel="stylesheet" href="styles/style_nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title> Expérimenter | Frida Kahlo </title>
 </head>
 <body class="">
-    
+    <header>
+        <nav id="nav">
+            <a href="index.html"><img src="images/LogoFrida.svg" alt=" Accueil" class="LogoFrida"></a>
+            <ul>
+                <li>
+                    <a href="">Découvrir</a>
+                </li>
+                <li>
+                    <a href="billetrie.html">Billets</a>
+                </li>
+                <li>
+                    <a href="">Expérimenter</a>
+                </li>
+            </ul>
+            <div id="icons"><img src="../frida/images/icon/burger.png" alt="BurgerMenu"></div>
+        </nav>
+        
+        <div class="header-content">
+            <h1>Plongez dans une expérience <br> <strong>de réalité augmentée</strong></h1>
+            <p>Explorez l'histoire sous un nouveau jour avec notre visite de musée en réalité augmentée, où les objets prennent vie devant vos yeux ! Vivez une expérience immersive inédite grâce à notre dispositif de réalité augmentée, accessible sur tous les appareils, n'importe où, n'importe quand.</p>
+        </div>
+        <img src="images/transitions/orange.svg" alt="" class="transition">
+        <img src="images/transitions/orange_desk.svg" alt="" class="transition_pc">
+
+        <div class="theme">
+            <button class="themebutton" id="themebutton">
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="video-container">
+            <video controls>
+                <source src="chemin/vers/ma-video.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <p>Tutoriel d'utilisation du dispositif interactif</p>
+        </div>
+        <div class="etapes-container">
+            <div class="etapes">
+                <p><strong>1.</strong> Scannez le QR code</p>
+                <p><strong>2.</strong>Cliquez sur start ar.</p>
+                <p><strong>3.</strong>Bonne visite</p>
+            </div>
+            <img src="" alt="">qr code
+        </div>
+    </main>
+
+    <div id="transition" class="transition_footer"><img src="images/transitions/FooterMob.svg" alt=""></div>
+    <div id="transition" class="transition_footer_pc"><img src="images/transitions/FooterPc.svg" alt=""></div>
+
+    <footer>
+        <div id="footerContentMob">
+            <img src="images/Footer.svg" alt="">
+            <ul id="footerlist1">
+                <a href="">DÉCOUVRIR</a>
+                <a href="billetrie.html">BILLETS</a>
+                <a href="https://www.andeanart.gilbert.butmmi.o2switch.site/">NOTRE AGENCE</a>
+                <a href="">A PROPOS</a>
+            </ul>
+
+            <div id="Reseau">
+                <a href=""><img src="images/icon/twitter.svg" alt=""></a>
+                <a href="https://www.instagram.com/andean_art/"><img src="images/icon/insta.svg" alt=""></a>
+                <a href=""><img src="images/icon/Facebook.svg" alt=""></a>
+            </div>
+
+            <ul id="footerlist2" >
+                <a href="mention_legale.html">MENTIONS LÉGALES</a>
+                <a href="conditions_generale.html">CONDITIONS GÉNÉRALES DE VENTES</a>
+            </ul>
+        </div>
+
+        <div id="footerContent">
+            <div id="FooterCoo">
+                <img src="images/Footer.svg" alt="">
+                <p>2 Rue Albert Einstein</p>
+                <p>77420 Champs Sur Marne</p>
+            </div>
+            <div id="FooterNav">
+                <h2>NAVIGATION</h2>
+                    <a href="">Découvrir</a>
+                    <a href="billetrie.html">Billets</a>
+            </div>
+            <div id="FooterLien">
+                <h2>LIENS UTILES</h2>
+                <a href="">À propos</a>
+                <a href="https://www.andeanart.gilbert.butmmi.o2switch.site/">Agence Frida</a>
+            </div>
+            <div id="ReseauPc">
+                <h2>NOUS SUIVRES</h2>
+                <div>
+                    <a href=""><img src="images/icon/twitter.svg" alt=""></a>
+                    <a href="https://www.instagram.com/andean_art/"><img src="images/icon/insta.svg" alt=""></a>
+                    <a href=""><img src="images/icon/Facebook.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div id="Mentions">
+            <a href="mention_legale.html">Mentions légales</a>
+            <a href="conditions_generale.html">conditions générales de ventes</a>
+           </div>
+       </footer>
+
+    <script src="script/script.js"></script>
 </body>
 </html>

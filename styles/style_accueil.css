@@ -32,28 +32,7 @@
   .nuit{
     background-color: #4A4473 !important;
   }
-
-  .theme{
-    position: fixed;
-    display: flex;
-    margin-top: 10vh;
-    justify-content: flex-end;
-    width: 100vw;
-    z-index: 3;
-  }
-
-  .themebutton{
-    background-image: url(../images/icon/DarkMode.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color:rgba(0, 0, 0, 0);
-    border:none;
-    height: 6vh;
-    width: 13vw;
-    margin-right: 3vw;
-  }
  
-
   p {
     margin: 0;
     font-family: "Raleway", sans-serif;
@@ -143,31 +122,10 @@ background-size: contain;
       background-image:linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6777704831932774) 98%), url(../images/BackgroundAccueil.svg);
   }
 
-
-  .theme{
-    position: fixed;
-    display: flex;
-    margin-top: 10vh;
-  }
-
-
 }
 
 
 /* --------------------------------------MODE SOMBRE ACCUEIL */
-
-
-.nuit .themebutton{
-  background-image: url(../images/icon/LightMode.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-  background-color:rgba(0, 0, 0, 0);
-  border:none;
-  height: 6vh;
-  width: 13vw;
-  margin-right: 3vw;
-}
 
 .nuit header{
   background-image: url(../images/BackAccSombre.svg);
@@ -214,20 +172,14 @@ background-image: url(../images/TitreSombre.svg);
     height: 56%;
   }
   
-  .nuit .themebutton{
-    width: 5vw;
-    margin-right: 3vw;
-    padding: 0;
-  }
-
-  .themebutton{
-    width: 5vw;
-    margin-right: 3vw;
-  }
 }
 
 
   /* --------------------------------------FOOTER */
+
+  .transition_footer {
+    display: block!important;
+  }
 
   footer{
     position: relative;

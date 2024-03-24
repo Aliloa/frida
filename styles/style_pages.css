@@ -53,9 +53,6 @@ body{
     background-size: cover;
 }
 
-
-
-
  h1{
     font-family: "Road Rage", sans-serif;
     font-weight: 800;
@@ -117,7 +114,21 @@ body{
     text-transform: uppercase;
   }
 
+  @keyframes moveLeftAndRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50px); /* Adjust distance to move */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
+.mini_faucille {
+  animation: moveLeftAndRight 5s ease-in-out infinite;
+}
 
 /* tableaux */
 
@@ -209,8 +220,6 @@ font-size: 5.5rem;
 
 @media screen and (min-width: 760px) {
 
-  
-
     .intro_element h1:first-child{
         font-size: 5.5rem;
     }
@@ -260,27 +269,7 @@ font-size: 5.5rem;
   .introduction img{
     display: block;
    }  
-
-  .heritage_culturel_page .introduction img{
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
    }  
-
-@keyframes hand {
-  0% {
-    transform: rotate(-20deg);
-  }
-  
-  
-  100% {
-    transform: rotate(-10deg);
-  }
-  
-}
-}
-
 
 
 /* page heritage culturel */
@@ -290,7 +279,7 @@ font-size: 5.5rem;
   url("../images/heritage_culturel_mobile.svg");    
   background-size: cover;
   background-repeat: no-repeat;
-
+  background-position: bottom;
 }
 
 .heritage_culturel_page footer  #footerContent h2{
@@ -317,7 +306,35 @@ font-size: 5.5rem;
   align-items: center;
  }
 
+ .heritage_culturel_page .introduction img{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  }
+
+  .heritage_culturel_page .introduction {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  @keyframes flyingBird {
+    0% {
+        transform: translateX(-100%) rotate(-20deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(25deg);
+    }
+    
+  }
+  
+  .partie_2 .introduction img {
+    animation: flyingBird 10s linear ;
+  }
+
 @media screen and (min-width: 767px) {
+
   .heritage_culturel_page{
       background-image: linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.6777704831932774) 98%),
       url("../images/heritage_culturel_desktop.svg");    
@@ -338,6 +355,10 @@ font-size: 5.5rem;
     width: 80%;
     margin: auto;
    }
+
+   .heritage_culturel_page .introduction {
+    width: 100%;
+  }
 
    .heritage_culturel_page #fleche {
     display: flex;
@@ -453,12 +474,13 @@ font-size: 5.5rem;
 
 /* --------------------------------------FOOTER */
 
-footer{
+.vie_social_page footer{
     position: relative;
     height: 100vh;
     background: rgb(80,26,89);
     background: linear-gradient(0deg, rgba(80,26,89,1) 0%, rgba(101,42,110,1) 100%);
     }
+    
 
     a{
         color: white;
@@ -622,6 +644,7 @@ footer{
     }
   }
 
+
   /* ...................................................Conditions generales */
 
   .conditions_page, .legale_page {
@@ -674,3 +697,20 @@ footer{
   border-top: 1px solid #28253F; /* Couleur de la ligne noire avec une épaisseur de 1 pixel */
   margin: 20px 0; /* Marge au-dessus et en dessous de la ligne */
 }
+
+  @keyframes animFleche {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(25px); /* Adjust distance to move */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#fleche img {
+  animation: animFleche 4s ease-in-out infinite;
+}
+
