@@ -8,7 +8,7 @@ window.addEventListener('resize', function() {
 // -----------------------------------------------------------DESERT
 if (window.innerWidth < 767) {
     gsap.fromTo(".frida_dance", 
-      { x: 100 }, // Adjust initial x value for mobile
+      { x: 100 },
       { x: 0, duration: 1,
         scrollTrigger : {
           trigger: ".desert",
@@ -21,7 +21,7 @@ if (window.innerWidth < 767) {
     );
   } else {
     gsap.fromTo(".frida_dance", 
-      { x: -200 }, // Default initial x value for desktop
+      { x: -200 },
       { x: 0, duration: 1,
         scrollTrigger : {
           trigger: ".desert",
