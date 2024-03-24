@@ -621,3 +621,56 @@ footer{
       height: 4vh;
     }
   }
+
+  /* ...................................................Conditions generales */
+
+  .conditions_page, .legale_page {
+    background-image: linear-gradient(0deg, rgba(255,0,0,0) 0%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.6777704831932774) 98%),
+    url("../images/conditions_géérales_de_ventes.svg");    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #FFF4EA;
+}
+
+.conditions_page , .legale_page footer{
+  background: #28253F;
+}
+
+.conditions_page, .legale_page #transition{
+  background-image: url(../images/transitions/FooterPc.svg);
+  position: relative;
+  bottom: -2px;
+  margin-top: -25vh;
+  z-index: 1;
+  height:60vh;
+  width: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.conditions,.mentions {
+  width:80%; 
+  margin: 0 auto; 
+  text-align: left; 
+  color:#28253F;
+  margin-top: 40px;
+}
+
+
+.conditions,.mentions h1{
+  font-size: 4.5rem;
+}
+
+.conditions,.mentions h2{
+  font-family: "Road Rage", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+
+}
+
+.ligne {
+  border-top: 1px solid #28253F; /* Couleur de la ligne noire avec une épaisseur de 1 pixel */
+  margin: 20px 0; /* Marge au-dessus et en dessous de la ligne */
+}
