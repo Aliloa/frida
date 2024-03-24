@@ -15,46 +15,42 @@ const formatTimeString = (timeString) => {
 };
 
 export const Tableau = () => {
-    const API = `http://frida.fatimarajan.fr/api/reservations.php`;
+    const API = `http://localhost/frida/api/reservations.php`;
     const [reservations, setReservations] = useState([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const token = localStorage.getItem('token');
-                const result = await fetch(API, {
-                    headers: {
-                        'Authorization': `${token}`
-                    }
-                });
-                if (result.ok) {
-                    const data = await result.json();
-                    data.forEach(reservation => {
-                        reservation.date = formatDateString(reservation.date);
-                        reservation.heure = formatTimeString(reservation.heure);
-                    });
-                    setReservations(data);
-                } else {
-                    setError('Vous devez vous connecter pour accéder aux données');
+                const result = await fetch(API);
+                if (!result.ok) {
+                    throw new Error('Failed to fetch data');
                 }
+                const data = await result.json();
+                // mettre la date au bon format
+                data.forEach(reservation => {
+                    reservation.date = formatDateString(reservation.date);
+                    reservation.heure = formatTimeString(reservation.heure);
+                });
+                setReservations(data); 
             } catch (error) {
                 console.error('Error fetching data:', error);
-                setError('Erreur lors du chargement des données. Veuillez réessayer plus tard.');
+                setError('Error fetching data');
             }
         };
+    
         fetchData();
-    }, []);
+    }, []); 
 
     if (error) {
         return (
             <div>
-            <p>{error}</p>
-            <Link href="/">
-            <button>Se connecter</button>
-          </Link>
-        </div>
-        )
+                <p>{error}</p>
+                <Link href="/">
+                    <button>Se connecter</button>
+                </Link>
+            </div>
+        );
     }
 
     return (
@@ -89,4 +85,4 @@ export const Tableau = () => {
             </table>
         </div>
     );
-}
+};
