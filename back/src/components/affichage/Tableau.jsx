@@ -15,27 +15,32 @@ const formatTimeString = (timeString) => {
 };
 
 export const Tableau = () => {
-    const API = `http://localhost/frida/api/reservations.php`;
+    const API = `https://frida.fatimarajan.fr/api/reservations.php`;
     const [reservations, setReservations] = useState([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const result = await fetch(API);
-                if (!result.ok) {
-                    throw new Error('Failed to fetch data');
-                }
-                const data = await result.json();
-                // mettre la date au bon format
-                data.forEach(reservation => {
-                    reservation.date = formatDateString(reservation.date);
-                    reservation.heure = formatTimeString(reservation.heure);
+                const token = localStorage.getItem('token');
+                const result = await fetch(API, {
+                    headers: {
+                        'Authorization': `${token}`
+                    }
                 });
-                setReservations(data); 
+                if (result.ok) {
+                    const data = await result.json();
+                    data.forEach(reservation => {
+                        reservation.date = formatDateString(reservation.date);
+                        reservation.heure = formatTimeString(reservation.heure);
+                    });
+                    setReservations(data);
+                } else {
+                    setError('Vous devez vous connecter pour accéder aux données');
+                }
             } catch (error) {
-                console.error('Error fetching data:', error);
-                setError('Error fetching data');
+                console.error('Erreur lors de la récupération des données :', error);
+                setError('Erreur lors de la récupération des données');
             }
         };
     

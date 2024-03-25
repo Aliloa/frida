@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
+import Link from "next/link";
 import "./stat.css";
 
 
@@ -12,12 +13,22 @@ const formatDateString = (dateString) => {
 
 
 export const Statistiques = () => {
+  const API = `https://frida.fatimarajan.fr/api/reservations.php`;
   const [statistiques, setStatistiques] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const API = `http://localhost/frida/api/reservations.php`;
+    const token = localStorage.getItem('token');
+    if (!token) {
+      setError('Vous devez vous connecter pour accéder aux données');
+      return;
+    }
 
-    fetch(API)
+    fetch(API, {
+      headers: {
+        'Authorization': `${token}`
+      }
+    })
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la requête.');
@@ -25,15 +36,12 @@ export const Statistiques = () => {
         return response.json();
       })
       .then(data => {
-        // Regrouper les adultes et les enfants par date
         const groupedAdultes = {};
         const groupedEnfants = {};
         data.forEach(reservation => {
           const date = formatDateString(reservation.date);
           const adulte = parseInt(reservation.adulte);
           const enfant = parseInt(reservation.enfant);
-
-            // Vérifie si la date existe déjà dans les objets, sinon met  à zéro
 
           if (!groupedAdultes[date]) {
             groupedAdultes[date] = 0;
@@ -44,13 +52,24 @@ export const Statistiques = () => {
           groupedAdultes[date] += adulte;
           groupedEnfants[date] += enfant;
         });
-        // Mettre à jour les données d'état avec les statistiques regroupées
         setStatistiques({ adultes: groupedAdultes, enfants: groupedEnfants });
       })
       .catch(error => {
         console.error('Erreur lors de la requête:', error);
+        setError('Erreur lors de la requête');
       });
   }, []);
+
+  if (error) {
+    return (
+        <div>
+            <p>{error}</p>
+            <Link href="/">
+                <button>Se connecter</button>
+            </Link>
+        </div>
+    );
+}
 
   if (!statistiques) {
     return <p>Chargement des statistiques...</p>;
@@ -115,6 +134,7 @@ export const Statistiques = () => {
             font: {
               family: "Road Rage",
               size: "40rem",
+              weight: "400"
             },
             align: 'start',
             color: 'black', 

@@ -15,23 +15,34 @@ const formatTimeString = (timeString) => {
 
 export const Statistiques_2 = () => {
   // api
-    const API = 'http://localhost/frida/api/reservations.php';
+    const API = 'https://frida.fatimarajan.fr/api/reservations.php';
   
     // stokage les données des statistiques, la date sélectionnée et les données du graphique
     const [statistiques, setStatistiques] = useState(null);
     const [selectedDate, setSelectedDate] = useState(null);
     const [chartData, setChartData] = useState(null);
+    const [error, setError] = useState(null);
   
     // recupere les données des statistiques une fois que le composant est monté
     useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const result = await fetch(API);
-          if (!result.ok) {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        setError('Vous devez vous connecter pour accéder aux données');
+        return;
+      }
+  
+      fetch(API, {
+        headers: {
+          'Authorization': `${token}` // Utilisation du token dans l'en-tête de la requête
+        }
+      })
+        .then(response => {
+          if (!response.ok) {
             throw new Error('Failed to fetch data');
           }
-          const data = await result.json();
-          
+          return response.json();
+        })
+        .then(data => {
           // Formater les données des statistiques
           const formattedData = data.map(reservation => ({
             ...reservation,
@@ -40,12 +51,11 @@ export const Statistiques_2 = () => {
           }));
           // Mettre à jour l'état des statistiques avec les données formatées
           setStatistiques(formattedData);
-        } catch (error) {
+        })
+        .catch(error => {
           console.error('Error fetching data:', error);
-        }
-      };
-  
-      fetchData();
+          setError('Une erreur s\'est produite lors du chargement des données');
+        });
     }, []);
   
     // Effet pour mettre à jour les données du graphique lorsque les statistiques ou la date sélectionnée changent
@@ -113,6 +123,12 @@ export const Statistiques_2 = () => {
         <button key={date} onClick={() => handleDateChange(date)}>{date}</button>
       ));
     };
+
+    if (error) {
+      return (
+        <p></p>
+      );
+  }
   
     // Rendu du composant
     return (
@@ -140,6 +156,7 @@ export const Statistiques_2 = () => {
                     font: {
                       family: "Road Rage",
                       size: "40rem",
+                      weight: "400"
                     },
                     align: 'start',
                     color: "black",
