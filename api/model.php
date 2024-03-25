@@ -8,7 +8,7 @@ function dbConnect()
 function getAllReservations()
 {
     $db=dbConnect();
-    $query = $db->query("SELECT * FROM reservation ORDER BY date LIMIT 9");
+    $query = $db->query("SELECT * FROM reservation ORDER BY date ");
 
     return $query->fetchAll(PDO::FETCH_ASSOC);
 }
