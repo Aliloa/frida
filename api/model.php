@@ -5,6 +5,30 @@ function dbConnect()
     return $db;
 }
 
+function authenticateRequest() {
+    $token = $_SERVER['HTTP_AUTHORIZATION'] ?? null;
+
+    // var_dump($_SERVER['HTTP_AUTHORIZATION']);
+    // echo $token;
+
+    if (!$token) {
+        http_response_code(401);
+        echo json_encode(["message" => "Pas de token"]);
+        exit();
+    }
+
+    try {
+        $key='mlpkfz8bal';
+        $decoded = JWT::decode($token, new Key($key, 'HS256'));
+        // $decoded = JWT::decode($token, 'mlpkfz8bal', ['HS256']);
+        // echo json_encode(["decoded_token" => $decoded]);
+    } catch (Exception $e) {
+        http_response_code(401);
+        echo json_encode(["message" => "Invalid token: " . $e->getMessage()]);
+        exit();
+    }
+}
+
 function getAllReservations()
 {
     $db=dbConnect();
@@ -47,5 +71,28 @@ function deleteReservation($id)
     $query->bindValue(':id', $id, PDO::PARAM_INT);
     $query->execute();
     exit(); 
+}
+
+function envoiMail($data)
+{
+    $mailTo = $data['mail'];
+    
+    $subject = "Réservation exposition Frida Kahlo";
+    $from = 'loanachalach@gmail.com';
+
+    // Type de contenu (HTML)
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+    // Créer les en-têtes de l'e-mail
+    $headers .= 'From: ' . $from . "\r\n" .
+        'Reply-To: ' . $from . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
+    // Message HTML pour le client
+    $message = "Merci de votre réservation" . $data['prenom'] . " " . $data['nom'] . "Récapitulatif:<br> date:" . $data['date'] . "<br>heure:" . $data['heure'] . "<br>billets enfant:" . $data['billet_enfant'] . "<br>billets adulte:" . $data['billet_adulte'];
+
+    // Envoyer l'e-mail
+    mail($mailTo, $subject, $message, $headers);
 }
 ?>
