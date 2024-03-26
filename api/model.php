@@ -1,4 +1,9 @@
 <?php
+
+require 'vendor/autoload.php';
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+
 function dbConnect()
 {
     $db = new PDO('mysql:host=localhost;dbname=expo_frida;port=3306','root','');
@@ -76,18 +81,13 @@ function deleteReservation($id)
 function envoiMail($data)
 {
     $mailTo = $data['mail'];
+    $mailFrom = "exhibition@iconicfridakahlo.fr";
     
     $subject = "Réservation exposition Frida Kahlo";
-    $from = 'loanachalach@gmail.com';
 
-    // Type de contenu (HTML)
-    $headers  = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-    // Créer les en-têtes de l'e-mail
-    $headers .= 'From: ' . $from . "\r\n" .
-        'Reply-To: ' . $from . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+    $headers = "From: $mailFrom\r\n";
+    $headers .= "Reply-To: $mailFrom\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
     // Message HTML pour le client
     $message = "Merci de votre réservation" . $data['prenom'] . " " . $data['nom'] . "Récapitulatif:<br> date:" . $data['date'] . "<br>heure:" . $data['heure'] . "<br>billets enfant:" . $data['billet_enfant'] . "<br>billets adulte:" . $data['billet_adulte'];

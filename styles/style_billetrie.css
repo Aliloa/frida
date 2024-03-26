@@ -345,3 +345,16 @@ display: none;
   .white {
     color: white;
   }
+
+  nav ul {
+    display: none;
+  }
+  nav .active ul {
+    display: flex;
+  }
+
+  @media screen and (min-width:650px) {
+    nav ul {
+      display: flex;
+    }
+  }
