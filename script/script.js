@@ -68,29 +68,3 @@ if (typeof fermervideo !== 'undefined') {
     toggleScrollLock();
   });
 }
-
-
-
-// Pour les langues 
-
-const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang');
-        if (lang === 'en') {
-          // nav
-            document.querySelector('#nav ul li:first-child a').innerText = 'Discover';
-            document.querySelector('#nav ul li:nth-child(2) a').innerText = 'Tickets';
-            document.querySelector('#nav ul li:nth-child(3) a').innerText = 'Experience';
-            document.querySelector('#nav ul li:last-child a').href = '?lang=fr';
-            document.querySelector('#nav ul li:last-child a').innerText = 'Fr';
-
-        //site accueil
-        document.querySelector('#AccContent a').innerText = 'Buy a ticket';
-        document.querySelector("")
-
-        //------------------------CONDITIONS GENERALES
-
-        conditions_gen.innerText = 'Terms of Sales';
-        les_presentes.innerText = 'The purpose of these general conditions of sale (CGV) is to define the terms of distribution and sale of free tickets for a free art exhibition.';
-        }
-
-
