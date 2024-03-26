@@ -1,6 +1,6 @@
 import "./delete.css";
 export const Delete = ({ id }) => {
-    const API = `http://frida.fatimarajan.fr/api/reservations.php` + '?id=' + id;
+    const API = `https://iconicfridakahlo.fr/api/reservations.php` + '?id=' + id;
     
     const supprimerReservation = async (e) => { // async function declaration to use await
         try {

@@ -15,7 +15,7 @@ const formatTimeString = (timeString) => {
 
 export const Statistiques_2 = () => {
   // api
-    const API = 'https://frida.fatimarajan.fr/api/reservations.php';
+    const API = 'https://iconicfridakahlo.fr/api/reservations.php';
   
     // stokage les données des statistiques, la date sélectionnée et les données du graphique
     const [statistiques, setStatistiques] = useState(null);

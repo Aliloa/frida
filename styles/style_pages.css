@@ -483,7 +483,6 @@ z-index: -1;
 
 .vie_social_page footer{
   position: relative;
-  height: 100vh;
   background: rgb(80,26,89);
   background: linear-gradient(0deg, rgba(80,26,89,1) 0%, rgba(101,42,110,1) 100%);
   }

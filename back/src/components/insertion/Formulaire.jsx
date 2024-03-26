@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 export const Formulaire = () => {
-    const API = `https://frida.fatimarajan.fr/api/reservations.php`;
+    const API = `https://iconicfridakahlo.fr/api/reservations.php`;
 
     const handleSubmit = (e) => {
         e.preventDefault();
