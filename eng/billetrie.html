@@ -21,16 +21,16 @@
         <a href="index.html"><img src="images/LogoFrida.svg" alt=" Accueil" class="LogoFrida"></a>
         <ul>
             <li>
-                <a href="">Découvrir</a>
+                <a href="">Discover</a>
             </li>
             <li>
-                <a href="billetrie.html">Billets</a>
+                <a href="billetrie.html">Tickets</a>
             </li>
             <li>
-                <a href="experimenter.html">experimenter</a>
+                <a href="experimenter.html">Experience</a>
             </li>
             <li>
-                <a href="?lang=en">Eng</a>
+                <a href="../billetrie.html">FR</a>
 
 
             </li>
@@ -46,57 +46,57 @@
         <div class="billeterie-formulaire">
             <h1>Billeterie</h1>
             <div aria-label="etapes" class="etapes">
-                <a href=# id="etape1" class="etape etape_active">Dates & horaires&#160;</a>
-                <a href=# id="etape2" class="etape"><span class="white">>&#160;</span>Nombre de billets&#160;</a>
-                <a href=#  id="etape3" class="etape"><span class="white">>&#160;</span>Coordonnées</a>
+                <a href=# id="etape1" class="etape etape_active">Date & time &#160;</a>
+                <a href=# id="etape2" class="etape"><span class="white">>&#160;</span>Number of tickets&#160;</a>
+                <a href=#  id="etape3" class="etape"><span class="white">>&#160;</span>Contact details</a>
             </div>
-            <p>Les champs suivis d’un <span>*</span> sont obligatoires.</p>   
+            <p>Fields followed by a <span>*</span> are required.</p>   
 
             <div class="form_wrap">
             <form action="api/reservations.php" method="POST" id="billeterie-formulaire">             
                     <fieldset id="part_1" class="onglets">
 
-                        <h2>DATE ET HORAIRE</h2>
+                        <h2>DATES AND TIMES</h2>
                         <div class="champ">
-                            <label for="date_calendrier" class="date-formulaire">Choisissez une date<span> *</span></label>
+                            <label for="date_calendrier" class="date-formulaire">Choose a date<span> *</span></label>
                                 <input type="date" id="date_calendrier" class="input_basique" name="date" required>
                         </div>
                         <div class="champ">
-                            <label for="horaire" class="horraire-formulaire">Choisissez un horaire<span> *</span></label>
+                            <label for="horaire" class="horraire-formulaire">Choose a time<span> *</span></label>
                             <div class="horaires">
-                                <input type="radio" id="radio1" name="heure" value="10:00" required>
-                                <label for="radio1">10:00</label>
+                                <input type="radio" id="radio1" name="heure" value="10:00 " required>
+                                <label for="radio1">10:00 am</label>
                                 <input type="radio" id="radio2" name="heure" value="11:00" required>
-                                <label for="radio2">11:00</label>
+                                <label for="radio2">11:00 am</label>
                                 <input type="radio" id="radio3" name="heure" value="12:00" required>
-                                <label for="radio3">12:00</label>
+                                <label for="radio3">12:00 pm</label>
                                 <input type="radio" id="radio4" name="heure" value="13:00" required>
-                                <label for="radio4">13:00</label>
+                                <label for="radio4">1:00 pm</label>
                                 <input type="radio" id="radio5" name="heure" value="14:00" required>
-                                <label for="radio5">14:00</label>
+                                <label for="radio5">2:00 pm </label>
                                 <input type="radio" id="radio6" name="heure" value="15:00" required>
-                                <label for="radio6">15:00</label>
+                                <label for="radio6">3:00 pm </label>
                                 <input type="radio" id="radio7" name="heure" value="16:00" required>
-                                <label for="radio7">16:00</label>
+                                <label for="radio7">4:00 pm </label>
                                 <input type="radio" id="radio8" name="heure" value="17:00" required>
-                                <label for="radio8">17:00</label>
+                                <label for="radio8">5:00 pm </label>
                                 <input type="radio" id="radio9" name="heure" value="18:00" required>
-                                <label for="radio9">18:00</label>
+                                <label for="radio9">6:00 pm </label>
                             </div>
                         </div>
-                        <button  type="button" class="button-form suivant1 bouton_basique" disabled>Suivant</button>
+                        <button  type="button" class="button-form suivant1 bouton_basique" disabled>Next</button>
                     </fieldset>
 
                 <fieldset  id="part_2" class="onglets">
-                    <h2>Billets</h2>
+                    <h2>Tickets</h2>
 
                     <div class="container">
-                        <p>Choisissez un nombre de billet de visite (Jusqu’à 10 visiteurs). <span>*</span></p>
+                        <p>Choose a number of visit tickets (Up to 10 visitors).<span>*</span></p>
                         
                         <div class="amount">
 
                             <div>
-                                <label for="billet_adulte">Billets adultes<span> *</span></label>
+                                <label for="billet_adulte">Adult tickets<span> *</span></label>
                                 <div class="adulte_billet">
                                 <button type="button" id="substractAdulte"><img src="images/icon/moins.svg" alt="ajouter un billet"></button>
                             <input type="number" name="billet_adulte" class="billet_adulte input_basique" value="0">
@@ -105,7 +105,7 @@
                             </div>
 
                             <div>
-                                <label for="billet_enfant">Billets enfants<span> *</span></label>
+                                <label for="billet_enfant">Child tickets<span> *</span></label>
                                 <div class="enfant_billet">
                                     <button type="button" id="substractEnfant"><img src="images/icon/moins.svg" alt="ajouter un billet"></button>
     
@@ -116,20 +116,20 @@
                             </div>
 
                     </div>
-                    <button  type="button" class="button-form suivant2 bouton_basique" disabled>Suivant</button>
+                    <button  type="button" class="button-form suivant2 bouton_basique" disabled>Next</button>
                 </fieldset>
 
 
                 <fieldset id="part_3" class="onglets">
-                    <h2>Coordonnées</h2>
+                    <h2>Contact details</h2>
 
                     <div class="nom_prenom">
                         <div>
-                            <label for="name_first">Prénom<span>*</span></label>
+                            <label for="name_first">Last name<span>*</span></label>
                             <input type="text" id="prenom" name="prenom" class="input_basique" placeholder="Prénom" required>
                         </div>
                        <div>
-                        <label for="name_sec">Nom<span>*</span></label>
+                        <label for="name_sec">First name<span>*</span></label>
                         <input type="text" id="nom" name="nom" class="input_basique"placeholder="Nom" required>
                        </div>
 
@@ -144,6 +144,58 @@
         </div>
         </div>
     </main>
+    <div id="transition" class="transition"></div>
+    <footer>
+        <div id="footerContentMob">
+            <img src="images/Footer.svg" alt="">
+            <ul id="footerlist1">
+                <a href="">DISCOVER</a>
+                <a href="billetrie.html">TICKETS</a>
+                <a href="https://www.andeanart.gilbert.butmmi.o2switch.site/">OUR AGENCY</a>
+                <a href="">EXPERIENCE</a>
+            </ul>
+       
+            <div id="Reseau">
+                <a href=""><img src="images/icon/twitter.svg" alt=""></a>
+                <a href="https://www.instagram.com/andean_art/"><img src="images/icon/insta.svg" alt=""></a>
+                <a href=""><img src="images/icon/Facebook.svg" alt=""></a>
+            </div>
+       
+            <ul id="footerlist2" >
+                <a href="mention_legale.html">LEGAL NOTICE</a>
+                <a href="conditions_generale.html"></a>
+            </ul>
+        </div>
+       
+        <div id="footerContent">
+            <div id="FooterCoo">
+                <img src="images/Footer.svg" alt="">
+                <p>2 Rue Albert Einstein</p>
+                <p>77420 Champs Sur Marne</p>
+            </div>
+            <div id="FooterNav">
+                <h2>NAVIGATION</h2>
+                    <a href="">Discover</a>
+                    <a href="billetrie.html">Tickets</a>
+            </div>
+            <div id="FooterLien">
+                <h2>USELFUL LINKS</h2>
+                <a href="">About</a>
+                <a href="https://www.andeanart.gilbert.butmmi.o2switch.site/">Fida Agency</a>
+            </div>
+            <div id="ReseauPc">
+                <h2>FOLLOW US</h2>
+                <div>
+                   <a href="https://www.instagram.com/andean_art/"><img src="images/icon/insta.svg" alt="compte instagram"></a>
+                   <a href="https://www.tiktok.com/@andean_art"><img src="images/icon/tiktok.svg" alt="compte tiktok"></a>
+               </div>
+            </div>
+        </div>
+        <div id="Mentions">
+            <a href="mention_legale.html">Legal notice</a>
+            <a href="conditions_generale.html">Terms of sales</a>
+           </div>
+       </footer>
 
     <script src="script/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

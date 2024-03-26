@@ -358,3 +358,16 @@ display: none;
       display: flex;
     }
   }
+
+  .billetrie #transition{
+    background-image: url(../images/transitions/FooterPc.svg);
+    position: relative;
+    bottom: -2px;
+    margin-top: -25vh;
+    z-index: 1;
+    height:60vh;
+    width: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
