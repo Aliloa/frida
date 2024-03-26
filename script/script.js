@@ -51,15 +51,25 @@ try{
 
 // -----------------------------------------------TRAILER
 
-lancervideo.addEventListener("click", () => {
-  trailer.classList.toggle("active");
-  toggleScrollLock();
-});
+if (typeof lancervideo !== 'undefined') {
+  lancervideo.addEventListener("click", () => {
+    if (trailer) {
+      trailer.classList.toggle("active");
+    }
+    toggleScrollLock();
+  });
+}
 
-fermervideo.addEventListener("click", () => {
-  trailer.classList.toggle("active");
-  toggleScrollLock();
-});
+if (typeof fermervideo !== 'undefined') {
+  fermervideo.addEventListener("click", () => {
+    if (trailer) {
+      trailer.classList.toggle("active");
+    }
+    toggleScrollLock();
+  });
+}
+
+
 
 // Pour les langues 
 
@@ -77,4 +87,10 @@ const urlParams = new URLSearchParams(window.location.search);
         document.querySelector('#AccContent a').innerText = 'Buy a ticket';
         document.querySelector("")
 
+        //------------------------CONDITIONS GENERALES
+
+        conditions_gen.innerText = 'Terms of Sales';
+        les_presentes.innerText = 'The purpose of these general conditions of sale (CGV) is to define the terms of distribution and sale of free tickets for a free art exhibition.';
         }
+
+
