@@ -67,14 +67,14 @@ const urlParams = new URLSearchParams(window.location.search);
         const lang = urlParams.get('lang');
         if (lang === 'en') {
           // nav
-            document.querySelector('#nav ul li:first-child a').innerText = 'Discover';
-            document.querySelector('#nav ul li:nth-child(2) a').innerText = 'Tickets';
-            document.querySelector('#nav ul li:nth-child(3) a').innerText = 'Experience';
+            document.querySelector('#decouvrir').innerText = 'Discover';
+            document.querySelector('#billet').innerText = 'Tickets';
+            document.querySelector('#experimenter').innerText = 'Experience';
             document.querySelector('#nav ul li:last-child a').href = '?lang=fr';
             document.querySelector('#nav ul li:last-child a').innerText = 'Fr';
 
         //site accueil
-        document.querySelector('#AccContent a').innerText = 'Buy a ticket';
-        document.querySelector("")
+        document.querySelector('#AccContent #lancervideo').innerText = 'Watch trailer';
+        document.querySelector(".dessert h1").innerText='Beyond the icon'
 
         }
