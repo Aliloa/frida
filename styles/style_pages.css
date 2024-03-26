@@ -410,6 +410,11 @@ z-index: -1;
       flex-wrap: wrap;
   }
 
+  .femme_engage_page .partie_tableaux {
+    display: flex;
+    justify-content: space-around;
+  }
+
   #MobileVieSocial{
       display: none;
   }

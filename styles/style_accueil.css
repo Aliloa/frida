@@ -79,7 +79,7 @@ background-size: contain;
   
 }
 
-#AccContent a {
+#lancervideo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,8 +92,12 @@ background-size: contain;
   text-align: center;
   text-transform: uppercase;
   padding: 15px 20px 15px 20px;
-
-
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.2s;
+}
+#lancervideo:hover{
+  padding: 15px 30px 15px 30px;
 }
 
 
@@ -366,7 +370,12 @@ background-image: url(../images/TitreSombre.svg);
     font-size: 1.2rem;
     width: fit-content;
     z-index: 2;
+    transition: 0.2s;
   }
+  .bouton:hover {
+    padding: 10px 15px 10px 15px;
+  }
+
   @media screen and (min-width: 767px) {
     .center {
       display: flex;
@@ -381,6 +390,9 @@ background-image: url(../images/TitreSombre.svg);
     }
     .bouton {
       padding: 20px 7% 20px 7%;
+    }
+    .bouton:hover {
+      padding: 20px 9% 20px 9%;
     }
     
   }
@@ -805,10 +817,6 @@ background-image: url(../images/TitreSombre.svg);
       justify-content: center;
     }
 
-    .nuit .virtuelle .center{
-      background-image: url(../images/accueil/VR_PC_nuit.svg);
-    }
-
     .center .titrevirt h1{
       font-size: 7rem;
     }
@@ -818,7 +826,7 @@ background-image: url(../images/TitreSombre.svg);
     }
 
     .virtuelle .bouton{
-      width: 15vw;
+      width: 20vw;
       height: 9vh;
       background-color: #451B34;
       display: flex;
@@ -828,3 +836,35 @@ background-image: url(../images/TitreSombre.svg);
     }
   }
 
+  #trailer {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.697);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #trailer.active {
+    display: flex;
+  }
+  #trailer video {
+    width: 90%;
+  }
+  #fermervideo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 5vw;
+    cursor: pointer;
+    min-width: 30px;
+    max-width: 45px;
+  }
+
+  #fermervideo img {
+    width: 100%;
+  }

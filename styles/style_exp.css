@@ -98,6 +98,7 @@ video {
     display: flex;
     flex-direction: column;
     margin-top: 10vh;
+    text-align: center;
 }
 .etapes-container p {
     font-size: 1.5rem;
@@ -108,6 +109,39 @@ video {
 
 .etapes p {
     margin-bottom: 15px;
+}
+
+.tester-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.tester {
+    display: block;
+    border-radius: 30px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    border: 0;
+    width: 80%;
+    color: black;
+    margin-top: 20px;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: fit-content;
+    z-index: 2;
+    background-color: #F3E2A2;
+    transition: 0.2s;
+}
+.tester:hover {
+    padding: 10px 20px 10px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 @media screen and (min-width: 767px) {
@@ -142,5 +176,9 @@ video {
         width: 70%;
         margin: auto;
         margin-top: 10vh;
+        text-align: left;
+    }
+    .tester-container {
+        width: 50%;
     }
 }

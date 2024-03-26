@@ -89,8 +89,9 @@ function envoiMail($data)
     $headers .= "Reply-To: $mailFrom\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-    // Message HTML pour le client
-    $message = "Merci de votre réservation" . $data['prenom'] . " " . $data['nom'] . "Récapitulatif:<br> date:" . $data['date'] . "<br>heure:" . $data['heure'] . "<br>billets enfant:" . $data['billet_enfant'] . "<br>billets adulte:" . $data['billet_adulte'];
+    $message = "<div>
+    <img src='http://iconicfridakahlo.fr/api/img/email.png'> <br>
+<h1>Thank you for your reservation! " . $data['prenom'] . " " . $data['nom'] . "</h1><br>Information:<br> Day:<strong>" . $data['date'] . "</strong><br>Time:<strong>" . $data['heure'] . "</strong><br>Kids tickets:<strong>" . $data['billet_enfant'] . "</strong><br>Adult tickets:<strong>" . $data['billet_adulte'] . "</strong><br><h2>May your journey through this virtual exhibition be as bold and captivating as Frida herself!</h2></div>";
 
     // Envoyer l'e-mail
     mail($mailTo, $subject, $message, $headers);

@@ -49,4 +49,14 @@ try{
   });
 }catch(error){};
 
+// -----------------------------------------------TRAILER
 
+lancervideo.addEventListener("click", () => {
+  trailer.classList.toggle("active");
+  toggleScrollLock();
+});
+
+fermervideo.addEventListener("click", () => {
+  trailer.classList.toggle("active");
+  toggleScrollLock();
+});
