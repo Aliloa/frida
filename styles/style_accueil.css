@@ -52,7 +52,9 @@ header{
 }
 
 
-
+h1{
+  text-transform: uppercase;
+}
 
 
 /* HeaderContent*/
@@ -61,8 +63,7 @@ header{
   display: flex;
   flex-direction: column;
   height: 73%;
-  align-items: center;
-  
+  align-items: center;  
   justify-content: center;
 
 }
@@ -72,9 +73,9 @@ background-image: url(../images/Titre.svg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: contain;
-  width: 85%;
-  height: 50%;
-  padding-bottom: 5vh;
+width: 85%;
+height: 50%;
+padding-bottom: 5vh;
   
   
 }
