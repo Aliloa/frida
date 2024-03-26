@@ -206,7 +206,7 @@ li {
   #Reseau{
     width: 80vw;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
   #Reseau img{

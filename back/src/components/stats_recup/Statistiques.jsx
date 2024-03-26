@@ -13,7 +13,7 @@ const formatDateString = (dateString) => {
 
 
 export const Statistiques = () => {
-  const API = `https://frida.fatimarajan.fr/api/reservations.php`;
+  const API = `https://iconicfridakahlo.fr/api/reservations.php`;
   const [statistiques, setStatistiques] = useState(null);
   const [error, setError] = useState(null);
 

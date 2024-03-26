@@ -15,7 +15,7 @@ const formatTimeString = (timeString) => {
 };
 
 export const Tableau = () => {
-    const API = `https://frida.fatimarajan.fr/api/reservations.php`;
+    const API = `https://iconicfridakahlo.fr/api/reservations.php`;
     const [reservations, setReservations] = useState([]);
     const [error, setError] = useState(null);
 
