@@ -12,7 +12,7 @@ const Connexion = () => {
     formData.append('login', login);
     formData.append('mdp', mdp);
 
-    fetch('http://localhost/frida/api/authorization.php', {
+    fetch('https://frida.fatimarajan.fr/api/authorization.php', {
       method: 'POST',
       body: formData,
     })

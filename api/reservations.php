@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }
 
 require('model.php');
-require 'vendor/autoload.php'; // Assuming this is the path to your autoload.php for JWT library
+require 'vendor/autoload.php';
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
@@ -35,6 +35,7 @@ switch ($request_method) {
         if (!empty($data)) {
             // Appeler la fonction addReservation avec le tableau de données
             addReservation($data);
+            envoiMail($data);
         
             // Répondre avec un code de succès et les données JSON
             http_response_code(201);
@@ -67,30 +68,6 @@ switch ($request_method) {
         echo json_encode([
             'message' => 'method not allowed'
         ]);
-}
-
-function authenticateRequest() {
-    $token = $_SERVER['HTTP_AUTHORIZATION'] ?? null;
-
-    // var_dump($_SERVER['HTTP_AUTHORIZATION']);
-    // echo $token;
-
-    if (!$token) {
-        http_response_code(401);
-        echo json_encode(["message" => "Pas de token"]);
-        exit();
-    }
-
-    try {
-        $key='mlpkfz8bal';
-        $decoded = JWT::decode($token, new Key($key, 'HS256'));
-        // $decoded = JWT::decode($token, 'mlpkfz8bal', ['HS256']);
-        // echo json_encode(["decoded_token" => $decoded]);
-    } catch (Exception $e) {
-        http_response_code(401);
-        echo json_encode(["message" => "Invalid token: " . $e->getMessage()]);
-        exit();
-    }
 }
 
 ?>

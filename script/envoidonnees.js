@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API = 'http://localhost/frida/api/reservations.php';
+    const API = 'https://frida.fatimarajan.fr/api/reservations.php';
 
     const reservationForm = document.getElementById('billeterie-formulaire');
     reservationForm.addEventListener('submit', handleSubmit);

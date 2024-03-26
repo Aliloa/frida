@@ -8,8 +8,6 @@ import Connexion from "@/components/connexion/Connexion";
 
 import { useState, useEffect } from 'react';
 
-
-
 const Home = () => {
 
   return (

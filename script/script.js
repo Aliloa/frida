@@ -6,6 +6,11 @@ icons.addEventListener("click", () => {
   toggleScrollLock();
 });
 
+retour.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  toggleScrollLock();
+});
+
 links.forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("active");
