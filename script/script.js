@@ -75,5 +75,6 @@ const urlParams = new URLSearchParams(window.location.search);
 
         //site accueil
         document.querySelector('#AccContent a').innerText = 'Buy a ticket';
+        document.querySelector("")
 
         }
